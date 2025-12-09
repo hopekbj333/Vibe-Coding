@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 비행기 몸통 -->
+  <ellipse cx="100" cy="100" rx="80" ry="20" fill="#90CAF9"/>
+  <!-- 비행기 앞부분 -->
+  <path d="M 180 100 Q 195 100 180 100" fill="#64B5F6"/>
+  <ellipse cx="175" cy="100" rx="15" ry="18" fill="#64B5F6"/>
+  <!-- 창문 -->
+  <circle cx="80" cy="95" r="8" fill="#E3F2FD"/>
+  <circle cx="100" cy="95" r="8" fill="#E3F2FD"/>
+  <circle cx="120" cy="95" r="8" fill="#E3F2FD"/>
+  <circle cx="140" cy="95" r="8" fill="#E3F2FD"/>
+  <!-- 날개 -->
+  <path d="M 70 100 L 40 60 L 100 100 Z" fill="#1976D2"/>
+  <path d="M 70 100 L 40 140 L 100 100 Z" fill="#1976D2"/>
+  <!-- 꼬리 날개 -->
+  <path d="M 25 100 L 15 70 L 40 100 Z" fill="#1565C0"/>
+  <path d="M 25 100 L 15 130 L 40 100 Z" fill="#1565C0"/>
+  <!-- 수직 꼬리 -->
+  <path d="M 20 100 L 10 60 L 35 100 Z" fill="#0D47A1"/>
+</svg>
+

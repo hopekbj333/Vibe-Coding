@@ -1,0 +1,104 @@
+{
+  "contentId": "attention_go_no_go_basic_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "goNoGo",
+  "title": "Go/No-Go 기본",
+  "instruction": "초록색만 터치하세요",
+  "instructionAudioPath": "audio/instructions/go_no_go_basic.mp3",
+  "difficulty": {
+    "level": 1,
+    "minLevel": 1,
+    "maxLevel": 3,
+    "adjustmentThreshold": 3
+  },
+  "items": [
+    {
+      "itemId": "gng_001",
+      "question": "🟢만 터치하세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "go1", "label": "🟢", "imagePath": null, "audioPath": null, "optionData": {"type": "go"}},
+        {"optionId": "nogo1", "label": "🔴", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo"}},
+        {"optionId": "nogo2", "label": "🔴", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo"}}
+      ],
+      "correctAnswer": "go1",
+      "explanation": "초록색만 터치해요!",
+      "explanationAudioPath": null,
+      "itemData": {"targetColor": "green", "level": 1}
+    },
+    {
+      "itemId": "gng_002",
+      "question": "⭐만 터치하세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "go1", "label": "⭐", "imagePath": null, "audioPath": null, "optionData": {"type": "go"}},
+        {"optionId": "nogo1", "label": "●", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo"}},
+        {"optionId": "nogo2", "label": "■", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo"}}
+      ],
+      "correctAnswer": "go1",
+      "explanation": "별만 터치해요!",
+      "explanationAudioPath": null,
+      "itemData": {"targetShape": "star", "level": 1}
+    },
+    {
+      "itemId": "gng_003",
+      "question": "🍎만 터치하세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "nogo1", "label": "🍌", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo"}},
+        {"optionId": "go1", "label": "🍎", "imagePath": null, "audioPath": null, "optionData": {"type": "go"}},
+        {"optionId": "nogo2", "label": "🍇", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo"}}
+      ],
+      "correctAnswer": "go1",
+      "explanation": "사과만 터치해요!",
+      "explanationAudioPath": null,
+      "itemData": {"targetItem": "apple", "level": 1}
+    },
+    {
+      "itemId": "gng_004",
+      "question": "동물만 터치하세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "go1", "label": "🐕", "imagePath": null, "audioPath": null, "optionData": {"type": "go", "category": "animal"}},
+        {"optionId": "nogo1", "label": "🚗", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo", "category": "vehicle"}},
+        {"optionId": "go2", "label": "🐱", "imagePath": null, "audioPath": null, "optionData": {"type": "go", "category": "animal"}}
+      ],
+      "correctAnswer": "go1,go2",
+      "explanation": "동물을 잘 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"targetCategory": "animal", "level": 2}
+    },
+    {
+      "itemId": "gng_005",
+      "question": "빨간색만 터치하세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "go1", "label": "❤️", "imagePath": null, "audioPath": null, "optionData": {"type": "go"}},
+        {"optionId": "nogo1", "label": "💙", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo"}},
+        {"optionId": "go2", "label": "🍎", "imagePath": null, "audioPath": null, "optionData": {"type": "go"}},
+        {"optionId": "nogo2", "label": "🍌", "imagePath": null, "audioPath": null, "optionData": {"type": "nogo"}}
+      ],
+      "correctAnswer": "go1,go2",
+      "explanation": "빨간색을 잘 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"targetColor": "red", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "lastUpdated": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["attention", "go_no_go", "inhibition", "selective"],
+    "estimatedDuration": 1200,
+    "minAge": 6,
+    "maxAge": 9,
+    "note": "Go/No-Go 기본 - 5개 샘플 (쉬운 게임)"
+  }
+}

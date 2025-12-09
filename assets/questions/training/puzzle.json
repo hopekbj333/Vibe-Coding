@@ -1,0 +1,30 @@
+{
+  "contentId": "visual_puzzle_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "matching",
+  "title": "퍼즐",
+  "instruction": "퍼즐 조각을 맞추세요",
+  "instructionAudioPath": "audio/instructions/puzzle.mp3",
+  "difficulty": {"level": 3, "minLevel": 1, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "pz_001",
+      "question": "퍼즐을 완성하세요",
+      "questionAudioPath": null,
+      "questionImagePath": "images/puzzles/puzzle1.png",
+      "options": [],
+      "correctAnswer": "dynamic",
+      "explanation": "퍼즐 완성!",
+      "explanationAudioPath": null,
+      "itemData": {"pieceCount": 4, "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["visual", "puzzle", "spatial"],
+    "note": "동적 퍼즐 - 1개 샘플"
+  }
+}

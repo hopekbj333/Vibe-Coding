@@ -1,0 +1,27 @@
+{
+  "contentId": "attention_divided_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "multipleChoice",
+  "title": "분할 주의",
+  "instruction": "두 가지를 동시에 확인하세요",
+  "instructionAudioPath": "audio/instructions/divided_attention.mp3",
+  "difficulty": {"level": 3, "minLevel": 2, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "da_001",
+      "question": "왼쪽과 오른쪽 모두 맞나요?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "예", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "아니오", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "둘 다 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2}
+    }
+  ],
+  "metadata": {"version": "1.0.0", "createdAt": "2025-12-07", "author": "AI Assistant", "tags": ["attention", "divided"], "note": "1개 샘플"}
+}

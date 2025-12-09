@@ -1,0 +1,807 @@
+{
+  "contentId": "auditory_animal_sound_story_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "sequencing",
+  "title": "동물 소리 이야기",
+  "instruction": "동물들이 나오는 순서를 기억하세요",
+  "instructionAudioPath": "audio/instructions/animal_sound_story_instruction.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 4,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "sequenceLength": 3
+    }
+  },
+  "items": [
+    {
+      "itemId": "as_001",
+      "question": "농장의 아침",
+      "questionAudioPath": "audio/stories/farm_morning.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐓 닭", "imagePath": null, "audioPath": "audio/animals/rooster.mp3", "optionData": {"order": 0, "sound": "꼬끼오"}},
+        {"optionId": "a2", "label": "🐕 강아지", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"order": 1, "sound": "멍멍"}},
+        {"optionId": "a3", "label": "🐄 소", "imagePath": null, "audioPath": "audio/animals/cow.mp3", "optionData": {"order": 2, "sound": "음메"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "농장에서 아침이 밝았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌅", "story": "농장의 아침", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_002",
+      "question": "숲속 탐험",
+      "questionAudioPath": "audio/stories/forest_explore.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐦 새", "imagePath": null, "audioPath": "audio/animals/bird.mp3", "optionData": {"order": 0, "sound": "짹짹"}},
+        {"optionId": "a2", "label": "🦉 부엉이", "imagePath": null, "audioPath": "audio/animals/owl.mp3", "optionData": {"order": 1, "sound": "부엉"}},
+        {"optionId": "a3", "label": "🐿️ 다람쥐", "imagePath": null, "audioPath": "audio/animals/squirrel.mp3", "optionData": {"order": 2, "sound": "찍찍"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "숲속에서 친구들을 만났어요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌲", "story": "숲속 탐험", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_003",
+      "question": "동물원 나들이",
+      "questionAudioPath": "audio/stories/zoo_visit.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦁 사자", "imagePath": null, "audioPath": "audio/animals/lion.mp3", "optionData": {"order": 0, "sound": "어흥"}},
+        {"optionId": "a2", "label": "🐘 코끼리", "imagePath": null, "audioPath": "audio/animals/elephant.mp3", "optionData": {"order": 1, "sound": "뿌우"}},
+        {"optionId": "a3", "label": "🐒 원숭이", "imagePath": null, "audioPath": "audio/animals/monkey.mp3", "optionData": {"order": 2, "sound": "끽끽"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "동물원에 놀러 갔어요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🦁", "story": "동물원 나들이", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_004",
+      "question": "바닷가 여행",
+      "questionAudioPath": "audio/stories/beach_trip.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦅 갈매기", "imagePath": null, "audioPath": "audio/animals/seagull.mp3", "optionData": {"order": 0, "sound": "끼룩"}},
+        {"optionId": "a2", "label": "🦀 게", "imagePath": null, "audioPath": "audio/animals/crab.mp3", "optionData": {"order": 1, "sound": "딱딱"}},
+        {"optionId": "a3", "label": "🐬 돌고래", "imagePath": null, "audioPath": "audio/animals/dolphin.mp3", "optionData": {"order": 2, "sound": "끼익"}},
+        {"optionId": "a4", "label": "🦭 물개", "imagePath": null, "audioPath": "audio/animals/seal.mp3", "optionData": {"order": 3, "sound": "아르르"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "바닷가에서 친구들을 만났어요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏖️", "story": "바닷가 여행", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_005",
+      "question": "밤의 숲",
+      "questionAudioPath": "audio/stories/night_forest.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦉 부엉이", "imagePath": null, "audioPath": "audio/animals/owl.mp3", "optionData": {"order": 0, "sound": "부엉"}},
+        {"optionId": "a2", "label": "🐸 개구리", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"order": 1, "sound": "개굴"}},
+        {"optionId": "a3", "label": "🦗 귀뚜라미", "imagePath": null, "audioPath": "audio/animals/cricket.mp3", "optionData": {"order": 2, "sound": "귀뚤"}},
+        {"optionId": "a4", "label": "🦇 박쥐", "imagePath": null, "audioPath": "audio/animals/bat.mp3", "optionData": {"order": 3, "sound": "끼익"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "밤 숲은 시끌벅적해요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌙", "story": "밤의 숲", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_006",
+      "question": "시골 마을",
+      "questionAudioPath": "audio/stories/village.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐷 돼지", "imagePath": null, "audioPath": "audio/animals/pig.mp3", "optionData": {"order": 0, "sound": "꿀꿀"}},
+        {"optionId": "a2", "label": "🦆 오리", "imagePath": null, "audioPath": "audio/animals/duck.mp3", "optionData": {"order": 1, "sound": "꽥꽥"}},
+        {"optionId": "a3", "label": "🐑 양", "imagePath": null, "audioPath": "audio/animals/sheep.mp3", "optionData": {"order": 2, "sound": "메에"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "시골 마을의 아침이에요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏡", "story": "시골 마을", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_007",
+      "question": "정글 모험",
+      "questionAudioPath": "audio/stories/jungle.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦜 앵무새", "imagePath": null, "audioPath": "audio/animals/parrot.mp3", "optionData": {"order": 0, "sound": "까악"}},
+        {"optionId": "a2", "label": "🐍 뱀", "imagePath": null, "audioPath": "audio/animals/snake.mp3", "optionData": {"order": 1, "sound": "스스"}},
+        {"optionId": "a3", "label": "🐒 원숭이", "imagePath": null, "audioPath": "audio/animals/monkey.mp3", "optionData": {"order": 2, "sound": "끽끽"}},
+        {"optionId": "a4", "label": "🐆 표범", "imagePath": null, "audioPath": "audio/animals/leopard.mp3", "optionData": {"order": 3, "sound": "으르렁"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "정글은 신비로워요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌴", "story": "정글 모험", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_008",
+      "question": "극지방 여행",
+      "questionAudioPath": "audio/stories/polar.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐧 펭귄", "imagePath": null, "audioPath": "audio/animals/penguin.mp3", "optionData": {"order": 0, "sound": "꽥꽥"}},
+        {"optionId": "a2", "label": "🦭 물개", "imagePath": null, "audioPath": "audio/animals/seal.mp3", "optionData": {"order": 1, "sound": "아르르"}},
+        {"optionId": "a3", "label": "🐻‍❄️ 북극곰", "imagePath": null, "audioPath": "audio/animals/polar_bear.mp3", "optionData": {"order": 2, "sound": "으르렁"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "추운 극지방이에요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🧊", "story": "극지방 여행", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_009",
+      "question": "사막 탐험",
+      "questionAudioPath": "audio/stories/desert.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐫 낙타", "imagePath": null, "audioPath": "audio/animals/camel.mp3", "optionData": {"order": 0, "sound": "으응"}},
+        {"optionId": "a2", "label": "🦎 도마뱀", "imagePath": null, "audioPath": "audio/animals/lizard.mp3", "optionData": {"order": 1, "sound": "슉슉"}},
+        {"optionId": "a3", "label": "🦅 독수리", "imagePath": null, "audioPath": "audio/animals/eagle.mp3", "optionData": {"order": 2, "sound": "끼오옥"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "뜨거운 사막이에요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏜️", "story": "사막 탐험", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_010",
+      "question": "애완동물 가게",
+      "questionAudioPath": "audio/stories/pet_shop.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐕 강아지", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"order": 0, "sound": "멍멍"}},
+        {"optionId": "a2", "label": "🐱 고양이", "imagePath": null, "audioPath": "audio/animals/cat.mp3", "optionData": {"order": 1, "sound": "야옹"}},
+        {"optionId": "a3", "label": "🐹 햄스터", "imagePath": null, "audioPath": "audio/animals/hamster.mp3", "optionData": {"order": 2, "sound": "찍찍"}},
+        {"optionId": "a4", "label": "🐦 앵무새", "imagePath": null, "audioPath": "audio/animals/parrot.mp3", "optionData": {"order": 3, "sound": "까악"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "애완동물 가게예요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏪", "story": "애완동물 가게", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_011",
+      "question": "목장 풍경",
+      "questionAudioPath": "audio/stories/ranch.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐴 말", "imagePath": null, "audioPath": "audio/animals/horse.mp3", "optionData": {"order": 0, "sound": "히힝"}},
+        {"optionId": "a2", "label": "🐑 양", "imagePath": null, "audioPath": "audio/animals/sheep.mp3", "optionData": {"order": 1, "sound": "메에"}},
+        {"optionId": "a3", "label": "🐐 염소", "imagePath": null, "audioPath": "audio/animals/goat.mp3", "optionData": {"order": 2, "sound": "메에"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "목장에 있어요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌾", "story": "목장 풍경", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_012",
+      "question": "연못가 산책",
+      "questionAudioPath": "audio/stories/pond.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦆 오리", "imagePath": null, "audioPath": "audio/animals/duck.mp3", "optionData": {"order": 0, "sound": "꽥꽥"}},
+        {"optionId": "a2", "label": "🐸 개구리", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"order": 1, "sound": "개굴"}},
+        {"optionId": "a3", "label": "🐢 거북이", "imagePath": null, "audioPath": "audio/animals/turtle.mp3", "optionData": {"order": 2, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "연못가에 친구들이 있어요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌊", "story": "연못가 산책", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_013",
+      "question": "하늘을 나는 친구들",
+      "questionAudioPath": "audio/stories/flying.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦅 독수리", "imagePath": null, "audioPath": "audio/animals/eagle.mp3", "optionData": {"order": 0, "sound": "끼오옥"}},
+        {"optionId": "a2", "label": "🦜 앵무새", "imagePath": null, "audioPath": "audio/animals/parrot.mp3", "optionData": {"order": 1, "sound": "까악"}},
+        {"optionId": "a3", "label": "🕊️ 비둘기", "imagePath": null, "audioPath": "audio/animals/pigeon.mp3", "optionData": {"order": 2, "sound": "구구"}},
+        {"optionId": "a4", "label": "🦇 박쥐", "imagePath": null, "audioPath": "audio/animals/bat.mp3", "optionData": {"order": 3, "sound": "끼익"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "하늘을 나는 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "☁️", "story": "하늘을 나는 친구들", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_014",
+      "question": "곤충 친구들",
+      "questionAudioPath": "audio/stories/insects.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐝 벌", "imagePath": null, "audioPath": "audio/animals/bee.mp3", "optionData": {"order": 0, "sound": "윙윙"}},
+        {"optionId": "a2", "label": "🦋 나비", "imagePath": null, "audioPath": "audio/animals/butterfly.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🐞 무당벌레", "imagePath": null, "audioPath": "audio/animals/ladybug.mp3", "optionData": {"order": 2, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "작은 곤충 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌼", "story": "곤충 친구들", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_015",
+      "question": "초원의 동물들",
+      "questionAudioPath": "audio/stories/savanna.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦓 얼룩말", "imagePath": null, "audioPath": "audio/animals/zebra.mp3", "optionData": {"order": 0, "sound": "히힝"}},
+        {"optionId": "a2", "label": "🦒 기린", "imagePath": null, "audioPath": "audio/animals/giraffe.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🦏 코뿔소", "imagePath": null, "audioPath": "audio/animals/rhino.mp3", "optionData": {"order": 2, "sound": "푸우"}},
+        {"optionId": "a4", "label": "🦘 캥거루", "imagePath": null, "audioPath": "audio/animals/kangaroo.mp3", "optionData": {"order": 3, "sound": "(통통)"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "초원의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌾", "story": "초원의 동물들", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_016",
+      "question": "집 안의 반려동물",
+      "questionAudioPath": "audio/stories/pets_home.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐕 강아지", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"order": 0, "sound": "멍멍"}},
+        {"optionId": "a2", "label": "🐱 고양이", "imagePath": null, "audioPath": "audio/animals/cat.mp3", "optionData": {"order": 1, "sound": "야옹"}},
+        {"optionId": "a3", "label": "🐟 금붕어", "imagePath": null, "audioPath": "audio/animals/fish.mp3", "optionData": {"order": 2, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "우리 집 반려동물들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏠", "story": "집 안의 반려동물", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_017",
+      "question": "아쿠아리움",
+      "questionAudioPath": "audio/stories/aquarium.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐬 돌고래", "imagePath": null, "audioPath": "audio/animals/dolphin.mp3", "optionData": {"order": 0, "sound": "끼익"}},
+        {"optionId": "a2", "label": "🦭 물개", "imagePath": null, "audioPath": "audio/animals/seal.mp3", "optionData": {"order": 1, "sound": "아르르"}},
+        {"optionId": "a3", "label": "🐧 펭귄", "imagePath": null, "audioPath": "audio/animals/penguin.mp3", "optionData": {"order": 2, "sound": "꽥꽥"}},
+        {"optionId": "a4", "label": "🐙 문어", "imagePath": null, "audioPath": "audio/animals/octopus.mp3", "optionData": {"order": 3, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "아쿠아리움 구경!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌊", "story": "아쿠아리움", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_018",
+      "question": "산속 오두막",
+      "questionAudioPath": "audio/stories/mountain_cabin.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐻 곰", "imagePath": null, "audioPath": "audio/animals/bear.mp3", "optionData": {"order": 0, "sound": "으르렁"}},
+        {"optionId": "a2", "label": "🦌 사슴", "imagePath": null, "audioPath": "audio/animals/deer.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🦊 여우", "imagePath": null, "audioPath": "audio/animals/fox.mp3", "optionData": {"order": 2, "sound": "깡깡"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "산속의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "⛰️", "story": "산속 오두막", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_019",
+      "question": "열대우림",
+      "questionAudioPath": "audio/stories/rainforest.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦍 고릴라", "imagePath": null, "audioPath": "audio/animals/gorilla.mp3", "optionData": {"order": 0, "sound": "우우"}},
+        {"optionId": "a2", "label": "🐆 재규어", "imagePath": null, "audioPath": "audio/animals/jaguar.mp3", "optionData": {"order": 1, "sound": "그르렁"}},
+        {"optionId": "a3", "label": "🦜 앵무새", "imagePath": null, "audioPath": "audio/animals/parrot.mp3", "optionData": {"order": 2, "sound": "까악"}},
+        {"optionId": "a4", "label": "🐸 독개구리", "imagePath": null, "audioPath": "audio/animals/poison_frog.mp3", "optionData": {"order": 3, "sound": "개굴"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "열대우림은 신비로워요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌴", "story": "열대우림", "animalCount": 4, "level": 3}
+    },
+    {
+      "itemId": "as_020",
+      "question": "공원 산책",
+      "questionAudioPath": "audio/stories/park_walk.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐕 강아지", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"order": 0, "sound": "멍멍"}},
+        {"optionId": "a2", "label": "🐦 참새", "imagePath": null, "audioPath": "audio/animals/sparrow.mp3", "optionData": {"order": 1, "sound": "짹짹"}},
+        {"optionId": "a3", "label": "🦆 오리", "imagePath": null, "audioPath": "audio/animals/duck.mp3", "optionData": {"order": 2, "sound": "꽥꽥"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "공원에서 산책해요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏞️", "story": "공원 산책", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_021",
+      "question": "동굴 탐험",
+      "questionAudioPath": "audio/stories/cave.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦇 박쥐", "imagePath": null, "audioPath": "audio/animals/bat.mp3", "optionData": {"order": 0, "sound": "끼익"}},
+        {"optionId": "a2", "label": "🐻 곰", "imagePath": null, "audioPath": "audio/animals/bear.mp3", "optionData": {"order": 1, "sound": "으르렁"}},
+        {"optionId": "a3", "label": "🦎 도마뱀", "imagePath": null, "audioPath": "audio/animals/lizard.mp3", "optionData": {"order": 2, "sound": "슉슉"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "동굴 속 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🕳️", "story": "동굴 탐험", "animalCount": 3, "level": 2}
+    },
+    {
+      "itemId": "as_022",
+      "question": "아프리카 사파리",
+      "questionAudioPath": "audio/stories/safari.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦁 사자", "imagePath": null, "audioPath": "audio/animals/lion.mp3", "optionData": {"order": 0, "sound": "어흥"}},
+        {"optionId": "a2", "label": "🐘 코끼리", "imagePath": null, "audioPath": "audio/animals/elephant.mp3", "optionData": {"order": 1, "sound": "뿌우"}},
+        {"optionId": "a3", "label": "🦓 얼룩말", "imagePath": null, "audioPath": "audio/animals/zebra.mp3", "optionData": {"order": 2, "sound": "히힝"}},
+        {"optionId": "a4", "label": "🦒 기린", "imagePath": null, "audioPath": "audio/animals/giraffe.mp3", "optionData": {"order": 3, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "사파리 투어!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌍", "story": "아프리카 사파리", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_023",
+      "question": "호주 여행",
+      "questionAudioPath": "audio/stories/australia.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦘 캥거루", "imagePath": null, "audioPath": "audio/animals/kangaroo.mp3", "optionData": {"order": 0, "sound": "(통통)"}},
+        {"optionId": "a2", "label": "🐨 코알라", "imagePath": null, "audioPath": "audio/animals/koala.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🦘 왈라비", "imagePath": null, "audioPath": "audio/animals/wallaby.mp3", "optionData": {"order": 2, "sound": "(통통)"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "호주의 특별한 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🇦🇺", "story": "호주 여행", "animalCount": 3, "level": 2}
+    },
+    {
+      "itemId": "as_024",
+      "question": "새벽 닭장",
+      "questionAudioPath": "audio/stories/chicken_coop.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐓 수탉", "imagePath": null, "audioPath": "audio/animals/rooster.mp3", "optionData": {"order": 0, "sound": "꼬끼오"}},
+        {"optionId": "a2", "label": "🐔 암탉", "imagePath": null, "audioPath": "audio/animals/hen.mp3", "optionData": {"order": 1, "sound": "꼬꼬"}},
+        {"optionId": "a3", "label": "🐣 병아리", "imagePath": null, "audioPath": "audio/animals/chick.mp3", "optionData": {"order": 2, "sound": "삐약"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "닭 가족이에요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏚️", "story": "새벽 닭장", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_025",
+      "question": "깊은 바다",
+      "questionAudioPath": "audio/stories/deep_sea.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐋 고래", "imagePath": null, "audioPath": "audio/animals/whale.mp3", "optionData": {"order": 0, "sound": "우우우"}},
+        {"optionId": "a2", "label": "🦈 상어", "imagePath": null, "audioPath": "audio/animals/shark.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🐙 문어", "imagePath": null, "audioPath": "audio/animals/octopus.mp3", "optionData": {"order": 2, "sound": "(조용)"}},
+        {"optionId": "a4", "label": "🦑 오징어", "imagePath": null, "audioPath": "audio/animals/squid.mp3", "optionData": {"order": 3, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "깊은 바다 속!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌊", "story": "깊은 바다", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_026",
+      "question": "뒷마당",
+      "questionAudioPath": "audio/stories/backyard.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐦 참새", "imagePath": null, "audioPath": "audio/animals/sparrow.mp3", "optionData": {"order": 0, "sound": "짹짹"}},
+        {"optionId": "a2", "label": "🐝 벌", "imagePath": null, "audioPath": "audio/animals/bee.mp3", "optionData": {"order": 1, "sound": "윙윙"}},
+        {"optionId": "a3", "label": "🐈 고양이", "imagePath": null, "audioPath": "audio/animals/cat.mp3", "optionData": {"order": 2, "sound": "야옹"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "뒷마당의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏡", "story": "뒷마당", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_027",
+      "question": "야생동물 보호구역",
+      "questionAudioPath": "audio/stories/wildlife.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐺 늑대", "imagePath": null, "audioPath": "audio/animals/wolf.mp3", "optionData": {"order": 0, "sound": "아우우"}},
+        {"optionId": "a2", "label": "🦅 독수리", "imagePath": null, "audioPath": "audio/animals/eagle.mp3", "optionData": {"order": 1, "sound": "끼오옥"}},
+        {"optionId": "a3", "label": "🦌 사슴", "imagePath": null, "audioPath": "audio/animals/deer.mp3", "optionData": {"order": 2, "sound": "(조용)"}},
+        {"optionId": "a4", "label": "🐻 곰", "imagePath": null, "audioPath": "audio/animals/bear.mp3", "optionData": {"order": 3, "sound": "으르렁"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "야생동물들의 터전!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌲", "story": "야생동물 보호구역", "animalCount": 4, "level": 3}
+    },
+    {
+      "itemId": "as_028",
+      "question": "농가 마당",
+      "questionAudioPath": "audio/stories/farmyard.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐓 닭", "imagePath": null, "audioPath": "audio/animals/rooster.mp3", "optionData": {"order": 0, "sound": "꼬끼오"}},
+        {"optionId": "a2", "label": "🐷 돼지", "imagePath": null, "audioPath": "audio/animals/pig.mp3", "optionData": {"order": 1, "sound": "꿀꿀"}},
+        {"optionId": "a3", "label": "🐄 소", "imagePath": null, "audioPath": "audio/animals/cow.mp3", "optionData": {"order": 2, "sound": "음메"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "시끌벅적한 농가 마당!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌾", "story": "농가 마당", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_029",
+      "question": "조류 공원",
+      "questionAudioPath": "audio/stories/bird_park.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦜 앵무새", "imagePath": null, "audioPath": "audio/animals/parrot.mp3", "optionData": {"order": 0, "sound": "까악"}},
+        {"optionId": "a2", "label": "🦚 공작", "imagePath": null, "audioPath": "audio/animals/peacock.mp3", "optionData": {"order": 1, "sound": "끼욱"}},
+        {"optionId": "a3", "label": "🦢 백조", "imagePath": null, "audioPath": "audio/animals/swan.mp3", "optionData": {"order": 2, "sound": "(조용)"}},
+        {"optionId": "a4", "label": "🦩 플라밍고", "imagePath": null, "audioPath": "audio/animals/flamingo.mp3", "optionData": {"order": 3, "sound": "끽끽"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "아름다운 새들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🦜", "story": "조류 공원", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_030",
+      "question": "물가의 동물들",
+      "questionAudioPath": "audio/stories/waterside.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦆 오리", "imagePath": null, "audioPath": "audio/animals/duck.mp3", "optionData": {"order": 0, "sound": "꽥꽥"}},
+        {"optionId": "a2", "label": "🦢 백조", "imagePath": null, "audioPath": "audio/animals/swan.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🐸 개구리", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"order": 2, "sound": "개굴"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "물가의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "💧", "story": "물가의 동물들", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_031",
+      "question": "마을 축제",
+      "questionAudioPath": "audio/stories/village_festival.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐕 강아지", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"order": 0, "sound": "멍멍"}},
+        {"optionId": "a2", "label": "🐱 고양이", "imagePath": null, "audioPath": "audio/animals/cat.mp3", "optionData": {"order": 1, "sound": "야옹"}},
+        {"optionId": "a3", "label": "🐓 닭", "imagePath": null, "audioPath": "audio/animals/rooster.mp3", "optionData": {"order": 2, "sound": "꼬끼오"}},
+        {"optionId": "a4", "label": "🐄 소", "imagePath": null, "audioPath": "audio/animals/cow.mp3", "optionData": {"order": 3, "sound": "음메"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "마을 축제에 모였어요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🎊", "story": "마을 축제", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_032",
+      "question": "겨울 동물원",
+      "questionAudioPath": "audio/stories/winter_zoo.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐧 펭귄", "imagePath": null, "audioPath": "audio/animals/penguin.mp3", "optionData": {"order": 0, "sound": "꽥꽥"}},
+        {"optionId": "a2", "label": "🐻‍❄️ 북극곰", "imagePath": null, "audioPath": "audio/animals/polar_bear.mp3", "optionData": {"order": 1, "sound": "으르렁"}},
+        {"optionId": "a3", "label": "🦭 물개", "imagePath": null, "audioPath": "audio/animals/seal.mp3", "optionData": {"order": 2, "sound": "아르르"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "추운 곳의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "❄️", "story": "겨울 동물원", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_033",
+      "question": "애완동물 병원",
+      "questionAudioPath": "audio/stories/vet.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐕 강아지", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"order": 0, "sound": "멍멍"}},
+        {"optionId": "a2", "label": "🐱 고양이", "imagePath": null, "audioPath": "audio/animals/cat.mp3", "optionData": {"order": 1, "sound": "야옹"}},
+        {"optionId": "a3", "label": "🐹 햄스터", "imagePath": null, "audioPath": "audio/animals/hamster.mp3", "optionData": {"order": 2, "sound": "찍찍"}},
+        {"optionId": "a4", "label": "🐰 토끼", "imagePath": null, "audioPath": "audio/animals/rabbit.mp3", "optionData": {"order": 3, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "병원에서 치료 받아요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏥", "story": "애완동물 병원", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_034",
+      "question": "과수원 나들이",
+      "questionAudioPath": "audio/stories/orchard.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐦 참새", "imagePath": null, "audioPath": "audio/animals/sparrow.mp3", "optionData": {"order": 0, "sound": "짹짹"}},
+        {"optionId": "a2", "label": "🐝 벌", "imagePath": null, "audioPath": "audio/animals/bee.mp3", "optionData": {"order": 1, "sound": "윙윙"}},
+        {"optionId": "a3", "label": "🦋 나비", "imagePath": null, "audioPath": "audio/animals/butterfly.mp3", "optionData": {"order": 2, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "과수원의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🍎", "story": "과수원 나들이", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_035",
+      "question": "강가 풍경",
+      "questionAudioPath": "audio/stories/riverside.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦆 오리", "imagePath": null, "audioPath": "audio/animals/duck.mp3", "optionData": {"order": 0, "sound": "꽥꽥"}},
+        {"optionId": "a2", "label": "🐸 개구리", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"order": 1, "sound": "개굴"}},
+        {"optionId": "a3", "label": "🐢 거북이", "imagePath": null, "audioPath": "audio/animals/turtle.mp3", "optionData": {"order": 2, "sound": "(조용)"}},
+        {"optionId": "a4", "label": "🦭 수달", "imagePath": null, "audioPath": "audio/animals/otter.mp3", "optionData": {"order": 3, "sound": "끼익"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "강가의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏞️", "story": "강가 풍경", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_036",
+      "question": "방목장",
+      "questionAudioPath": "audio/stories/pasture.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐴 말", "imagePath": null, "audioPath": "audio/animals/horse.mp3", "optionData": {"order": 0, "sound": "히힝"}},
+        {"optionId": "a2", "label": "🐮 소", "imagePath": null, "audioPath": "audio/animals/cow.mp3", "optionData": {"order": 1, "sound": "음메"}},
+        {"optionId": "a3", "label": "🐑 양", "imagePath": null, "audioPath": "audio/animals/sheep.mp3", "optionData": {"order": 2, "sound": "메에"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "넓은 방목장!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌾", "story": "방목장", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_037",
+      "question": "대나무 숲",
+      "questionAudioPath": "audio/stories/bamboo_forest.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐼 판다", "imagePath": null, "audioPath": "audio/animals/panda.mp3", "optionData": {"order": 0, "sound": "으응"}},
+        {"optionId": "a2", "label": "🐦 새", "imagePath": null, "audioPath": "audio/animals/bird.mp3", "optionData": {"order": 1, "sound": "짹짹"}},
+        {"optionId": "a3", "label": "🦋 나비", "imagePath": null, "audioPath": "audio/animals/butterfly.mp3", "optionData": {"order": 2, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "대나무 숲의 판다!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🎋", "story": "대나무 숲", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_038",
+      "question": "산호초 세계",
+      "questionAudioPath": "audio/stories/coral_reef.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐠 열대어", "imagePath": null, "audioPath": "audio/animals/tropical_fish.mp3", "optionData": {"order": 0, "sound": "(조용)"}},
+        {"optionId": "a2", "label": "🐙 문어", "imagePath": null, "audioPath": "audio/animals/octopus.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🐬 돌고래", "imagePath": null, "audioPath": "audio/animals/dolphin.mp3", "optionData": {"order": 2, "sound": "끼익"}},
+        {"optionId": "a4", "label": "🦈 상어", "imagePath": null, "audioPath": "audio/animals/shark.mp3", "optionData": {"order": 3, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "산호초는 아름다워요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🪸", "story": "산호초 세계", "animalCount": 4, "level": 2}
+    },
+    {
+      "itemId": "as_039",
+      "question": "비오는 날",
+      "questionAudioPath": "audio/stories/rainy_day.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐸 개구리", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"order": 0, "sound": "개굴"}},
+        {"optionId": "a2", "label": "🐌 달팽이", "imagePath": null, "audioPath": "audio/animals/snail.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🐛 애벌레", "imagePath": null, "audioPath": "audio/animals/caterpillar.mp3", "optionData": {"order": 2, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "비 오는 날의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌧️", "story": "비오는 날", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_040",
+      "question": "숲속 음악회",
+      "questionAudioPath": "audio/stories/forest_concert.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐦 새", "imagePath": null, "audioPath": "audio/animals/bird.mp3", "optionData": {"order": 0, "sound": "짹짹"}},
+        {"optionId": "a2", "label": "🦗 귀뚜라미", "imagePath": null, "audioPath": "audio/animals/cricket.mp3", "optionData": {"order": 1, "sound": "귀뚤"}},
+        {"optionId": "a3", "label": "🐸 개구리", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"order": 2, "sound": "개굴"}},
+        {"optionId": "a4", "label": "🦉 부엉이", "imagePath": null, "audioPath": "audio/animals/owl.mp3", "optionData": {"order": 3, "sound": "부엉"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "숲속 음악회!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🎵", "story": "숲속 음악회", "animalCount": 4, "level": 3}
+    },
+    {
+      "itemId": "as_041",
+      "question": "목장 저녁",
+      "questionAudioPath": "audio/stories/ranch_evening.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐴 말", "imagePath": null, "audioPath": "audio/animals/horse.mp3", "optionData": {"order": 0, "sound": "히힝"}},
+        {"optionId": "a2", "label": "🐄 소", "imagePath": null, "audioPath": "audio/animals/cow.mp3", "optionData": {"order": 1, "sound": "음메"}},
+        {"optionId": "a3", "label": "🐕 강아지", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"order": 2, "sound": "멍멍"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "저녁이 되었어요!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌆", "story": "목장 저녁", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_042",
+      "question": "정글 탐험대",
+      "questionAudioPath": "audio/stories/jungle_expedition.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦍 고릴라", "imagePath": null, "audioPath": "audio/animals/gorilla.mp3", "optionData": {"order": 0, "sound": "우우"}},
+        {"optionId": "a2", "label": "🐍 뱀", "imagePath": null, "audioPath": "audio/animals/snake.mp3", "optionData": {"order": 1, "sound": "스스"}},
+        {"optionId": "a3", "label": "🦜 앵무새", "imagePath": null, "audioPath": "audio/animals/parrot.mp3", "optionData": {"order": 2, "sound": "까악"}},
+        {"optionId": "a4", "label": "🐅 호랑이", "imagePath": null, "audioPath": "audio/animals/tiger.mp3", "optionData": {"order": 3, "sound": "어흥"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "정글 탐험대 출발!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌴", "story": "정글 탐험대", "animalCount": 4, "level": 3}
+    },
+    {
+      "itemId": "as_043",
+      "question": "봄꽃 동산",
+      "questionAudioPath": "audio/stories/spring_garden.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐝 벌", "imagePath": null, "audioPath": "audio/animals/bee.mp3", "optionData": {"order": 0, "sound": "윙윙"}},
+        {"optionId": "a2", "label": "🦋 나비", "imagePath": null, "audioPath": "audio/animals/butterfly.mp3", "optionData": {"order": 1, "sound": "(조용)"}},
+        {"optionId": "a3", "label": "🐞 무당벌레", "imagePath": null, "audioPath": "audio/animals/ladybug.mp3", "optionData": {"order": 2, "sound": "(조용)"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "봄꽃 동산의 곤충들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌸", "story": "봄꽃 동산", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_044",
+      "question": "늪지대",
+      "questionAudioPath": "audio/stories/swamp.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐊 악어", "imagePath": null, "audioPath": "audio/animals/alligator.mp3", "optionData": {"order": 0, "sound": "으르렁"}},
+        {"optionId": "a2", "label": "🐸 개구리", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"order": 1, "sound": "개굴"}},
+        {"optionId": "a3", "label": "🦆 오리", "imagePath": null, "audioPath": "audio/animals/duck.mp3", "optionData": {"order": 2, "sound": "꽥꽥"}},
+        {"optionId": "a4", "label": "🐍 뱀", "imagePath": null, "audioPath": "audio/animals/snake.mp3", "optionData": {"order": 3, "sound": "스스"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "늪지대의 동물들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌿", "story": "늪지대", "animalCount": 4, "level": 3}
+    },
+    {
+      "itemId": "as_045",
+      "question": "동물 서커스",
+      "questionAudioPath": "audio/stories/circus.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐘 코끼리", "imagePath": null, "audioPath": "audio/animals/elephant.mp3", "optionData": {"order": 0, "sound": "뿌우"}},
+        {"optionId": "a2", "label": "🦁 사자", "imagePath": null, "audioPath": "audio/animals/lion.mp3", "optionData": {"order": 1, "sound": "어흥"}},
+        {"optionId": "a3", "label": "🐴 말", "imagePath": null, "audioPath": "audio/animals/horse.mp3", "optionData": {"order": 2, "sound": "히힝"}},
+        {"optionId": "a4", "label": "🐵 원숭이", "imagePath": null, "audioPath": "audio/animals/monkey.mp3", "optionData": {"order": 3, "sound": "끽끽"}},
+        {"optionId": "a5", "label": "🐕 개", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"order": 4, "sound": "멍멍"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4,a5",
+      "explanation": "서커스 공연!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🎪", "story": "동물 서커스", "animalCount": 5, "level": 4}
+    },
+    {
+      "itemId": "as_046",
+      "question": "계곡 놀이터",
+      "questionAudioPath": "audio/stories/valley.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐸 개구리", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"order": 0, "sound": "개굴"}},
+        {"optionId": "a2", "label": "🐦 물총새", "imagePath": null, "audioPath": "audio/animals/kingfisher.mp3", "optionData": {"order": 1, "sound": "찌익"}},
+        {"optionId": "a3", "label": "🦎 도마뱀", "imagePath": null, "audioPath": "audio/animals/lizard.mp3", "optionData": {"order": 2, "sound": "슉슉"}}
+      ],
+      "correctAnswer": "a1,a2,a3",
+      "explanation": "계곡의 친구들!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "💦", "story": "계곡 놀이터", "animalCount": 3, "level": 1}
+    },
+    {
+      "itemId": "as_047",
+      "question": "초원 일몰",
+      "questionAudioPath": "audio/stories/savanna_sunset.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦁 사자", "imagePath": null, "audioPath": "audio/animals/lion.mp3", "optionData": {"order": 0, "sound": "어흥"}},
+        {"optionId": "a2", "label": "🦓 얼룩말", "imagePath": null, "audioPath": "audio/animals/zebra.mp3", "optionData": {"order": 1, "sound": "히힝"}},
+        {"optionId": "a3", "label": "🦒 기린", "imagePath": null, "audioPath": "audio/animals/giraffe.mp3", "optionData": {"order": 2, "sound": "(조용)"}},
+        {"optionId": "a4", "label": "🐆 표범", "imagePath": null, "audioPath": "audio/animals/leopard.mp3", "optionData": {"order": 3, "sound": "으르렁"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "초원의 일몰!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌅", "story": "초원 일몰", "animalCount": 4, "level": 3}
+    },
+    {
+      "itemId": "as_048",
+      "question": "눈 덮인 산",
+      "questionAudioPath": "audio/stories/snowy_mountain.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦅 독수리", "imagePath": null, "audioPath": "audio/animals/eagle.mp3", "optionData": {"order": 0, "sound": "끼오옥"}},
+        {"optionId": "a2", "label": "🐻 곰", "imagePath": null, "audioPath": "audio/animals/bear.mp3", "optionData": {"order": 1, "sound": "으르렁"}},
+        {"optionId": "a3", "label": "🦊 여우", "imagePath": null, "audioPath": "audio/animals/fox.mp3", "optionData": {"order": 2, "sound": "깡깡"}},
+        {"optionId": "a4", "label": "🐺 늑대", "imagePath": null, "audioPath": "audio/animals/wolf.mp3", "optionData": {"order": 3, "sound": "아우우"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4",
+      "explanation": "눈 덮인 산!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🏔️", "story": "눈 덮인 산", "animalCount": 4, "level": 3}
+    },
+    {
+      "itemId": "as_049",
+      "question": "거대한 동물원",
+      "questionAudioPath": "audio/stories/mega_zoo.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🦁 사자", "imagePath": null, "audioPath": "audio/animals/lion.mp3", "optionData": {"order": 0, "sound": "어흥"}},
+        {"optionId": "a2", "label": "🐘 코끼리", "imagePath": null, "audioPath": "audio/animals/elephant.mp3", "optionData": {"order": 1, "sound": "뿌우"}},
+        {"optionId": "a3", "label": "🦒 기린", "imagePath": null, "audioPath": "audio/animals/giraffe.mp3", "optionData": {"order": 2, "sound": "(조용)"}},
+        {"optionId": "a4", "label": "🦓 얼룩말", "imagePath": null, "audioPath": "audio/animals/zebra.mp3", "optionData": {"order": 3, "sound": "히힝"}},
+        {"optionId": "a5", "label": "🐻 곰", "imagePath": null, "audioPath": "audio/animals/bear.mp3", "optionData": {"order": 4, "sound": "으르렁"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4,a5",
+      "explanation": "거대한 동물원 투어!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🦁", "story": "거대한 동물원", "animalCount": 5, "level": 4}
+    },
+    {
+      "itemId": "as_050",
+      "question": "세계 여행",
+      "questionAudioPath": "audio/stories/world_tour.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "a1", "label": "🐼 판다", "imagePath": null, "audioPath": "audio/animals/panda.mp3", "optionData": {"order": 0, "sound": "으응"}},
+        {"optionId": "a2", "label": "🦘 캥거루", "imagePath": null, "audioPath": "audio/animals/kangaroo.mp3", "optionData": {"order": 1, "sound": "(통통)"}},
+        {"optionId": "a3", "label": "🦁 사자", "imagePath": null, "audioPath": "audio/animals/lion.mp3", "optionData": {"order": 2, "sound": "어흥"}},
+        {"optionId": "a4", "label": "🐧 펭귄", "imagePath": null, "audioPath": "audio/animals/penguin.mp3", "optionData": {"order": 3, "sound": "꽥꽥"}},
+        {"optionId": "a5", "label": "🐫 낙타", "imagePath": null, "audioPath": "audio/animals/camel.mp3", "optionData": {"order": 4, "sound": "으응"}}
+      ],
+      "correctAnswer": "a1,a2,a3,a4,a5",
+      "explanation": "세계 여행 완료!",
+      "explanationAudioPath": null,
+      "itemData": {"setting": "🌍", "story": "세계 여행", "animalCount": 5, "level": 4}
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["auditory", "sequencing", "memory", "story"],
+    "estimatedDuration": 2000,
+    "minAge": 6,
+    "maxAge": 10
+  }
+}

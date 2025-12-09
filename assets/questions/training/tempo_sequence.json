@@ -1,0 +1,34 @@
+{
+  "contentId": "auditory_tempo_sequence_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "sequencing",
+  "title": "빠르기 순서",
+  "instruction": "소리의 빠르기 순서대로 정렬하세요",
+  "instructionAudioPath": "audio/instructions/tempo_sequence.mp3",
+  "difficulty": {"level": 3, "minLevel": 2, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "ts_001",
+      "question": "느린 것부터 빠른 순서로",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐌 느림", "imagePath": null, "audioPath": "audio/tempo/slow.mp3", "optionData": {"tempo": "slow", "order": 0}},
+        {"optionId": "opt2", "label": "🚶 보통", "imagePath": null, "audioPath": "audio/tempo/medium.mp3", "optionData": {"tempo": "medium", "order": 1}},
+        {"optionId": "opt3", "label": "🏃 빠름", "imagePath": null, "audioPath": "audio/tempo/fast.mp3", "optionData": {"tempo": "fast", "order": 2}}
+      ],
+      "correctAnswer": "opt1,opt2,opt3",
+      "explanation": "순서대로 맞았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"sequence": [0, 1, 2], "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["auditory", "tempo", "sequence"],
+    "note": "빠르기 순서 - 1개 샘플"
+  }
+}

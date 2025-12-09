@@ -1,0 +1,49 @@
+{
+  "contentId": "working_memory_n_back_v1",
+  "moduleId": "working_memory",
+  "type": "workingMemory",
+  "pattern": "goNoGo",
+  "title": "N-back 게임",
+  "instruction": "N번 전과 같으면 터치하세요",
+  "instructionAudioPath": "audio/instructions/n_back.mp3",
+  "difficulty": {
+    "level": 3,
+    "minLevel": 1,
+    "maxLevel": 3
+  },
+  "items": [
+    {
+      "itemId": "nb_001",
+      "question": "1-back: 바로 전과 같으면 터치",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "dynamic",
+      "explanation": "1-back 게임!",
+      "explanationAudioPath": null,
+      "itemData": {"n": 1, "sequence": ["🍎", "🍎", "🍌", "🍌", "🍇"], "level": 2}
+    },
+    {
+      "itemId": "nb_002",
+      "question": "2-back: 2번 전과 같으면 터치",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "dynamic",
+      "explanation": "2-back 게임!",
+      "explanationAudioPath": null,
+      "itemData": {"n": 2, "sequence": ["🐕", "🐱", "🐕", "🐱", "🐕"], "level": 3}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["working_memory", "n_back", "go_no_go"],
+    "estimatedDuration": 2000,
+    "minAge": 7,
+    "maxAge": 12,
+    "note": "복잡한 Go/No-Go 패턴 - 2개 샘플만 제공"
+  }
+}

@@ -1,0 +1,780 @@
+{
+  "contentId": "phonological_phoneme_synthesis_v1",
+  "moduleId": "phonological_advanced",
+  "type": "phonological",
+  "pattern": "multipleChoice",
+  "title": "음소 합성",
+  "instruction": "자음과 모음을 합쳐서 글자를 만드세요",
+  "instructionAudioPath": "audio/instructions/phoneme_synthesis_instruction.mp3",
+  "difficulty": {
+    "level": 3,
+    "minLevel": 2,
+    "maxLevel": 4,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "hasCoda": false
+    }
+  },
+  "items": [
+    {
+      "itemId": "ps_001",
+      "question": "ㄱ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "가 🍎", "imagePath": null, "audioPath": null, "optionData": {"char": "가"}},
+        {"optionId": "opt2", "label": "나 🌸", "imagePath": null, "audioPath": null, "optionData": {"char": "나"}},
+        {"optionId": "opt3", "label": "다 ⭐", "imagePath": null, "audioPath": null, "optionData": {"char": "다"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅏ", "coda": null, "result": "가", "level": 1}
+    },
+    {
+      "itemId": "ps_002",
+      "question": "ㄴ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㄴ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "나 🌳", "imagePath": null, "audioPath": null, "optionData": {"char": "나"}},
+        {"optionId": "opt2", "label": "다 🌙", "imagePath": null, "audioPath": null, "optionData": {"char": "다"}},
+        {"optionId": "opt3", "label": "라 🎵", "imagePath": null, "audioPath": null, "optionData": {"char": "라"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "나 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄴ", "vowel": "ㅏ", "coda": null, "result": "나", "level": 1}
+    },
+    {
+      "itemId": "ps_003",
+      "question": "ㄷ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㄷ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "다 🌙", "imagePath": null, "audioPath": null, "optionData": {"char": "다"}},
+        {"optionId": "opt2", "label": "라 🎵", "imagePath": null, "audioPath": null, "optionData": {"char": "라"}},
+        {"optionId": "opt3", "label": "마 🐴", "imagePath": null, "audioPath": null, "optionData": {"char": "마"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "다 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄷ", "vowel": "ㅏ", "coda": null, "result": "다", "level": 1}
+    },
+    {
+      "itemId": "ps_004",
+      "question": "ㄹ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㄹ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "라 🎵", "imagePath": null, "audioPath": null, "optionData": {"char": "라"}},
+        {"optionId": "opt2", "label": "마 🐴", "imagePath": null, "audioPath": null, "optionData": {"char": "마"}},
+        {"optionId": "opt3", "label": "바 🌊", "imagePath": null, "audioPath": null, "optionData": {"char": "바"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "라 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄹ", "vowel": "ㅏ", "coda": null, "result": "라", "level": 1}
+    },
+    {
+      "itemId": "ps_005",
+      "question": "ㅁ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅁ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "마 🐴", "imagePath": null, "audioPath": null, "optionData": {"char": "마"}},
+        {"optionId": "opt2", "label": "바 🌊", "imagePath": null, "audioPath": null, "optionData": {"char": "바"}},
+        {"optionId": "opt3", "label": "사 🦁", "imagePath": null, "audioPath": null, "optionData": {"char": "사"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "마 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅁ", "vowel": "ㅏ", "coda": null, "result": "마", "level": 1}
+    },
+    {
+      "itemId": "ps_006",
+      "question": "ㅂ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "바 🌊", "imagePath": null, "audioPath": null, "optionData": {"char": "바"}},
+        {"optionId": "opt2", "label": "사 🦁", "imagePath": null, "audioPath": null, "optionData": {"char": "사"}},
+        {"optionId": "opt3", "label": "아 👶", "imagePath": null, "audioPath": null, "optionData": {"char": "아"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "바 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅏ", "coda": null, "result": "바", "level": 1}
+    },
+    {
+      "itemId": "ps_007",
+      "question": "ㅅ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅅ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "사 🦁", "imagePath": null, "audioPath": null, "optionData": {"char": "사"}},
+        {"optionId": "opt2", "label": "아 👶", "imagePath": null, "audioPath": null, "optionData": {"char": "아"}},
+        {"optionId": "opt3", "label": "자 🚗", "imagePath": null, "audioPath": null, "optionData": {"char": "자"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "사 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅅ", "vowel": "ㅏ", "coda": null, "result": "사", "level": 1}
+    },
+    {
+      "itemId": "ps_008",
+      "question": "ㅇ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅇ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "아 👶", "imagePath": null, "audioPath": null, "optionData": {"char": "아"}},
+        {"optionId": "opt2", "label": "어 🐟", "imagePath": null, "audioPath": null, "optionData": {"char": "어"}},
+        {"optionId": "opt3", "label": "오 🌊", "imagePath": null, "audioPath": null, "optionData": {"char": "오"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "아 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅇ", "vowel": "ㅏ", "coda": null, "result": "아", "level": 1}
+    },
+    {
+      "itemId": "ps_009",
+      "question": "ㅈ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅈ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "자 🚗", "imagePath": null, "audioPath": null, "optionData": {"char": "자"}},
+        {"optionId": "opt2", "label": "차 🚌", "imagePath": null, "audioPath": null, "optionData": {"char": "차"}},
+        {"optionId": "opt3", "label": "카 🚕", "imagePath": null, "audioPath": null, "optionData": {"char": "카"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "자 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅈ", "vowel": "ㅏ", "coda": null, "result": "자", "level": 1}
+    },
+    {
+      "itemId": "ps_010",
+      "question": "ㅊ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅊ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "차 🚌", "imagePath": null, "audioPath": null, "optionData": {"char": "차"}},
+        {"optionId": "opt2", "label": "카 🚕", "imagePath": null, "audioPath": null, "optionData": {"char": "카"}},
+        {"optionId": "opt3", "label": "타 🎯", "imagePath": null, "audioPath": null, "optionData": {"char": "타"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "차 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅊ", "vowel": "ㅏ", "coda": null, "result": "차", "level": 1}
+    },
+    {
+      "itemId": "ps_011",
+      "question": "ㅋ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅋ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "카 🚕", "imagePath": null, "audioPath": null, "optionData": {"char": "카"}},
+        {"optionId": "opt2", "label": "타 🎯", "imagePath": null, "audioPath": null, "optionData": {"char": "타"}},
+        {"optionId": "opt3", "label": "파 🔵", "imagePath": null, "audioPath": null, "optionData": {"char": "파"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "카 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅋ", "vowel": "ㅏ", "coda": null, "result": "카", "level": 1}
+    },
+    {
+      "itemId": "ps_012",
+      "question": "ㅌ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅌ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "타 🎯", "imagePath": null, "audioPath": null, "optionData": {"char": "타"}},
+        {"optionId": "opt2", "label": "파 🔵", "imagePath": null, "audioPath": null, "optionData": {"char": "파"}},
+        {"optionId": "opt3", "label": "하 💨", "imagePath": null, "audioPath": null, "optionData": {"char": "하"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "타 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅌ", "vowel": "ㅏ", "coda": null, "result": "타", "level": 1}
+    },
+    {
+      "itemId": "ps_013",
+      "question": "ㅍ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅍ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "파 🔵", "imagePath": null, "audioPath": null, "optionData": {"char": "파"}},
+        {"optionId": "opt2", "label": "하 💨", "imagePath": null, "audioPath": null, "optionData": {"char": "하"}},
+        {"optionId": "opt3", "label": "가 🍎", "imagePath": null, "audioPath": null, "optionData": {"char": "가"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "파 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅍ", "vowel": "ㅏ", "coda": null, "result": "파", "level": 1}
+    },
+    {
+      "itemId": "ps_014",
+      "question": "ㅎ + ㅏ = ?",
+      "questionAudioPath": "audio/phonemes/ㅎ_ㅏ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "하 💨", "imagePath": null, "audioPath": null, "optionData": {"char": "하"}},
+        {"optionId": "opt2", "label": "가 🍎", "imagePath": null, "audioPath": null, "optionData": {"char": "가"}},
+        {"optionId": "opt3", "label": "나 🌳", "imagePath": null, "audioPath": null, "optionData": {"char": "나"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "하 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅎ", "vowel": "ㅏ", "coda": null, "result": "하", "level": 1}
+    },
+    {
+      "itemId": "ps_015",
+      "question": "ㄱ + ㅓ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅓ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "거 🐢", "imagePath": null, "audioPath": null, "optionData": {"char": "거"}},
+        {"optionId": "opt2", "label": "너 🫵", "imagePath": null, "audioPath": null, "optionData": {"char": "너"}},
+        {"optionId": "opt3", "label": "더 ➕", "imagePath": null, "audioPath": null, "optionData": {"char": "더"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "거 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅓ", "coda": null, "result": "거", "level": 1}
+    },
+    {
+      "itemId": "ps_016",
+      "question": "ㄴ + ㅓ = ?",
+      "questionAudioPath": "audio/phonemes/ㄴ_ㅓ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "너 🫵", "imagePath": null, "audioPath": null, "optionData": {"char": "너"}},
+        {"optionId": "opt2", "label": "더 ➕", "imagePath": null, "audioPath": null, "optionData": {"char": "더"}},
+        {"optionId": "opt3", "label": "러 💪", "imagePath": null, "audioPath": null, "optionData": {"char": "러"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "너 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄴ", "vowel": "ㅓ", "coda": null, "result": "너", "level": 1}
+    },
+    {
+      "itemId": "ps_017",
+      "question": "ㄱ + ㅗ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅗ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "고 🐱", "imagePath": null, "audioPath": null, "optionData": {"char": "고"}},
+        {"optionId": "opt2", "label": "노 🟡", "imagePath": null, "audioPath": null, "optionData": {"char": "노"}},
+        {"optionId": "opt3", "label": "도 🎯", "imagePath": null, "audioPath": null, "optionData": {"char": "도"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "고 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅗ", "coda": null, "result": "고", "level": 1}
+    },
+    {
+      "itemId": "ps_018",
+      "question": "ㅂ + ㅗ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅗ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "보 💎", "imagePath": null, "audioPath": null, "optionData": {"char": "보"}},
+        {"optionId": "opt2", "label": "소 🐄", "imagePath": null, "audioPath": null, "optionData": {"char": "소"}},
+        {"optionId": "opt3", "label": "오 🔵", "imagePath": null, "audioPath": null, "optionData": {"char": "오"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "보 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅗ", "coda": null, "result": "보", "level": 1}
+    },
+    {
+      "itemId": "ps_019",
+      "question": "ㄱ + ㅜ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅜ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "구 ⚫", "imagePath": null, "audioPath": null, "optionData": {"char": "구"}},
+        {"optionId": "opt2", "label": "누 👁️", "imagePath": null, "audioPath": null, "optionData": {"char": "누"}},
+        {"optionId": "opt3", "label": "두 2️⃣", "imagePath": null, "audioPath": null, "optionData": {"char": "두"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "구 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅜ", "coda": null, "result": "구", "level": 1}
+    },
+    {
+      "itemId": "ps_020",
+      "question": "ㅅ + ㅜ = ?",
+      "questionAudioPath": "audio/phonemes/ㅅ_ㅜ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "수 🔢", "imagePath": null, "audioPath": null, "optionData": {"char": "수"}},
+        {"optionId": "opt2", "label": "우 🐄", "imagePath": null, "audioPath": null, "optionData": {"char": "우"}},
+        {"optionId": "opt3", "label": "주 🧃", "imagePath": null, "audioPath": null, "optionData": {"char": "주"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "수 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅅ", "vowel": "ㅜ", "coda": null, "result": "수", "level": 1}
+    },
+    {
+      "itemId": "ps_021",
+      "question": "ㄱ + ㅣ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅣ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "기 🚩", "imagePath": null, "audioPath": null, "optionData": {"char": "기"}},
+        {"optionId": "opt2", "label": "니 🫵", "imagePath": null, "audioPath": null, "optionData": {"char": "니"}},
+        {"optionId": "opt3", "label": "디 💿", "imagePath": null, "audioPath": null, "optionData": {"char": "디"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "기 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅣ", "coda": null, "result": "기", "level": 1}
+    },
+    {
+      "itemId": "ps_022",
+      "question": "ㅂ + ㅣ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅣ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "비 🌧️", "imagePath": null, "audioPath": null, "optionData": {"char": "비"}},
+        {"optionId": "opt2", "label": "시 ⏰", "imagePath": null, "audioPath": null, "optionData": {"char": "시"}},
+        {"optionId": "opt3", "label": "이 🦷", "imagePath": null, "audioPath": null, "optionData": {"char": "이"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "비 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅣ", "coda": null, "result": "비", "level": 1}
+    },
+    {
+      "itemId": "ps_023",
+      "question": "ㄱ + ㅐ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅐ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "개 🐕", "imagePath": null, "audioPath": null, "optionData": {"char": "개"}},
+        {"optionId": "opt2", "label": "내 👤", "imagePath": null, "audioPath": null, "optionData": {"char": "내"}},
+        {"optionId": "opt3", "label": "대 🎋", "imagePath": null, "audioPath": null, "optionData": {"char": "대"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "개 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅐ", "coda": null, "result": "개", "level": 2}
+    },
+    {
+      "itemId": "ps_024",
+      "question": "ㅅ + ㅐ = ?",
+      "questionAudioPath": "audio/phonemes/ㅅ_ㅐ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "새 🐦", "imagePath": null, "audioPath": null, "optionData": {"char": "새"}},
+        {"optionId": "opt2", "label": "애 👶", "imagePath": null, "audioPath": null, "optionData": {"char": "애"}},
+        {"optionId": "opt3", "label": "재 🌿", "imagePath": null, "audioPath": null, "optionData": {"char": "재"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "새 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅅ", "vowel": "ㅐ", "coda": null, "result": "새", "level": 2}
+    },
+    {
+      "itemId": "ps_025",
+      "question": "ㅂ + ㅐ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅐ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "배 🍐", "imagePath": null, "audioPath": null, "optionData": {"char": "배"}},
+        {"optionId": "opt2", "label": "새 🐦", "imagePath": null, "audioPath": null, "optionData": {"char": "새"}},
+        {"optionId": "opt3", "label": "재 🌿", "imagePath": null, "audioPath": null, "optionData": {"char": "재"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "배 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅐ", "coda": null, "result": "배", "level": 2}
+    },
+    {
+      "itemId": "ps_026",
+      "question": "ㄱ + ㅏ + ㅁ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅏ_ㅁ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "감 🍊", "imagePath": null, "audioPath": null, "optionData": {"char": "감"}},
+        {"optionId": "opt2", "label": "강 🌊", "imagePath": null, "audioPath": null, "optionData": {"char": "강"}},
+        {"optionId": "opt3", "label": "갈 🍂", "imagePath": null, "audioPath": null, "optionData": {"char": "갈"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "감 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅏ", "coda": "ㅁ", "result": "감", "level": 2}
+    },
+    {
+      "itemId": "ps_027",
+      "question": "ㅂ + ㅏ + ㅂ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅏ_ㅂ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "밥 🍚", "imagePath": null, "audioPath": null, "optionData": {"char": "밥"}},
+        {"optionId": "opt2", "label": "반 🏠", "imagePath": null, "audioPath": null, "optionData": {"char": "반"}},
+        {"optionId": "opt3", "label": "발 🦶", "imagePath": null, "audioPath": null, "optionData": {"char": "발"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "밥 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅏ", "coda": "ㅂ", "result": "밥", "level": 2}
+    },
+    {
+      "itemId": "ps_028",
+      "question": "ㄱ + ㅗ + ㅇ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅗ_ㅇ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "공 ⚽", "imagePath": null, "audioPath": null, "optionData": {"char": "공"}},
+        {"optionId": "opt2", "label": "곰 🐻", "imagePath": null, "audioPath": null, "optionData": {"char": "곰"}},
+        {"optionId": "opt3", "label": "골 🥅", "imagePath": null, "audioPath": null, "optionData": {"char": "골"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "공 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅗ", "coda": "ㅇ", "result": "공", "level": 2}
+    },
+    {
+      "itemId": "ps_029",
+      "question": "ㅁ + ㅜ + ㄹ = ?",
+      "questionAudioPath": "audio/phonemes/ㅁ_ㅜ_ㄹ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "물 💧", "imagePath": null, "audioPath": null, "optionData": {"char": "물"}},
+        {"optionId": "opt2", "label": "문 🚪", "imagePath": null, "audioPath": null, "optionData": {"char": "문"}},
+        {"optionId": "opt3", "label": "묵 🥣", "imagePath": null, "audioPath": null, "optionData": {"char": "묵"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "물 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅁ", "vowel": "ㅜ", "coda": "ㄹ", "result": "물", "level": 2}
+    },
+    {
+      "itemId": "ps_030",
+      "question": "ㅅ + ㅏ + ㄴ = ?",
+      "questionAudioPath": "audio/phonemes/ㅅ_ㅏ_ㄴ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "산 ⛰️", "imagePath": null, "audioPath": null, "optionData": {"char": "산"}},
+        {"optionId": "opt2", "label": "살 🥩", "imagePath": null, "audioPath": null, "optionData": {"char": "살"}},
+        {"optionId": "opt3", "label": "삼 3️⃣", "imagePath": null, "audioPath": null, "optionData": {"char": "삼"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "산 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅅ", "vowel": "ㅏ", "coda": "ㄴ", "result": "산", "level": 2}
+    },
+    {
+      "itemId": "ps_031",
+      "question": "ㅂ + ㅏ + ㄹ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅏ_ㄹ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "발 🦶", "imagePath": null, "audioPath": null, "optionData": {"char": "발"}},
+        {"optionId": "opt2", "label": "밤 🌰", "imagePath": null, "audioPath": null, "optionData": {"char": "밤"}},
+        {"optionId": "opt3", "label": "반 🏠", "imagePath": null, "audioPath": null, "optionData": {"char": "반"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "발 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅏ", "coda": "ㄹ", "result": "발", "level": 2}
+    },
+    {
+      "itemId": "ps_032",
+      "question": "ㅈ + ㅣ + ㅂ = ?",
+      "questionAudioPath": "audio/phonemes/ㅈ_ㅣ_ㅂ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "집 🏠", "imagePath": null, "audioPath": null, "optionData": {"char": "집"}},
+        {"optionId": "opt2", "label": "진 🧂", "imagePath": null, "audioPath": null, "optionData": {"char": "진"}},
+        {"optionId": "opt3", "label": "질 🏺", "imagePath": null, "audioPath": null, "optionData": {"char": "질"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "집 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅈ", "vowel": "ㅣ", "coda": "ㅂ", "result": "집", "level": 2}
+    },
+    {
+      "itemId": "ps_033",
+      "question": "ㄲ + ㅗ + ㅊ = ?",
+      "questionAudioPath": "audio/phonemes/ㄲ_ㅗ_ㅊ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "꽃 🌸", "imagePath": null, "audioPath": null, "optionData": {"char": "꽃"}},
+        {"optionId": "opt2", "label": "곶 🏺", "imagePath": null, "audioPath": null, "optionData": {"char": "곶"}},
+        {"optionId": "opt3", "label": "꼴 😤", "imagePath": null, "audioPath": null, "optionData": {"char": "꼴"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "꽃 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄲ", "vowel": "ㅗ", "coda": "ㅊ", "result": "꽃", "level": 3}
+    },
+    {
+      "itemId": "ps_034",
+      "question": "ㄴ + ㅜ + ㄴ = ?",
+      "questionAudioPath": "audio/phonemes/ㄴ_ㅜ_ㄴ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "눈 ❄️", "imagePath": null, "audioPath": null, "optionData": {"char": "눈"}},
+        {"optionId": "opt2", "label": "논 🌾", "imagePath": null, "audioPath": null, "optionData": {"char": "논"}},
+        {"optionId": "opt3", "label": "눌 ⏬", "imagePath": null, "audioPath": null, "optionData": {"char": "눌"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "눈 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄴ", "vowel": "ㅜ", "coda": "ㄴ", "result": "눈", "level": 2}
+    },
+    {
+      "itemId": "ps_035",
+      "question": "ㅁ + ㅜ + ㄴ = ?",
+      "questionAudioPath": "audio/phonemes/ㅁ_ㅜ_ㄴ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "문 🚪", "imagePath": null, "audioPath": null, "optionData": {"char": "문"}},
+        {"optionId": "opt2", "label": "몬 👹", "imagePath": null, "audioPath": null, "optionData": {"char": "몬"}},
+        {"optionId": "opt3", "label": "물 💧", "imagePath": null, "audioPath": null, "optionData": {"char": "물"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "문 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅁ", "vowel": "ㅜ", "coda": "ㄴ", "result": "문", "level": 2}
+    },
+    {
+      "itemId": "ps_036",
+      "question": "ㅊ + ㅐ + ㄱ = ?",
+      "questionAudioPath": "audio/phonemes/ㅊ_ㅐ_ㄱ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "책 📚", "imagePath": null, "audioPath": null, "optionData": {"char": "책"}},
+        {"optionId": "opt2", "label": "책 📖", "imagePath": null, "audioPath": null, "optionData": {"char": "챙"}},
+        {"optionId": "opt3", "label": "척 🎯", "imagePath": null, "audioPath": null, "optionData": {"char": "척"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "책 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅊ", "vowel": "ㅐ", "coda": "ㄱ", "result": "책", "level": 2}
+    },
+    {
+      "itemId": "ps_037",
+      "question": "ㅎ + ㅏ + ㄴ = ?",
+      "questionAudioPath": "audio/phonemes/ㅎ_ㅏ_ㄴ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "한 🇰🇷", "imagePath": null, "audioPath": null, "optionData": {"char": "한"}},
+        {"optionId": "opt2", "label": "할 📝", "imagePath": null, "audioPath": null, "optionData": {"char": "할"}},
+        {"optionId": "opt3", "label": "함 📦", "imagePath": null, "audioPath": null, "optionData": {"char": "함"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "한 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅎ", "vowel": "ㅏ", "coda": "ㄴ", "result": "한", "level": 2}
+    },
+    {
+      "itemId": "ps_038",
+      "question": "ㅅ + ㅜ + ㄴ = ?",
+      "questionAudioPath": "audio/phonemes/ㅅ_ㅜ_ㄴ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "순 👋", "imagePath": null, "audioPath": null, "optionData": {"char": "순"}},
+        {"optionId": "opt2", "label": "숫 🔢", "imagePath": null, "audioPath": null, "optionData": {"char": "숫"}},
+        {"optionId": "opt3", "label": "술 🍶", "imagePath": null, "audioPath": null, "optionData": {"char": "술"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "순 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅅ", "vowel": "ㅜ", "coda": "ㄴ", "result": "순", "level": 2}
+    },
+    {
+      "itemId": "ps_039",
+      "question": "ㄷ + ㅗ + ㄹ = ?",
+      "questionAudioPath": "audio/phonemes/ㄷ_ㅗ_ㄹ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "돌 🪨", "imagePath": null, "audioPath": null, "optionData": {"char": "돌"}},
+        {"optionId": "opt2", "label": "돈 💰", "imagePath": null, "audioPath": null, "optionData": {"char": "돈"}},
+        {"optionId": "opt3", "label": "독 🧪", "imagePath": null, "audioPath": null, "optionData": {"char": "독"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "돌 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄷ", "vowel": "ㅗ", "coda": "ㄹ", "result": "돌", "level": 2}
+    },
+    {
+      "itemId": "ps_040",
+      "question": "ㅂ + ㅗ + ㅁ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅗ_ㅁ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "봄 🌸", "imagePath": null, "audioPath": null, "optionData": {"char": "봄"}},
+        {"optionId": "opt2", "label": "본 👀", "imagePath": null, "audioPath": null, "optionData": {"char": "본"}},
+        {"optionId": "opt3", "label": "볼 ⚽", "imagePath": null, "audioPath": null, "optionData": {"char": "볼"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "봄 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅗ", "coda": "ㅁ", "result": "봄", "level": 2}
+    },
+    {
+      "itemId": "ps_041",
+      "question": "ㄱ + ㅗ + ㅁ = ?",
+      "questionAudioPath": "audio/phonemes/ㄱ_ㅗ_ㅁ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "곰 🐻", "imagePath": null, "audioPath": null, "optionData": {"char": "곰"}},
+        {"optionId": "opt2", "label": "공 ⚽", "imagePath": null, "audioPath": null, "optionData": {"char": "공"}},
+        {"optionId": "opt3", "label": "골 🥅", "imagePath": null, "audioPath": null, "optionData": {"char": "골"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "곰 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄱ", "vowel": "ㅗ", "coda": "ㅁ", "result": "곰", "level": 2}
+    },
+    {
+      "itemId": "ps_042",
+      "question": "ㅂ + ㅏ + ㅁ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅏ_ㅁ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "밤 🌰", "imagePath": null, "audioPath": null, "optionData": {"char": "밤"}},
+        {"optionId": "opt2", "label": "반 🏠", "imagePath": null, "audioPath": null, "optionData": {"char": "반"}},
+        {"optionId": "opt3", "label": "발 🦶", "imagePath": null, "audioPath": null, "optionData": {"char": "발"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "밤 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅏ", "coda": "ㅁ", "result": "밤", "level": 2}
+    },
+    {
+      "itemId": "ps_043",
+      "question": "ㅈ + ㅏ + ㅁ = ?",
+      "questionAudioPath": "audio/phonemes/ㅈ_ㅏ_ㅁ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "잠 💤", "imagePath": null, "audioPath": null, "optionData": {"char": "잠"}},
+        {"optionId": "opt2", "label": "잔 🥛", "imagePath": null, "audioPath": null, "optionData": {"char": "잔"}},
+        {"optionId": "opt3", "label": "잘 ✂️", "imagePath": null, "audioPath": null, "optionData": {"char": "잘"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "잠 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅈ", "vowel": "ㅏ", "coda": "ㅁ", "result": "잠", "level": 2}
+    },
+    {
+      "itemId": "ps_044",
+      "question": "ㅂ + ㅕ + ㄹ = ?",
+      "questionAudioPath": "audio/phonemes/ㅂ_ㅕ_ㄹ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "별 ⭐", "imagePath": null, "audioPath": null, "optionData": {"char": "별"}},
+        {"optionId": "opt2", "label": "벌 🐝", "imagePath": null, "audioPath": null, "optionData": {"char": "벌"}},
+        {"optionId": "opt3", "label": "번 🔢", "imagePath": null, "audioPath": null, "optionData": {"char": "번"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "별 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅂ", "vowel": "ㅕ", "coda": "ㄹ", "result": "별", "level": 3}
+    },
+    {
+      "itemId": "ps_045",
+      "question": "ㄷ + ㅏ + ㄹ = ?",
+      "questionAudioPath": "audio/phonemes/ㄷ_ㅏ_ㄹ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "달 🌙", "imagePath": null, "audioPath": null, "optionData": {"char": "달"}},
+        {"optionId": "opt2", "label": "단 🍬", "imagePath": null, "audioPath": null, "optionData": {"char": "단"}},
+        {"optionId": "opt3", "label": "담 🧱", "imagePath": null, "audioPath": null, "optionData": {"char": "담"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "달 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄷ", "vowel": "ㅏ", "coda": "ㄹ", "result": "달", "level": 2}
+    },
+    {
+      "itemId": "ps_046",
+      "question": "ㅈ + ㅗ + ㅇ = ?",
+      "questionAudioPath": "audio/phonemes/ㅈ_ㅗ_ㅇ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "종 🔔", "imagePath": null, "audioPath": null, "optionData": {"char": "종"}},
+        {"optionId": "opt2", "label": "존 🎯", "imagePath": null, "audioPath": null, "optionData": {"char": "존"}},
+        {"optionId": "opt3", "label": "졸 😴", "imagePath": null, "audioPath": null, "optionData": {"char": "졸"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "종 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅈ", "vowel": "ㅗ", "coda": "ㅇ", "result": "종", "level": 2}
+    },
+    {
+      "itemId": "ps_047",
+      "question": "ㅍ + ㅗ + ㄹ = ?",
+      "questionAudioPath": "audio/phonemes/ㅍ_ㅗ_ㄹ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "폴 ⬇️", "imagePath": null, "audioPath": null, "optionData": {"char": "폴"}},
+        {"optionId": "opt2", "label": "폰 📱", "imagePath": null, "audioPath": null, "optionData": {"char": "폰"}},
+        {"optionId": "opt3", "label": "포 🎯", "imagePath": null, "audioPath": null, "optionData": {"char": "포"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "폴 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅍ", "vowel": "ㅗ", "coda": "ㄹ", "result": "폴", "level": 3}
+    },
+    {
+      "itemId": "ps_048",
+      "question": "ㅎ + ㅗ + ㄹ = ?",
+      "questionAudioPath": "audio/phonemes/ㅎ_ㅗ_ㄹ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "홀 🕳️", "imagePath": null, "audioPath": null, "optionData": {"char": "홀"}},
+        {"optionId": "opt2", "label": "혼 👻", "imagePath": null, "audioPath": null, "optionData": {"char": "혼"}},
+        {"optionId": "opt3", "label": "홍 🔴", "imagePath": null, "audioPath": null, "optionData": {"char": "홍"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "홀 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅎ", "vowel": "ㅗ", "coda": "ㄹ", "result": "홀", "level": 3}
+    },
+    {
+      "itemId": "ps_049",
+      "question": "ㅅ + ㅗ + ㄴ = ?",
+      "questionAudioPath": "audio/phonemes/ㅅ_ㅗ_ㄴ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "손 ✋", "imagePath": null, "audioPath": null, "optionData": {"char": "손"}},
+        {"optionId": "opt2", "label": "솔 🌲", "imagePath": null, "audioPath": null, "optionData": {"char": "솔"}},
+        {"optionId": "opt3", "label": "송 📻", "imagePath": null, "audioPath": null, "optionData": {"char": "송"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "손 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㅅ", "vowel": "ㅗ", "coda": "ㄴ", "result": "손", "level": 2}
+    },
+    {
+      "itemId": "ps_050",
+      "question": "ㄷ + ㅗ + ㄴ = ?",
+      "questionAudioPath": "audio/phonemes/ㄷ_ㅗ_ㄴ.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "돈 💰", "imagePath": null, "audioPath": null, "optionData": {"char": "돈"}},
+        {"optionId": "opt2", "label": "돌 🪨", "imagePath": null, "audioPath": null, "optionData": {"char": "돌"}},
+        {"optionId": "opt3", "label": "독 🧪", "imagePath": null, "audioPath": null, "optionData": {"char": "독"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "돈 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"onset": "ㄷ", "vowel": "ㅗ", "coda": "ㄴ", "result": "돈", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["phonological", "phoneme", "synthesis", "blending", "advanced"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 8
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "contentId": "working_memory_instruction_follow_v1",
+  "moduleId": "working_memory",
+  "type": "workingMemory",
+  "pattern": "sequencing",
+  "title": "지시 따르기",
+  "instruction": "지시를 듣고 순서대로 수행하세요",
+  "instructionAudioPath": "audio/instructions/instruction_follow.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 3
+  },
+  "items": [
+    {
+      "itemId": "if_001",
+      "question": "빨간 별을 터치하세요",
+      "questionAudioPath": "audio/instructions/touch_red_star.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "i1", "label": "⭐", "imagePath": null, "audioPath": null, "optionData": {"color": "red", "shape": "star"}},
+        {"optionId": "i2", "label": "●", "imagePath": null, "audioPath": null, "optionData": {"color": "blue", "shape": "circle"}},
+        {"optionId": "i3", "label": "■", "imagePath": null, "audioPath": null, "optionData": {"color": "green", "shape": "square"}}
+      ],
+      "correctAnswer": "i1",
+      "explanation": "잘했어요!",
+      "explanationAudioPath": null,
+      "itemData": {"steps": 1, "level": 1}
+    },
+    {
+      "itemId": "if_002",
+      "question": "파란 원을 터치하세요",
+      "questionAudioPath": "audio/instructions/touch_blue_circle.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "i1", "label": "⭐", "imagePath": null, "audioPath": null, "optionData": {"color": "red", "shape": "star"}},
+        {"optionId": "i2", "label": "●", "imagePath": null, "audioPath": null, "optionData": {"color": "blue", "shape": "circle"}},
+        {"optionId": "i3", "label": "■", "imagePath": null, "audioPath": null, "optionData": {"color": "green", "shape": "square"}}
+      ],
+      "correctAnswer": "i2",
+      "explanation": "잘했어요!",
+      "explanationAudioPath": null,
+      "itemData": {"steps": 1, "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["working_memory", "instruction", "sequencing"],
+    "estimatedDuration": 2000,
+    "minAge": 6,
+    "maxAge": 10,
+    "note": "복잡한 다단계 지시 게임 - 2개 샘플만 제공"
+  }
+}

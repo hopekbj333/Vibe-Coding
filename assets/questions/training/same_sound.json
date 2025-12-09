@@ -1,0 +1,781 @@
+{
+  "contentId": "phonological_same_sound_v1",
+  "moduleId": "phonological_basic",
+  "type": "phonological",
+  "pattern": "multipleChoice",
+  "title": "같은 소리 찾기",
+  "instruction": "3개의 소리 중 같은 2개를 찾아 터치하세요",
+  "instructionAudioPath": "audio/instructions/same_sound_instruction.mp3",
+  "difficulty": {
+    "level": 1,
+    "minLevel": 1,
+    "maxLevel": 3,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "soundType": "instrument",
+      "similarity": "low"
+    }
+  },
+  "items": [
+    {
+      "itemId": "ss_001",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🥁 북", "imagePath": null, "audioPath": "audio/instruments/drum.mp3", "optionData": {"soundType": "drum"}},
+        {"optionId": "opt2", "label": "🎹 피아노", "imagePath": null, "audioPath": "audio/instruments/piano.mp3", "optionData": {"soundType": "piano"}},
+        {"optionId": "opt3", "label": "🥁 북", "imagePath": null, "audioPath": "audio/instruments/drum.mp3", "optionData": {"soundType": "drum"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 북소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "instrument"}
+    },
+    {
+      "itemId": "ss_002",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🎸 기타", "imagePath": null, "audioPath": "audio/instruments/guitar.mp3", "optionData": {"soundType": "guitar"}},
+        {"optionId": "opt2", "label": "🎸 기타", "imagePath": null, "audioPath": "audio/instruments/guitar.mp3", "optionData": {"soundType": "guitar"}},
+        {"optionId": "opt3", "label": "🎺 트럼펫", "imagePath": null, "audioPath": "audio/instruments/trumpet.mp3", "optionData": {"soundType": "trumpet"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 기타 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "instrument"}
+    },
+    {
+      "itemId": "ss_003",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔔 종", "imagePath": null, "audioPath": "audio/instruments/bell.mp3", "optionData": {"soundType": "bell"}},
+        {"optionId": "opt2", "label": "🎻 바이올린", "imagePath": null, "audioPath": "audio/instruments/violin.mp3", "optionData": {"soundType": "violin"}},
+        {"optionId": "opt3", "label": "🔔 종", "imagePath": null, "audioPath": "audio/instruments/bell.mp3", "optionData": {"soundType": "bell"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 종소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "instrument"}
+    },
+    {
+      "itemId": "ss_004",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐕 멍멍", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"soundType": "dog"}},
+        {"optionId": "opt2", "label": "🐱 야옹", "imagePath": null, "audioPath": "audio/animals/cat.mp3", "optionData": {"soundType": "cat"}},
+        {"optionId": "opt3", "label": "🐕 멍멍", "imagePath": null, "audioPath": "audio/animals/dog.mp3", "optionData": {"soundType": "dog"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 강아지 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_005",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐄 음메", "imagePath": null, "audioPath": "audio/animals/cow.mp3", "optionData": {"soundType": "cow"}},
+        {"optionId": "opt2", "label": "🐄 음메", "imagePath": null, "audioPath": "audio/animals/cow.mp3", "optionData": {"soundType": "cow"}},
+        {"optionId": "opt3", "label": "🐷 꿀꿀", "imagePath": null, "audioPath": "audio/animals/pig.mp3", "optionData": {"soundType": "pig"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 소 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_006",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🌧️ 비", "imagePath": null, "audioPath": "audio/environment/rain.mp3", "optionData": {"soundType": "rain"}},
+        {"optionId": "opt2", "label": "💨 바람", "imagePath": null, "audioPath": "audio/environment/wind.mp3", "optionData": {"soundType": "wind"}},
+        {"optionId": "opt3", "label": "🌧️ 비", "imagePath": null, "audioPath": "audio/environment/rain.mp3", "optionData": {"soundType": "rain"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 비 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "environment"}
+    },
+    {
+      "itemId": "ss_007",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚗 자동차", "imagePath": null, "audioPath": "audio/vehicles/car.mp3", "optionData": {"soundType": "car"}},
+        {"optionId": "opt2", "label": "🚗 자동차", "imagePath": null, "audioPath": "audio/vehicles/car.mp3", "optionData": {"soundType": "car"}},
+        {"optionId": "opt3", "label": "🚂 기차", "imagePath": null, "audioPath": "audio/vehicles/train.mp3", "optionData": {"soundType": "train"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 자동차 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "transport"}
+    },
+    {
+      "itemId": "ss_008",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "📞 전화", "imagePath": null, "audioPath": "audio/home/phone.mp3", "optionData": {"soundType": "phone"}},
+        {"optionId": "opt2", "label": "🚪 노크", "imagePath": null, "audioPath": "audio/home/knock.mp3", "optionData": {"soundType": "knock"}},
+        {"optionId": "opt3", "label": "📞 전화", "imagePath": null, "audioPath": "audio/home/phone.mp3", "optionData": {"soundType": "phone"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 전화벨 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "home"}
+    },
+    {
+      "itemId": "ss_009",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐓 꼬끼오", "imagePath": null, "audioPath": "audio/animals/rooster.mp3", "optionData": {"soundType": "rooster"}},
+        {"optionId": "opt2", "label": "🦆 꽥꽥", "imagePath": null, "audioPath": "audio/animals/duck.mp3", "optionData": {"soundType": "duck"}},
+        {"optionId": "opt3", "label": "🐓 꼬끼오", "imagePath": null, "audioPath": "audio/animals/rooster.mp3", "optionData": {"soundType": "rooster"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 닭 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_010",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🦁 으르렁", "imagePath": null, "audioPath": "audio/animals/lion.mp3", "optionData": {"soundType": "lion"}},
+        {"optionId": "opt2", "label": "🦁 으르렁", "imagePath": null, "audioPath": "audio/animals/lion.mp3", "optionData": {"soundType": "lion"}},
+        {"optionId": "opt3", "label": "🐯 어흥", "imagePath": null, "audioPath": "audio/animals/tiger.mp3", "optionData": {"soundType": "tiger"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 사자 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_011",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐘 뿌우", "imagePath": null, "audioPath": "audio/animals/elephant.mp3", "optionData": {"soundType": "elephant"}},
+        {"optionId": "opt2", "label": "🦒 (기린)", "imagePath": null, "audioPath": "audio/animals/giraffe.mp3", "optionData": {"soundType": "giraffe"}},
+        {"optionId": "opt3", "label": "🐘 뿌우", "imagePath": null, "audioPath": "audio/animals/elephant.mp3", "optionData": {"soundType": "elephant"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 코끼리 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_012",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐎 히힝", "imagePath": null, "audioPath": "audio/animals/horse.mp3", "optionData": {"soundType": "horse"}},
+        {"optionId": "opt2", "label": "🐎 히힝", "imagePath": null, "audioPath": "audio/animals/horse.mp3", "optionData": {"soundType": "horse"}},
+        {"optionId": "opt3", "label": "🐑 메에", "imagePath": null, "audioPath": "audio/animals/sheep.mp3", "optionData": {"soundType": "sheep"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 말 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_013",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐸 개굴", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"soundType": "frog"}},
+        {"optionId": "opt2", "label": "🐦 짹짹", "imagePath": null, "audioPath": "audio/animals/bird.mp3", "optionData": {"soundType": "bird"}},
+        {"optionId": "opt3", "label": "🐸 개굴", "imagePath": null, "audioPath": "audio/animals/frog.mp3", "optionData": {"soundType": "frog"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 개구리 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_014",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐭 찍찍", "imagePath": null, "audioPath": "audio/animals/mouse.mp3", "optionData": {"soundType": "mouse"}},
+        {"optionId": "opt2", "label": "🐭 찍찍", "imagePath": null, "audioPath": "audio/animals/mouse.mp3", "optionData": {"soundType": "mouse"}},
+        {"optionId": "opt3", "label": "🐿️ 다람쥐", "imagePath": null, "audioPath": "audio/animals/squirrel.mp3", "optionData": {"soundType": "squirrel"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 쥐 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_015",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐺 늑대", "imagePath": null, "audioPath": "audio/animals/wolf.mp3", "optionData": {"soundType": "wolf"}},
+        {"optionId": "opt2", "label": "🦊 여우", "imagePath": null, "audioPath": "audio/animals/fox.mp3", "optionData": {"soundType": "fox"}},
+        {"optionId": "opt3", "label": "🐺 늑대", "imagePath": null, "audioPath": "audio/animals/wolf.mp3", "optionData": {"soundType": "wolf"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 늑대 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_016",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🎵 플루트", "imagePath": null, "audioPath": "audio/instruments/flute.mp3", "optionData": {"soundType": "flute"}},
+        {"optionId": "opt2", "label": "🎵 플루트", "imagePath": null, "audioPath": "audio/instruments/flute.mp3", "optionData": {"soundType": "flute"}},
+        {"optionId": "opt3", "label": "🎷 색소폰", "imagePath": null, "audioPath": "audio/instruments/saxophone.mp3", "optionData": {"soundType": "saxophone"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 플루트 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "instrument"}
+    },
+    {
+      "itemId": "ss_017",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🪘 탬버린", "imagePath": null, "audioPath": "audio/instruments/tambourine.mp3", "optionData": {"soundType": "tambourine"}},
+        {"optionId": "opt2", "label": "🎼 실로폰", "imagePath": null, "audioPath": "audio/instruments/xylophone.mp3", "optionData": {"soundType": "xylophone"}},
+        {"optionId": "opt3", "label": "🪘 탬버린", "imagePath": null, "audioPath": "audio/instruments/tambourine.mp3", "optionData": {"soundType": "tambourine"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 탬버린 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "instrument"}
+    },
+    {
+      "itemId": "ss_018",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🎤 노래", "imagePath": null, "audioPath": "audio/instruments/singing.mp3", "optionData": {"soundType": "singing"}},
+        {"optionId": "opt2", "label": "🎤 노래", "imagePath": null, "audioPath": "audio/instruments/singing.mp3", "optionData": {"soundType": "singing"}},
+        {"optionId": "opt3", "label": "📣 외침", "imagePath": null, "audioPath": "audio/voice/shout.mp3", "optionData": {"soundType": "shout"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 노래 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "instrument"}
+    },
+    {
+      "itemId": "ss_019",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🎪 아코디언", "imagePath": null, "audioPath": "audio/instruments/accordion.mp3", "optionData": {"soundType": "accordion"}},
+        {"optionId": "opt2", "label": "🥁 봉고", "imagePath": null, "audioPath": "audio/instruments/bongo.mp3", "optionData": {"soundType": "bongo"}},
+        {"optionId": "opt3", "label": "🎪 아코디언", "imagePath": null, "audioPath": "audio/instruments/accordion.mp3", "optionData": {"soundType": "accordion"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 아코디언 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "instrument"}
+    },
+    {
+      "itemId": "ss_020",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🎺 트롬본", "imagePath": null, "audioPath": "audio/instruments/trombone.mp3", "optionData": {"soundType": "trombone"}},
+        {"optionId": "opt2", "label": "🎺 트롬본", "imagePath": null, "audioPath": "audio/instruments/trombone.mp3", "optionData": {"soundType": "trombone"}},
+        {"optionId": "opt3", "label": "🎺 트럼펫", "imagePath": null, "audioPath": "audio/instruments/trumpet.mp3", "optionData": {"soundType": "trumpet"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 트롬본 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "instrument"}
+    },
+    {
+      "itemId": "ss_021",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐑 메에", "imagePath": null, "audioPath": "audio/animals/sheep.mp3", "optionData": {"soundType": "sheep"}},
+        {"optionId": "opt2", "label": "🐐 염소", "imagePath": null, "audioPath": "audio/animals/goat.mp3", "optionData": {"soundType": "goat"}},
+        {"optionId": "opt3", "label": "🐑 메에", "imagePath": null, "audioPath": "audio/animals/sheep.mp3", "optionData": {"soundType": "sheep"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 양 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_022",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐝 윙윙", "imagePath": null, "audioPath": "audio/animals/bee.mp3", "optionData": {"soundType": "bee"}},
+        {"optionId": "opt2", "label": "🐝 윙윙", "imagePath": null, "audioPath": "audio/animals/bee.mp3", "optionData": {"soundType": "bee"}},
+        {"optionId": "opt3", "label": "🦟 모기", "imagePath": null, "audioPath": "audio/animals/mosquito.mp3", "optionData": {"soundType": "mosquito"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 벌 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_023",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🦅 독수리", "imagePath": null, "audioPath": "audio/animals/eagle.mp3", "optionData": {"soundType": "eagle"}},
+        {"optionId": "opt2", "label": "🐦 참새", "imagePath": null, "audioPath": "audio/animals/sparrow.mp3", "optionData": {"soundType": "sparrow"}},
+        {"optionId": "opt3", "label": "🦅 독수리", "imagePath": null, "audioPath": "audio/animals/eagle.mp3", "optionData": {"soundType": "eagle"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 독수리 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_024",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐒 원숭이", "imagePath": null, "audioPath": "audio/animals/monkey.mp3", "optionData": {"soundType": "monkey"}},
+        {"optionId": "opt2", "label": "🐒 원숭이", "imagePath": null, "audioPath": "audio/animals/monkey.mp3", "optionData": {"soundType": "monkey"}},
+        {"optionId": "opt3", "label": "🦍 고릴라", "imagePath": null, "audioPath": "audio/animals/gorilla.mp3", "optionData": {"soundType": "gorilla"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 원숭이 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_025",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐻 곰", "imagePath": null, "audioPath": "audio/animals/bear.mp3", "optionData": {"soundType": "bear"}},
+        {"optionId": "opt2", "label": "🦌 사슴", "imagePath": null, "audioPath": "audio/animals/deer.mp3", "optionData": {"soundType": "deer"}},
+        {"optionId": "opt3", "label": "🐻 곰", "imagePath": null, "audioPath": "audio/animals/bear.mp3", "optionData": {"soundType": "bear"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 곰 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "animal"}
+    },
+    {
+      "itemId": "ss_026",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "✈️ 비행기", "imagePath": null, "audioPath": "audio/vehicles/airplane.mp3", "optionData": {"soundType": "airplane"}},
+        {"optionId": "opt2", "label": "✈️ 비행기", "imagePath": null, "audioPath": "audio/vehicles/airplane.mp3", "optionData": {"soundType": "airplane"}},
+        {"optionId": "opt3", "label": "🚁 헬리콥터", "imagePath": null, "audioPath": "audio/vehicles/helicopter.mp3", "optionData": {"soundType": "helicopter"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 비행기 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "transport"}
+    },
+    {
+      "itemId": "ss_027",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚂 기차", "imagePath": null, "audioPath": "audio/vehicles/train.mp3", "optionData": {"soundType": "train"}},
+        {"optionId": "opt2", "label": "🚇 지하철", "imagePath": null, "audioPath": "audio/vehicles/subway.mp3", "optionData": {"soundType": "subway"}},
+        {"optionId": "opt3", "label": "🚂 기차", "imagePath": null, "audioPath": "audio/vehicles/train.mp3", "optionData": {"soundType": "train"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 기차 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "transport"}
+    },
+    {
+      "itemId": "ss_028",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚌 버스", "imagePath": null, "audioPath": "audio/vehicles/bus.mp3", "optionData": {"soundType": "bus"}},
+        {"optionId": "opt2", "label": "🚌 버스", "imagePath": null, "audioPath": "audio/vehicles/bus.mp3", "optionData": {"soundType": "bus"}},
+        {"optionId": "opt3", "label": "🚕 택시", "imagePath": null, "audioPath": "audio/vehicles/taxi.mp3", "optionData": {"soundType": "taxi"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 버스 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "transport"}
+    },
+    {
+      "itemId": "ss_029",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚲 자전거", "imagePath": null, "audioPath": "audio/vehicles/bicycle.mp3", "optionData": {"soundType": "bicycle"}},
+        {"optionId": "opt2", "label": "🏍️ 오토바이", "imagePath": null, "audioPath": "audio/vehicles/motorcycle.mp3", "optionData": {"soundType": "motorcycle"}},
+        {"optionId": "opt3", "label": "🚲 자전거", "imagePath": null, "audioPath": "audio/vehicles/bicycle.mp3", "optionData": {"soundType": "bicycle"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 자전거 벨 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "transport"}
+    },
+    {
+      "itemId": "ss_030",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚢 배", "imagePath": null, "audioPath": "audio/vehicles/ship.mp3", "optionData": {"soundType": "ship"}},
+        {"optionId": "opt2", "label": "🚢 배", "imagePath": null, "audioPath": "audio/vehicles/ship.mp3", "optionData": {"soundType": "ship"}},
+        {"optionId": "opt3", "label": "🛥️ 보트", "imagePath": null, "audioPath": "audio/vehicles/boat.mp3", "optionData": {"soundType": "boat"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 배 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "transport"}
+    },
+    {
+      "itemId": "ss_031",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⚡ 천둥", "imagePath": null, "audioPath": "audio/nature/thunder.mp3", "optionData": {"soundType": "thunder"}},
+        {"optionId": "opt2", "label": "🌊 파도", "imagePath": null, "audioPath": "audio/nature/wave.mp3", "optionData": {"soundType": "wave"}},
+        {"optionId": "opt3", "label": "⚡ 천둥", "imagePath": null, "audioPath": "audio/nature/thunder.mp3", "optionData": {"soundType": "thunder"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 천둥 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "nature"}
+    },
+    {
+      "itemId": "ss_032",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🌊 파도", "imagePath": null, "audioPath": "audio/nature/wave.mp3", "optionData": {"soundType": "wave"}},
+        {"optionId": "opt2", "label": "🌊 파도", "imagePath": null, "audioPath": "audio/nature/wave.mp3", "optionData": {"soundType": "wave"}},
+        {"optionId": "opt3", "label": "💧 물방울", "imagePath": null, "audioPath": "audio/nature/water_drop.mp3", "optionData": {"soundType": "water_drop"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 파도 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "nature"}
+    },
+    {
+      "itemId": "ss_033",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔥 불타는 소리", "imagePath": null, "audioPath": "audio/nature/fire.mp3", "optionData": {"soundType": "fire"}},
+        {"optionId": "opt2", "label": "🌪️ 폭풍", "imagePath": null, "audioPath": "audio/nature/storm.mp3", "optionData": {"soundType": "storm"}},
+        {"optionId": "opt3", "label": "🔥 불타는 소리", "imagePath": null, "audioPath": "audio/nature/fire.mp3", "optionData": {"soundType": "fire"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 불타는 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "nature"}
+    },
+    {
+      "itemId": "ss_034",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🍃 나뭇잎", "imagePath": null, "audioPath": "audio/nature/leaves.mp3", "optionData": {"soundType": "leaves"}},
+        {"optionId": "opt2", "label": "🍃 나뭇잎", "imagePath": null, "audioPath": "audio/nature/leaves.mp3", "optionData": {"soundType": "leaves"}},
+        {"optionId": "opt3", "label": "🌳 나무", "imagePath": null, "audioPath": "audio/nature/tree_creak.mp3", "optionData": {"soundType": "tree"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 나뭇잎 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "nature"}
+    },
+    {
+      "itemId": "ss_035",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🌨️ 눈", "imagePath": null, "audioPath": "audio/nature/snow.mp3", "optionData": {"soundType": "snow"}},
+        {"optionId": "opt2", "label": "❄️ 얼음", "imagePath": null, "audioPath": "audio/nature/ice.mp3", "optionData": {"soundType": "ice"}},
+        {"optionId": "opt3", "label": "🌨️ 눈", "imagePath": null, "audioPath": "audio/nature/snow.mp3", "optionData": {"soundType": "snow"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 눈 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "nature"}
+    },
+    {
+      "itemId": "ss_036",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚪 문 열기", "imagePath": null, "audioPath": "audio/home/door_open.mp3", "optionData": {"soundType": "door_open"}},
+        {"optionId": "opt2", "label": "🚪 문 열기", "imagePath": null, "audioPath": "audio/home/door_open.mp3", "optionData": {"soundType": "door_open"}},
+        {"optionId": "opt3", "label": "🚪 문 닫기", "imagePath": null, "audioPath": "audio/home/door_close.mp3", "optionData": {"soundType": "door_close"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 문 여는 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "home"}
+    },
+    {
+      "itemId": "ss_037",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⏰ 알람", "imagePath": null, "audioPath": "audio/home/alarm.mp3", "optionData": {"soundType": "alarm"}},
+        {"optionId": "opt2", "label": "⏰ 시계", "imagePath": null, "audioPath": "audio/home/clock.mp3", "optionData": {"soundType": "clock"}},
+        {"optionId": "opt3", "label": "⏰ 알람", "imagePath": null, "audioPath": "audio/home/alarm.mp3", "optionData": {"soundType": "alarm"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 알람 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "home"}
+    },
+    {
+      "itemId": "ss_038",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "💧 물", "imagePath": null, "audioPath": "audio/home/water.mp3", "optionData": {"soundType": "water"}},
+        {"optionId": "opt2", "label": "💧 물", "imagePath": null, "audioPath": "audio/home/water.mp3", "optionData": {"soundType": "water"}},
+        {"optionId": "opt3", "label": "🚿 샤워", "imagePath": null, "audioPath": "audio/home/shower.mp3", "optionData": {"soundType": "shower"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 물소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "home"}
+    },
+    {
+      "itemId": "ss_039",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔑 열쇠", "imagePath": null, "audioPath": "audio/home/keys.mp3", "optionData": {"soundType": "keys"}},
+        {"optionId": "opt2", "label": "🪙 동전", "imagePath": null, "audioPath": "audio/home/coins.mp3", "optionData": {"soundType": "coins"}},
+        {"optionId": "opt3", "label": "🔑 열쇠", "imagePath": null, "audioPath": "audio/home/keys.mp3", "optionData": {"soundType": "keys"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 열쇠 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "home"}
+    },
+    {
+      "itemId": "ss_040",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "📺 TV", "imagePath": null, "audioPath": "audio/home/tv.mp3", "optionData": {"soundType": "tv"}},
+        {"optionId": "opt2", "label": "📺 TV", "imagePath": null, "audioPath": "audio/home/tv.mp3", "optionData": {"soundType": "tv"}},
+        {"optionId": "opt3", "label": "📻 라디오", "imagePath": null, "audioPath": "audio/home/radio.mp3", "optionData": {"soundType": "radio"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 TV 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "home"}
+    },
+    {
+      "itemId": "ss_041",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔨 망치", "imagePath": null, "audioPath": "audio/tools/hammer.mp3", "optionData": {"soundType": "hammer"}},
+        {"optionId": "opt2", "label": "⚙️ 드릴", "imagePath": null, "audioPath": "audio/tools/drill.mp3", "optionData": {"soundType": "drill"}},
+        {"optionId": "opt3", "label": "🔨 망치", "imagePath": null, "audioPath": "audio/tools/hammer.mp3", "optionData": {"soundType": "hammer"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 망치 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "tools"}
+    },
+    {
+      "itemId": "ss_042",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "✂️ 가위", "imagePath": null, "audioPath": "audio/tools/scissors.mp3", "optionData": {"soundType": "scissors"}},
+        {"optionId": "opt2", "label": "✂️ 가위", "imagePath": null, "audioPath": "audio/tools/scissors.mp3", "optionData": {"soundType": "scissors"}},
+        {"optionId": "opt3", "label": "📎 클립", "imagePath": null, "audioPath": "audio/tools/clip.mp3", "optionData": {"soundType": "clip"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 가위 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "tools"}
+    },
+    {
+      "itemId": "ss_043",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "💡 스위치", "imagePath": null, "audioPath": "audio/home/switch.mp3", "optionData": {"soundType": "switch"}},
+        {"optionId": "opt2", "label": "🖱️ 클릭", "imagePath": null, "audioPath": "audio/home/click.mp3", "optionData": {"soundType": "click"}},
+        {"optionId": "opt3", "label": "💡 스위치", "imagePath": null, "audioPath": "audio/home/switch.mp3", "optionData": {"soundType": "switch"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 스위치 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "home"}
+    },
+    {
+      "itemId": "ss_044",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🎮 게임", "imagePath": null, "audioPath": "audio/home/game.mp3", "optionData": {"soundType": "game"}},
+        {"optionId": "opt2", "label": "🎮 게임", "imagePath": null, "audioPath": "audio/home/game.mp3", "optionData": {"soundType": "game"}},
+        {"optionId": "opt3", "label": "⌨️ 키보드", "imagePath": null, "audioPath": "audio/home/keyboard.mp3", "optionData": {"soundType": "keyboard"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 게임 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "home"}
+    },
+    {
+      "itemId": "ss_045",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🏀 농구공", "imagePath": null, "audioPath": "audio/sports/basketball.mp3", "optionData": {"soundType": "basketball"}},
+        {"optionId": "opt2", "label": "⚽ 축구공", "imagePath": null, "audioPath": "audio/sports/soccer.mp3", "optionData": {"soundType": "soccer"}},
+        {"optionId": "opt3", "label": "🏀 농구공", "imagePath": null, "audioPath": "audio/sports/basketball.mp3", "optionData": {"soundType": "basketball"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 농구공 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "sports"}
+    },
+    {
+      "itemId": "ss_046",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🎾 테니스", "imagePath": null, "audioPath": "audio/sports/tennis.mp3", "optionData": {"soundType": "tennis"}},
+        {"optionId": "opt2", "label": "🎾 테니스", "imagePath": null, "audioPath": "audio/sports/tennis.mp3", "optionData": {"soundType": "tennis"}},
+        {"optionId": "opt3", "label": "🏓 탁구", "imagePath": null, "audioPath": "audio/sports/pingpong.mp3", "optionData": {"soundType": "pingpong"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 테니스 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 2, "soundCategory": "sports"}
+    },
+    {
+      "itemId": "ss_047",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🎳 볼링", "imagePath": null, "audioPath": "audio/sports/bowling.mp3", "optionData": {"soundType": "bowling"}},
+        {"optionId": "opt2", "label": "⛳ 골프", "imagePath": null, "audioPath": "audio/sports/golf.mp3", "optionData": {"soundType": "golf"}},
+        {"optionId": "opt3", "label": "🎳 볼링", "imagePath": null, "audioPath": "audio/sports/bowling.mp3", "optionData": {"soundType": "bowling"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 볼링 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 3, "soundCategory": "sports"}
+    },
+    {
+      "itemId": "ss_048",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "👏 박수", "imagePath": null, "audioPath": "audio/human/clap.mp3", "optionData": {"soundType": "clap"}},
+        {"optionId": "opt2", "label": "👏 박수", "imagePath": null, "audioPath": "audio/human/clap.mp3", "optionData": {"soundType": "clap"}},
+        {"optionId": "opt3", "label": "🤝 악수", "imagePath": null, "audioPath": "audio/human/handshake.mp3", "optionData": {"soundType": "handshake"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 박수 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "human"}
+    },
+    {
+      "itemId": "ss_049",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "😂 웃음", "imagePath": null, "audioPath": "audio/human/laugh.mp3", "optionData": {"soundType": "laugh"}},
+        {"optionId": "opt2", "label": "😭 울음", "imagePath": null, "audioPath": "audio/human/cry.mp3", "optionData": {"soundType": "cry"}},
+        {"optionId": "opt3", "label": "😂 웃음", "imagePath": null, "audioPath": "audio/human/laugh.mp3", "optionData": {"soundType": "laugh"}}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "같은 웃음소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "human"}
+    },
+    {
+      "itemId": "ss_050",
+      "question": "같은 소리를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🤧 기침", "imagePath": null, "audioPath": "audio/human/cough.mp3", "optionData": {"soundType": "cough"}},
+        {"optionId": "opt2", "label": "🤧 기침", "imagePath": null, "audioPath": "audio/human/cough.mp3", "optionData": {"soundType": "cough"}},
+        {"optionId": "opt3", "label": "🤧 재채기", "imagePath": null, "audioPath": "audio/human/sneeze.mp3", "optionData": {"soundType": "sneeze"}}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "같은 기침 소리를 찾았어요!",
+      "explanationAudioPath": "audio/feedback/same_sound_correct.mp3",
+      "itemData": {"level": 1, "soundCategory": "human"}
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["phonological", "sound_discrimination", "basic"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 8
+  }
+}

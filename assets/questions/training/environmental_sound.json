@@ -1,0 +1,118 @@
+{
+  "contentId": "auditory_environmental_sound_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "multipleChoice",
+  "title": "환경음 식별",
+  "instruction": "들리는 소리를 찾으세요",
+  "instructionAudioPath": "audio/instructions/environmental_sound.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 3,
+    "adjustmentThreshold": 3
+  },
+  "items": [
+    {
+      "itemId": "es_001",
+      "question": "무슨 소리일까요?",
+      "questionAudioPath": "audio/environment/rain.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🌧️ 비", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🌊 파도", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "💨 바람", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "비 소리예요!",
+      "explanationAudioPath": null,
+      "itemData": {"category": "weather", "level": 1}
+    },
+    {
+      "itemId": "es_002",
+      "question": "무슨 소리일까요?",
+      "questionAudioPath": "audio/environment/car.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚗 자동차", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🚂 기차", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "✈️ 비행기", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "자동차 소리예요!",
+      "explanationAudioPath": null,
+      "itemData": {"category": "vehicle", "level": 1}
+    },
+    {
+      "itemId": "es_003",
+      "question": "무슨 소리일까요?",
+      "questionAudioPath": "audio/environment/door.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚪 문", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔔 초인종", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "📞 전화", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "문 소리예요!",
+      "explanationAudioPath": null,
+      "itemData": {"category": "home", "level": 1}
+    },
+    {
+      "itemId": "es_004",
+      "question": "무슨 소리일까요?",
+      "questionAudioPath": "audio/environment/water.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🚿 샤워", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🚽 변기", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🚰 수도", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "수도 소리예요!",
+      "explanationAudioPath": null,
+      "itemData": {"category": "home", "level": 1}
+    },
+    {
+      "itemId": "es_005",
+      "question": "무슨 소리일까요?",
+      "questionAudioPath": "audio/environment/bird.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐦 새", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🐕 강아지", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🐱 고양이", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "새 소리예요!",
+      "explanationAudioPath": null,
+      "itemData": {"category": "nature", "level": 1}
+    },
+    {
+      "itemId": "es_006",
+      "question": "무슨 소리일까요?",
+      "questionAudioPath": "audio/environment/clock.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⏰ 알람", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⏱️ 타이머", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🕰️ 시계", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "시계 째깍 소리예요!",
+      "explanationAudioPath": null,
+      "itemData": {"category": "home", "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "lastUpdated": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["auditory", "environmental", "sound", "identification"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 9,
+    "note": "환경음 식별 - 6개 샘플 (쉬운 게임)"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "contentId": "auditory_sound_sequence_memory_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "sequencing",
+  "title": "소리 순서 기억",
+  "instruction": "소리 순서를 기억하고 똑같이 터치하세요",
+  "instructionAudioPath": "audio/instructions/sound_sequence_memory.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "ssm_001",
+      "question": "소리 순서대로 터치하세요",
+      "questionAudioPath": "audio/sequences/dog_cat_bird.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🐕", "imagePath": null, "audioPath": null, "optionData": {"order": 0}},
+        {"optionId": "opt2", "label": "🐱", "imagePath": null, "audioPath": null, "optionData": {"order": 1}},
+        {"optionId": "opt3", "label": "🐦", "imagePath": null, "audioPath": null, "optionData": {"order": 2}}
+      ],
+      "correctAnswer": "opt1,opt2,opt3",
+      "explanation": "순서대로 잘했어요!",
+      "explanationAudioPath": null,
+      "itemData": {"sequence": [0, 1, 2], "length": 3, "level": 1}
+    },
+    {
+      "itemId": "ssm_002",
+      "question": "소리 순서대로 터치하세요",
+      "questionAudioPath": "audio/sequences/bell_drum_piano.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔔", "imagePath": null, "audioPath": null, "optionData": {"order": 0}},
+        {"optionId": "opt2", "label": "🥁", "imagePath": null, "audioPath": null, "optionData": {"order": 1}},
+        {"optionId": "opt3", "label": "🎹", "imagePath": null, "audioPath": null, "optionData": {"order": 2}}
+      ],
+      "correctAnswer": "opt1,opt2,opt3",
+      "explanation": "순서대로 잘했어요!",
+      "explanationAudioPath": null,
+      "itemData": {"sequence": [0, 1, 2], "length": 3, "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["auditory", "sequence", "memory"],
+    "note": "소리 순서 기억 - 2개 샘플"
+  }
+}

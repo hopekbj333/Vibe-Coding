@@ -1,0 +1,361 @@
+{
+  "contentId": "working_memory_card_match_v1",
+  "moduleId": "working_memory_visual",
+  "type": "workingMemory",
+  "pattern": "matching",
+  "title": "카드 짝 맞추기",
+  "instruction": "뒤집힌 카드를 터치해서 같은 짝을 찾으세요",
+  "instructionAudioPath": "audio/instructions/card_match_instruction.mp3",
+  "difficulty": {
+    "level": 1,
+    "minLevel": 1,
+    "maxLevel": 5,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "pairCount": 4,
+      "gridSize": "4x2"
+    }
+  },
+  "items": [
+    {
+      "itemId": "cm_001",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🍎", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🍎", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🍌", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🍌", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🍇", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🍇", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "pairCount": 3, "category": "fruits"}
+    },
+    {
+      "itemId": "cm_002",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🐕", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🐕", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🐱", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🐱", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🐰", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🐰", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "pairCount": 3, "category": "animals"}
+    },
+    {
+      "itemId": "cm_003",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "⚽", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "⚽", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🏀", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🏀", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "⚾", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "⚾", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "pairCount": 3, "category": "sports"}
+    },
+    {
+      "itemId": "cm_004",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🚗", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🚗", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🚌", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🚌", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "✈️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "✈️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "pairCount": 3, "category": "vehicles"}
+    },
+    {
+      "itemId": "cm_005",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "❤️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "❤️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "⭐", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "⭐", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🔵", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🔵", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🟢", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🟢", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "pairCount": 4, "category": "shapes"}
+    },
+    {
+      "itemId": "cm_006",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🍓", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🍓", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🍊", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🍊", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🍋", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🍋", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🍉", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🍉", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "pairCount": 4, "category": "fruits"}
+    },
+    {
+      "itemId": "cm_007",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🐘", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🐘", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🦒", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🦒", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🦁", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🦁", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🐯", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🐯", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "pairCount": 4, "category": "wild_animals"}
+    },
+    {
+      "itemId": "cm_008",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🏀", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🏀", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "⚽", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "⚽", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🏐", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🏐", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🎾", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🎾", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "pairCount": 4, "category": "balls"}
+    },
+    {
+      "itemId": "cm_009",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🌸", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🌸", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🌺", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🌺", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🌻", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🌻", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🌹", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🌹", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "pairCount": 4, "category": "flowers"}
+    },
+    {
+      "itemId": "cm_010",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🚗", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🚗", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🚌", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🚌", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🚑", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🚑", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🚒", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🚒", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c9", "label": "🚓", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c10", "label": "🚓", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "pairCount": 5, "category": "vehicles"}
+    },
+    {
+      "itemId": "cm_011",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🔴", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🔴", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🔵", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🔵", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🟡", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🟡", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🟢", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🟢", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c9", "label": "🟣", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c10", "label": "🟣", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "pairCount": 5, "category": "colors"}
+    },
+    {
+      "itemId": "cm_012",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🍕", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🍕", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🍔", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🍔", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🍟", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🍟", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🌭", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🌭", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c9", "label": "🥪", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c10", "label": "🥪", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "pairCount": 5, "category": "food"}
+    },
+    {
+      "itemId": "cm_013",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "⚽", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "⚽", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🏀", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🏀", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🏈", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🏈", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "⚾", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "⚾", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c9", "label": "🎾", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c10", "label": "🎾", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "pairCount": 5, "category": "sports_balls"}
+    },
+    {
+      "itemId": "cm_014",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🦋", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🦋", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "🐝", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "🐝", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "🐞", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "🐞", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🦗", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🦗", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c9", "label": "🐛", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c10", "label": "🐛", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "pairCount": 5, "category": "insects"}
+    },
+    {
+      "itemId": "cm_015",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "🌙", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "🌙", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "⭐", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "⭐", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "☀️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "☀️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "☁️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "☁️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c9", "label": "🌈", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c10", "label": "🌈", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c11", "label": "⚡", "imagePath": null, "audioPath": null, "optionData": {"pairId": 5}},
+        {"optionId": "c12", "label": "⚡", "imagePath": null, "audioPath": null, "optionData": {"pairId": 5}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 4, "pairCount": 6, "category": "sky"}
+    },
+    {
+      "itemId": "cm_016",
+      "question": "카드 짝을 맞추세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "c1", "label": "📱", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c2", "label": "📱", "imagePath": null, "audioPath": null, "optionData": {"pairId": 0}},
+        {"optionId": "c3", "label": "💻", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c4", "label": "💻", "imagePath": null, "audioPath": null, "optionData": {"pairId": 1}},
+        {"optionId": "c5", "label": "⌨️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c6", "label": "⌨️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 2}},
+        {"optionId": "c7", "label": "🖱️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c8", "label": "🖱️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 3}},
+        {"optionId": "c9", "label": "🖨️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c10", "label": "🖨️", "imagePath": null, "audioPath": null, "optionData": {"pairId": 4}},
+        {"optionId": "c11", "label": "📷", "imagePath": null, "audioPath": null, "optionData": {"pairId": 5}},
+        {"optionId": "c12", "label": "📷", "imagePath": null, "audioPath": null, "optionData": {"pairId": 5}}
+      ],
+      "correctAnswer": "all_pairs",
+      "explanation": "모든 카드 짝을 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 4, "pairCount": 6, "category": "electronics"}
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["working_memory", "visual_memory", "matching"],
+    "estimatedDuration": 2000,
+    "minAge": 6,
+    "maxAge": 10
+  }
+}

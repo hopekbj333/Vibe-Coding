@@ -1,0 +1,76 @@
+{
+  "contentId": "auditory_instrument_sequence_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "sequencing",
+  "title": "악기 순서 기억",
+  "instruction": "악기 소리를 듣고 같은 순서로 터치하세요",
+  "instructionAudioPath": "audio/instructions/instrument_sequence_instruction.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 4,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "sequenceLength": 3
+    }
+  },
+  "items": [
+    {
+      "itemId": "is_001",
+      "question": "악기 순서를 기억하세요",
+      "questionAudioPath": "audio/sequences/piano_drum_guitar.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "inst1", "label": "🎹 피아노", "imagePath": null, "audioPath": "audio/instruments/piano.mp3", "optionData": {"order": 0}},
+        {"optionId": "inst2", "label": "🥁 드럼", "imagePath": null, "audioPath": "audio/instruments/drum.mp3", "optionData": {"order": 1}},
+        {"optionId": "inst3", "label": "🎸 기타", "imagePath": null, "audioPath": "audio/instruments/guitar.mp3", "optionData": {"order": 2}}
+      ],
+      "correctAnswer": "inst1,inst2,inst3",
+      "explanation": "피아노→드럼→기타",
+      "explanationAudioPath": null,
+      "itemData": {"sequence": [0, 1, 2], "length": 3, "level": 1}
+    },
+    {
+      "itemId": "is_002",
+      "question": "악기 순서를 기억하세요",
+      "questionAudioPath": "audio/sequences/violin_trumpet_drum.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "inst1", "label": "🎻 바이올린", "imagePath": null, "audioPath": "audio/instruments/violin.mp3", "optionData": {"order": 0}},
+        {"optionId": "inst2", "label": "🎺 트럼펫", "imagePath": null, "audioPath": "audio/instruments/trumpet.mp3", "optionData": {"order": 1}},
+        {"optionId": "inst3", "label": "🥁 드럼", "imagePath": null, "audioPath": "audio/instruments/drum.mp3", "optionData": {"order": 2}}
+      ],
+      "correctAnswer": "inst1,inst2,inst3",
+      "explanation": "바이올린→트럼펫→드럼",
+      "explanationAudioPath": null,
+      "itemData": {"sequence": [0, 1, 2], "length": 3, "level": 1}
+    },
+    {
+      "itemId": "is_003",
+      "question": "악기 순서를 기억하세요",
+      "questionAudioPath": "audio/sequences/guitar_piano_violin.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "inst1", "label": "🎸 기타", "imagePath": null, "audioPath": "audio/instruments/guitar.mp3", "optionData": {"order": 0}},
+        {"optionId": "inst2", "label": "🎹 피아노", "imagePath": null, "audioPath": "audio/instruments/piano.mp3", "optionData": {"order": 1}},
+        {"optionId": "inst3", "label": "🎻 바이올린", "imagePath": null, "audioPath": "audio/instruments/violin.mp3", "optionData": {"order": 2}}
+      ],
+      "correctAnswer": "inst1,inst2,inst3",
+      "explanation": "기타→피아노→바이올린",
+      "explanationAudioPath": null,
+      "itemData": {"sequence": [0, 1, 2], "length": 3, "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["auditory", "sequencing", "memory", "instruments"],
+    "estimatedDuration": 2000,
+    "minAge": 6,
+    "maxAge": 10,
+    "note": "복잡한 시퀀스 패턴 - 3개 샘플만 제공, 프로그래매틱 생성 권장"
+  }
+}

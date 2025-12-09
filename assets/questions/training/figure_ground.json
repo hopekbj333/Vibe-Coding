@@ -1,0 +1,30 @@
+{
+  "contentId": "visual_figure_ground_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "matching",
+  "title": "배경-전경 구별",
+  "instruction": "숨어있는 물건을 찾으세요",
+  "instructionAudioPath": "audio/instructions/figure_ground.mp3",
+  "difficulty": {"level": 3, "minLevel": 2, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "fg_001",
+      "question": "숨어있는 ⭐를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "star",
+      "explanation": "찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "star", "complexity": "medium", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["visual", "figure_ground", "discrimination"],
+    "note": "배경-전경 구별 - 1개 샘플"
+  }
+}

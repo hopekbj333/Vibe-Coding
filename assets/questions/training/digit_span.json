@@ -1,0 +1,49 @@
+{
+  "contentId": "working_memory_digit_span_v1",
+  "moduleId": "working_memory",
+  "type": "workingMemory",
+  "pattern": "recording",
+  "title": "숫자 폭 기억",
+  "instruction": "숫자를 듣고 똑같이 말하세요",
+  "instructionAudioPath": "audio/instructions/digit_span.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 4
+  },
+  "items": [
+    {
+      "itemId": "ds_001",
+      "question": "2-7-1",
+      "questionAudioPath": "audio/digits/2_7_1.mp3",
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "2-7-1",
+      "explanation": "2-7-1",
+      "explanationAudioPath": null,
+      "itemData": {"digits": [2, 7, 1], "length": 3, "level": 1}
+    },
+    {
+      "itemId": "ds_002",
+      "question": "5-3-9-4",
+      "questionAudioPath": "audio/digits/5_3_9_4.mp3",
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "5-3-9-4",
+      "explanation": "5-3-9-4",
+      "explanationAudioPath": null,
+      "itemData": {"digits": [5, 3, 9, 4], "length": 4, "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["working_memory", "digit", "span", "recording"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 10,
+    "note": "음성 인식 필요 - 2개 샘플만 제공"
+  }
+}

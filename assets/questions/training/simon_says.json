@@ -1,0 +1,63 @@
+{
+  "contentId": "auditory_simon_says_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "sequencing",
+  "title": "사이먼 가라사대",
+  "instruction": "불빛 순서를 기억하고 따라하세요",
+  "instructionAudioPath": "audio/instructions/simon_says_instruction.mp3",
+  "difficulty": {
+    "level": 3,
+    "minLevel": 1,
+    "maxLevel": 5,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "sequenceLength": 3
+    }
+  },
+  "items": [
+    {
+      "itemId": "ss_001",
+      "question": "순서를 기억하세요",
+      "questionAudioPath": "audio/simon/red_blue_green.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "btn1", "label": "🔴 빨강", "imagePath": null, "audioPath": "audio/simon/beep1.mp3", "optionData": {"order": 0}},
+        {"optionId": "btn2", "label": "🔵 파랑", "imagePath": null, "audioPath": "audio/simon/beep2.mp3", "optionData": {"order": 1}},
+        {"optionId": "btn3", "label": "🟢 초록", "imagePath": null, "audioPath": "audio/simon/beep3.mp3", "optionData": {"order": 2}},
+        {"optionId": "btn4", "label": "🟡 노랑", "imagePath": null, "audioPath": "audio/simon/beep4.mp3", "optionData": {"order": -1}}
+      ],
+      "correctAnswer": "btn1,btn2,btn3",
+      "explanation": "빨강→파랑→초록",
+      "explanationAudioPath": null,
+      "itemData": {"sequence": [0, 1, 2], "length": 3, "level": 1}
+    },
+    {
+      "itemId": "ss_002",
+      "question": "순서를 기억하세요",
+      "questionAudioPath": "audio/simon/yellow_red_yellow_blue.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "btn1", "label": "🔴 빨강", "imagePath": null, "audioPath": "audio/simon/beep1.mp3", "optionData": {"order": 1}},
+        {"optionId": "btn2", "label": "🔵 파랑", "imagePath": null, "audioPath": "audio/simon/beep2.mp3", "optionData": {"order": 3}},
+        {"optionId": "btn3", "label": "🟢 초록", "imagePath": null, "audioPath": "audio/simon/beep3.mp3", "optionData": {"order": -1}},
+        {"optionId": "btn4", "label": "🟡 노랑", "imagePath": null, "audioPath": "audio/simon/beep4.mp3", "optionData": {"order": 0}}
+      ],
+      "correctAnswer": "btn4,btn1,btn4,btn2",
+      "explanation": "노랑→빨강→노랑→파랑",
+      "explanationAudioPath": null,
+      "itemData": {"sequence": [3, 0, 3, 1], "length": 4, "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["auditory", "visual", "sequencing", "memory", "simon"],
+    "estimatedDuration": 2000,
+    "minAge": 6,
+    "maxAge": 12,
+    "note": "복잡한 시퀀스 게임 - 2개 샘플만 제공"
+  }
+}

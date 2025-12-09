@@ -1,0 +1,171 @@
+{
+  "contentId": "auditory_sound_rule_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "multipleChoice",
+  "title": "소리 규칙 찾기",
+  "instruction": "패턴을 보고 다음에 올 소리를 찾으세요",
+  "instructionAudioPath": "audio/instructions/sound_rule_instruction.mp3",
+  "difficulty": {
+    "level": 3,
+    "minLevel": 2,
+    "maxLevel": 4,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "patternType": "alternating"
+    }
+  },
+  "items": [
+    {
+      "itemId": "sr_001",
+      "question": "높음-낮음-높음-?",
+      "questionAudioPath": "audio/patterns/high_low_high.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬆️ 높음", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬇️ 낮음", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "낮음이 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "alternating", "type": "pitch", "level": 2}
+    },
+    {
+      "itemId": "sr_002",
+      "question": "낮음-높음-낮음-?",
+      "questionAudioPath": "audio/patterns/low_high_low.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬆️ 높음", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬇️ 낮음", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "높음이 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "alternating", "type": "pitch", "level": 2}
+    },
+    {
+      "itemId": "sr_003",
+      "question": "길게-짧게-길게-?",
+      "questionAudioPath": "audio/patterns/long_short_long.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "➖ 길게", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "• 짧게", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "짧게가 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "alternating", "type": "duration", "level": 2}
+    },
+    {
+      "itemId": "sr_004",
+      "question": "짧게-길게-짧게-?",
+      "questionAudioPath": "audio/patterns/short_long_short.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "➖ 길게", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "• 짧게", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "길게가 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "alternating", "type": "duration", "level": 2}
+    },
+    {
+      "itemId": "sr_005",
+      "question": "크게-작게-크게-?",
+      "questionAudioPath": "audio/patterns/loud_soft_loud.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "📢 크게", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔉 작게", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "작게가 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "alternating", "type": "volume", "level": 2}
+    },
+    {
+      "itemId": "sr_006",
+      "question": "작게-크게-작게-?",
+      "questionAudioPath": "audio/patterns/soft_loud_soft.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "📢 크게", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔉 작게", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "크게가 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "alternating", "type": "volume", "level": 2}
+    },
+    {
+      "itemId": "sr_007",
+      "question": "빠르게-느리게-빠르게-?",
+      "questionAudioPath": "audio/patterns/fast_slow_fast.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⚡ 빠르게", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🐌 느리게", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "느리게가 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "alternating", "type": "tempo", "level": 2}
+    },
+    {
+      "itemId": "sr_008",
+      "question": "높음-높음-낮음-높음-높음-?",
+      "questionAudioPath": "audio/patterns/high_high_low.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬆️ 높음", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬇️ 낮음", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "2-1 패턴!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "AAB", "type": "pitch", "level": 3}
+    },
+    {
+      "itemId": "sr_009",
+      "question": "길게-짧게-짧게-길게-짧게-?",
+      "questionAudioPath": "audio/patterns/long_short_short.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "➖ 길게", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "• 짧게", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "1-2 패턴!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "ABB", "type": "duration", "level": 3}
+    },
+    {
+      "itemId": "sr_010",
+      "question": "크게-크게-작게-크게-크게-?",
+      "questionAudioPath": "audio/patterns/loud_loud_soft.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "📢 크게", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔉 작게", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "2-1 패턴!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "AAB", "type": "volume", "level": 3}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["auditory", "pattern", "rule", "prediction"],
+    "estimatedDuration": 1800,
+    "minAge": 7,
+    "maxAge": 10,
+    "note": "패턴 인식 게임 - 10개 샘플 제공"
+  }
+}

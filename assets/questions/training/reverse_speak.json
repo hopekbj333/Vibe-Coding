@@ -1,0 +1,49 @@
+{
+  "contentId": "working_memory_reverse_speak_v1",
+  "moduleId": "working_memory",
+  "type": "workingMemory",
+  "pattern": "recording",
+  "title": "거꾸로 말하기",
+  "instruction": "단어를 거꾸로 말해보세요",
+  "instructionAudioPath": "audio/instructions/reverse_speak.mp3",
+  "difficulty": {
+    "level": 3,
+    "minLevel": 2,
+    "maxLevel": 4
+  },
+  "items": [
+    {
+      "itemId": "rs_001",
+      "question": "'나비'를 거꾸로 말하세요",
+      "questionAudioPath": "audio/words/나비.mp3",
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "비나",
+      "explanation": "비나!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "나비", "reversed": "비나", "syllables": 2}
+    },
+    {
+      "itemId": "rs_002",
+      "question": "'사과'를 거꾸로 말하세요",
+      "questionAudioPath": "audio/words/사과.mp3",
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "과사",
+      "explanation": "과사!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "사과", "reversed": "과사", "syllables": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["working_memory", "reverse", "recording"],
+    "estimatedDuration": 1500,
+    "minAge": 7,
+    "maxAge": 10,
+    "note": "음성 인식 필요 - 2개 샘플만 제공"
+  }
+}

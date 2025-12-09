@@ -1,0 +1,30 @@
+{
+  "contentId": "attention_target_hunt_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "matching",
+  "title": "목표 찾기",
+  "instruction": "숨어있는 타겟을 찾으세요",
+  "instructionAudioPath": "audio/instructions/target_hunt.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "th_001",
+      "question": "🎯를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "target",
+      "explanation": "찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "🎯", "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["attention", "visual_search", "selective"],
+    "note": "시각 탐색 - 1개 샘플"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "contentId": "working_memory_complex_span_v1",
+  "moduleId": "working_memory",
+  "type": "workingMemory",
+  "pattern": "recording",
+  "title": "복합 기억 폭",
+  "instruction": "숫자와 글자를 함께 기억하세요",
+  "instructionAudioPath": "audio/instructions/complex_span.mp3",
+  "difficulty": {"level": 3, "minLevel": 2, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "cs_001",
+      "question": "3-가-7-나",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "3-가-7-나",
+      "explanation": "잘 기억했어요!",
+      "explanationAudioPath": null,
+      "itemData": {"items": ["3", "가", "7", "나"], "length": 4, "level": 2}
+    }
+  ],
+  "metadata": {"version": "1.0.0", "createdAt": "2025-12-07", "author": "AI Assistant", "tags": ["working_memory", "complex_span"], "note": "1개 샘플"}
+}

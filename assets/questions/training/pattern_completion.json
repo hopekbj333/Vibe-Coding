@@ -1,0 +1,64 @@
+{
+  "contentId": "visual_pattern_completion_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "multipleChoice",
+  "title": "패턴 완성",
+  "instruction": "빠진 부분을 찾아 패턴을 완성하세요",
+  "instructionAudioPath": "audio/instructions/pattern_completion.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "pc_001",
+      "question": "🔴🔵🔴🔵?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔴", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔵", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🟢", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "빨강이 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "AB", "level": 1}
+    },
+    {
+      "itemId": "pc_002",
+      "question": "⭐●⭐●?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⭐", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "●", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "■", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "별이 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "AB", "level": 1}
+    },
+    {
+      "itemId": "pc_003",
+      "question": "🔴🔴🔵🔴🔴?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔴", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔵", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🟢", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "파랑이 와요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "AAB", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["visual", "pattern", "completion"],
+    "note": "패턴 완성 - 3개 샘플"
+  }
+}

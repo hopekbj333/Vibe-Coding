@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 차 몸통 -->
+  <rect x="20" y="100" width="160" height="50" rx="10" fill="#2196F3"/>
+  <!-- 차 지붕 -->
+  <path d="M 50 100 L 70 60 L 130 60 L 150 100" fill="#1976D2"/>
+  <!-- 창문 -->
+  <path d="M 55 95 L 72 65 L 98 65 L 98 95 Z" fill="#B3E5FC"/>
+  <path d="M 102 95 L 102 65 L 128 65 L 145 95 Z" fill="#B3E5FC"/>
+  <!-- 바퀴 -->
+  <circle cx="55" cy="150" r="22" fill="#424242"/>
+  <circle cx="55" cy="150" r="12" fill="#757575"/>
+  <circle cx="145" cy="150" r="22" fill="#424242"/>
+  <circle cx="145" cy="150" r="12" fill="#757575"/>
+  <!-- 헤드라이트 -->
+  <rect x="165" y="110" width="12" height="15" rx="3" fill="#FFEB3B"/>
+  <rect x="23" y="110" width="12" height="15" rx="3" fill="#FFEB3B"/>
+</svg>
+

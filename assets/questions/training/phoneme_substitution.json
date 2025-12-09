@@ -1,0 +1,41 @@
+{
+  "contentId": "phonological_phoneme_substitution_v1",
+  "moduleId": "phonological_advanced",
+  "type": "phonological",
+  "pattern": "recording",
+  "title": "음소 대치",
+  "instruction": "소리를 바꿔서 말해보세요",
+  "instructionAudioPath": "audio/instructions/phoneme_substitution.mp3",
+  "difficulty": {"level": 4, "minLevel": 3, "maxLevel": 5},
+  "items": [
+    {
+      "itemId": "ps_001",
+      "question": "'강아지'에서 'ㄱ'을 'ㅂ'으로 바꾸면?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "방아지",
+      "explanation": "방아지!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "강아지", "from": "ㄱ", "to": "ㅂ", "answer": "방아지", "level": 3}
+    },
+    {
+      "itemId": "ps_002",
+      "question": "'나비'에서 'ㄴ'을 'ㄷ'으로 바꾸면?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "다비",
+      "explanation": "다비!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "나비", "from": "ㄴ", "to": "ㄷ", "answer": "다비", "level": 3}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["phonological", "phoneme", "substitution", "recording"],
+    "note": "음성 인식 필요 - 2개 샘플"
+  }
+}

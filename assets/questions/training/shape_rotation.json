@@ -1,0 +1,34 @@
+{
+  "contentId": "visual_shape_rotation_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "multipleChoice",
+  "title": "도형 회전",
+  "instruction": "회전한 도형을 찾으세요",
+  "instructionAudioPath": "audio/instructions/shape_rotation.mp3",
+  "difficulty": {"level": 3, "minLevel": 2, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "sr_001",
+      "question": "90도 회전하면?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "▶️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔽", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "◀️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "🔽가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "▶️", "angle": 90, "answer": "🔽", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["visual", "rotation", "spatial"],
+    "note": "회전 게임 - 1개 샘플"
+  }
+}

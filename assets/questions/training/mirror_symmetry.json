@@ -1,0 +1,181 @@
+{
+  "contentId": "visual_mirror_symmetry_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "multipleChoice",
+  "title": "거울 대칭",
+  "instruction": "거울/물에 비친 모습을 찾으세요",
+  "instructionAudioPath": "audio/instructions/mirror_symmetry_instruction.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 3,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "symmetryType": "horizontal"
+    }
+  },
+  "items": [
+    {
+      "itemId": "ms_001",
+      "question": "👉의 거울 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "👉", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "👈", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "👆", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "👈이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "👉", "answer": "👈", "type": "horizontal", "level": 1}
+    },
+    {
+      "itemId": "ms_002",
+      "question": "➡️의 거울 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "➡️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬅️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "⬆️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "⬅️가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "➡️", "answer": "⬅️", "type": "horizontal", "level": 1}
+    },
+    {
+      "itemId": "ms_003",
+      "question": "◀️의 거울 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "◀️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "▶️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🔼", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "▶️가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "◀️", "answer": "▶️", "type": "horizontal", "level": 1}
+    },
+    {
+      "itemId": "ms_004",
+      "question": "⬅️의 거울 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬅️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "➡️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "⬇️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "➡️가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "⬅️", "answer": "➡️", "type": "horizontal", "level": 1}
+    },
+    {
+      "itemId": "ms_005",
+      "question": "👈의 거울 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "👈", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "👉", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "👇", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "👉이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "👈", "answer": "👉", "type": "horizontal", "level": 1}
+    },
+    {
+      "itemId": "ms_006",
+      "question": "🔼의 물 속 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔼", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔽", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "▶️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "🔽가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "🔼", "answer": "🔽", "type": "vertical", "level": 1}
+    },
+    {
+      "itemId": "ms_007",
+      "question": "⬆️의 물 속 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬆️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬇️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "➡️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "⬇️가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "⬆️", "answer": "⬇️", "type": "vertical", "level": 1}
+    },
+    {
+      "itemId": "ms_008",
+      "question": "☝️의 물 속 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "☝️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "👇", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "👉", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "👇가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "☝️", "answer": "👇", "type": "vertical", "level": 1}
+    },
+    {
+      "itemId": "ms_009",
+      "question": "▲의 물 속 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "▲", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "▼", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "◀", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "▼가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "▲", "answer": "▼", "type": "vertical", "level": 1}
+    },
+    {
+      "itemId": "ms_010",
+      "question": "▶️의 거울 모습은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "▶️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "◀️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🔽", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "◀️가 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"original": "▶️", "answer": "◀️", "type": "horizontal", "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["visual", "symmetry", "mirror", "spatial"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 9,
+    "note": "대칭 게임 - 10개 샘플 제공 (좌우 5개, 상하 5개)"
+  }
+}

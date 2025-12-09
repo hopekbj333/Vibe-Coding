@@ -1,0 +1,30 @@
+{
+  "contentId": "attention_auditory_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "goNoGo",
+  "title": "청각 주의력",
+  "instruction": "특정 소리만 들리면 터치하세요",
+  "instructionAudioPath": "audio/instructions/auditory_attention.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "aa_001",
+      "question": "'멍멍' 소리만 터치하세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "dog",
+      "explanation": "잘했어요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "dog", "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["attention", "auditory", "go_no_go"],
+    "note": "Go/No-Go 패턴 - 1개 샘플"
+  }
+}

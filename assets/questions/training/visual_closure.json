@@ -1,0 +1,34 @@
+{
+  "contentId": "visual_closure_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "multipleChoice",
+  "title": "부분으로 전체 추측",
+  "instruction": "부분만 보고 전체를 맞춰보세요",
+  "instructionAudioPath": "audio/instructions/visual_closure.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "vc_001",
+      "question": "이것은 무엇일까요? (일부만 보임)",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🍎 사과", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🍌 바나나", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🍇 포도", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "사과예요!",
+      "explanationAudioPath": null,
+      "itemData": {"partialView": "top", "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["visual", "closure", "inference"],
+    "note": "시각 완결성 - 1개 샘플"
+  }
+}

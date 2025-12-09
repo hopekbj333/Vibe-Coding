@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 사과 몸통 -->
+  <ellipse cx="100" cy="120" rx="70" ry="65" fill="#E53935"/>
+  <!-- 사과 하이라이트 -->
+  <ellipse cx="75" cy="100" rx="20" ry="30" fill="#EF5350" opacity="0.6"/>
+  <!-- 사과 꼭지 -->
+  <rect x="95" y="50" width="10" height="20" fill="#795548" rx="2"/>
+  <!-- 사과 잎 -->
+  <ellipse cx="120" cy="55" rx="20" ry="10" fill="#4CAF50" transform="rotate(30 120 55)"/>
+</svg>
+

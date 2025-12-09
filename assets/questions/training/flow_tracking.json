@@ -1,0 +1,30 @@
+{
+  "contentId": "attention_flow_tracking_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "matching",
+  "title": "흐름 추적",
+  "instruction": "움직이는 물체를 눈으로 따라가세요",
+  "instructionAudioPath": "audio/instructions/flow_tracking.mp3",
+  "difficulty": {"level": 3, "minLevel": 1, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "ft_001",
+      "question": "빨간 공을 따라가세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "dynamic",
+      "explanation": "잘 따라갔어요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "red_ball", "speed": "medium", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["attention", "visual_tracking", "sustained"],
+    "note": "동적 게임 - 1개 샘플"
+  }
+}

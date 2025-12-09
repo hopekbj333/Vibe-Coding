@@ -1,0 +1,34 @@
+{
+  "contentId": "working_memory_dual_task_v1",
+  "moduleId": "working_memory",
+  "type": "workingMemory",
+  "pattern": "multipleChoice",
+  "title": "이중 과제",
+  "instruction": "두 가지 일을 동시에 하세요",
+  "instructionAudioPath": "audio/instructions/dual_task.mp3",
+  "difficulty": {"level": 3, "minLevel": 2, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "dt_001",
+      "question": "빨간색이면서 동그란 것은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔴●", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🔴■", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🔵●", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "빨간 원!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["working_memory", "dual_task"],
+    "note": "신규 게임 - 1개 샘플"
+  }
+}

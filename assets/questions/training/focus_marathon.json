@@ -1,0 +1,30 @@
+{
+  "contentId": "attention_focus_marathon_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "goNoGo",
+  "title": "집중력 마라톤",
+  "instruction": "긴 시간 집중해서 타겟만 터치하세요",
+  "instructionAudioPath": "audio/instructions/focus_marathon.mp3",
+  "difficulty": {"level": 3, "minLevel": 2, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "fm_001",
+      "question": "⭐만 터치하세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "star",
+      "explanation": "집중력이 좋아요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "star", "duration": 60, "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["attention", "sustained", "go_no_go"],
+    "note": "지속 주의력 - 1개 샘플"
+  }
+}

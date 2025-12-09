@@ -1,0 +1,764 @@
+{
+  "contentId": "phonological_syllable_merge_v1",
+  "moduleId": "phonological_syllable",
+  "type": "phonological",
+  "pattern": "sequencing",
+  "title": "음절 블록 합치기",
+  "instruction": "음절 블록을 순서대로 눌러서 단어를 만드세요",
+  "instructionAudioPath": "audio/instructions/syllable_merge_instruction.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 3,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "syllableCount": 2
+    }
+  },
+  "items": [
+    {
+      "itemId": "sm_001",
+      "question": "나 + 비 = ?",
+      "questionAudioPath": "audio/syllables/나_비.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "나", "imagePath": null, "audioPath": "audio/syllables/나.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "비", "imagePath": null, "audioPath": "audio/syllables/비.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "나비",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🦋", "word": "나비", "syllables": ["나", "비"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_002",
+      "question": "사 + 과 = ?",
+      "questionAudioPath": "audio/syllables/사_과.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "사", "imagePath": null, "audioPath": "audio/syllables/사.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "과", "imagePath": null, "audioPath": "audio/syllables/과.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "사과",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍎", "word": "사과", "syllables": ["사", "과"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_003",
+      "question": "바 + 나 + 나 = ?",
+      "questionAudioPath": "audio/syllables/바_나_나.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "바", "imagePath": null, "audioPath": "audio/syllables/바.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "나", "imagePath": null, "audioPath": "audio/syllables/나.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "나", "imagePath": null, "audioPath": "audio/syllables/나.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "바나나",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍌", "word": "바나나", "syllables": ["바", "나", "나"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_004",
+      "question": "코 + 끼 + 리 = ?",
+      "questionAudioPath": "audio/syllables/코_끼_리.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "코", "imagePath": null, "audioPath": "audio/syllables/코.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "끼", "imagePath": null, "audioPath": "audio/syllables/끼.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "리", "imagePath": null, "audioPath": "audio/syllables/리.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "코끼리",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐘", "word": "코끼리", "syllables": ["코", "끼", "리"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_005",
+      "question": "강 + 아 + 지 = ?",
+      "questionAudioPath": "audio/syllables/강_아_지.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "강", "imagePath": null, "audioPath": "audio/syllables/강.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "아", "imagePath": null, "audioPath": "audio/syllables/아.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "지", "imagePath": null, "audioPath": "audio/syllables/지.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "강아지",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐕", "word": "강아지", "syllables": ["강", "아", "지"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_006",
+      "question": "하 + 마 = ?",
+      "questionAudioPath": "audio/syllables/하_마.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "하", "imagePath": null, "audioPath": "audio/syllables/하.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "마", "imagePath": null, "audioPath": "audio/syllables/마.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "하마",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🦛", "word": "하마", "syllables": ["하", "마"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_007",
+      "question": "호 + 랑 + 이 = ?",
+      "questionAudioPath": "audio/syllables/호_랑_이.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "호", "imagePath": null, "audioPath": "audio/syllables/호.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "랑", "imagePath": null, "audioPath": "audio/syllables/랑.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "이", "imagePath": null, "audioPath": "audio/syllables/이.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "호랑이",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐯", "word": "호랑이", "syllables": ["호", "랑", "이"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_008",
+      "question": "해 + 바 + 라 + 기 = ?",
+      "questionAudioPath": "audio/syllables/해_바_라_기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "해", "imagePath": null, "audioPath": "audio/syllables/해.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "바", "imagePath": null, "audioPath": "audio/syllables/바.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "라", "imagePath": null, "audioPath": "audio/syllables/라.mp3", "optionData": null},
+        {"optionId": "syl4", "label": "기", "imagePath": null, "audioPath": "audio/syllables/기.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3,syl4",
+      "explanation": "해바라기",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🌻", "word": "해바라기", "syllables": ["해", "바", "라", "기"], "syllableCount": 4}
+    },
+    {
+      "itemId": "sm_009",
+      "question": "토 + 끼 = ?",
+      "questionAudioPath": "audio/syllables/토_끼.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "토", "imagePath": null, "audioPath": "audio/syllables/토.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "끼", "imagePath": null, "audioPath": "audio/syllables/끼.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "토끼",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐰", "word": "토끼", "syllables": ["토", "끼"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_010",
+      "question": "고 + 양 + 이 = ?",
+      "questionAudioPath": "audio/syllables/고_양_이.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "고", "imagePath": null, "audioPath": "audio/syllables/고.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "양", "imagePath": null, "audioPath": "audio/syllables/양.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "이", "imagePath": null, "audioPath": "audio/syllables/이.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "고양이",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐱", "word": "고양이", "syllables": ["고", "양", "이"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_011",
+      "question": "포 + 도 = ?",
+      "questionAudioPath": "audio/syllables/포_도.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "포", "imagePath": null, "audioPath": "audio/syllables/포.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "도", "imagePath": null, "audioPath": "audio/syllables/도.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "포도",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍇", "word": "포도", "syllables": ["포", "도"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_012",
+      "question": "딸 + 기 = ?",
+      "questionAudioPath": "audio/syllables/딸_기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "딸", "imagePath": null, "audioPath": "audio/syllables/딸.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "기", "imagePath": null, "audioPath": "audio/syllables/기.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "딸기",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍓", "word": "딸기", "syllables": ["딸", "기"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_013",
+      "question": "수 + 박 = ?",
+      "questionAudioPath": "audio/syllables/수_박.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "수", "imagePath": null, "audioPath": "audio/syllables/수.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "박", "imagePath": null, "audioPath": "audio/syllables/박.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "수박",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍉", "word": "수박", "syllables": ["수", "박"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_014",
+      "question": "복 + 숭 + 아 = ?",
+      "questionAudioPath": "audio/syllables/복_숭_아.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "복", "imagePath": null, "audioPath": "audio/syllables/복.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "숭", "imagePath": null, "audioPath": "audio/syllables/숭.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "아", "imagePath": null, "audioPath": "audio/syllables/아.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "복숭아",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍑", "word": "복숭아", "syllables": ["복", "숭", "아"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_015",
+      "question": "오 + 렌 + 지 = ?",
+      "questionAudioPath": "audio/syllables/오_렌_지.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "오", "imagePath": null, "audioPath": "audio/syllables/오.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "렌", "imagePath": null, "audioPath": "audio/syllables/렌.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "지", "imagePath": null, "audioPath": "audio/syllables/지.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "오렌지",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍊", "word": "오렌지", "syllables": ["오", "렌", "지"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_016",
+      "question": "체 + 리 = ?",
+      "questionAudioPath": "audio/syllables/체_리.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "체", "imagePath": null, "audioPath": "audio/syllables/체.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "리", "imagePath": null, "audioPath": "audio/syllables/리.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "체리",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍒", "word": "체리", "syllables": ["체", "리"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_017",
+      "question": "키 + 위 = ?",
+      "questionAudioPath": "audio/syllables/키_위.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "키", "imagePath": null, "audioPath": "audio/syllables/키.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "위", "imagePath": null, "audioPath": "audio/syllables/위.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "키위",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🥝", "word": "키위", "syllables": ["키", "위"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_018",
+      "question": "망 + 고 = ?",
+      "questionAudioPath": "audio/syllables/망_고.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "망", "imagePath": null, "audioPath": "audio/syllables/망.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "고", "imagePath": null, "audioPath": "audio/syllables/고.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "망고",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🥭", "word": "망고", "syllables": ["망", "고"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_019",
+      "question": "파 + 인 + 애 + 플 = ?",
+      "questionAudioPath": "audio/syllables/파_인_애_플.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "파", "imagePath": null, "audioPath": "audio/syllables/파.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "인", "imagePath": null, "audioPath": "audio/syllables/인.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "애", "imagePath": null, "audioPath": "audio/syllables/애.mp3", "optionData": null},
+        {"optionId": "syl4", "label": "플", "imagePath": null, "audioPath": "audio/syllables/플.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3,syl4",
+      "explanation": "파인애플",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍍", "word": "파인애플", "syllables": ["파", "인", "애", "플"], "syllableCount": 4}
+    },
+    {
+      "itemId": "sm_020",
+      "question": "레 + 몬 = ?",
+      "questionAudioPath": "audio/syllables/레_몬.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "레", "imagePath": null, "audioPath": "audio/syllables/레.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "몬", "imagePath": null, "audioPath": "audio/syllables/몬.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "레몬",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🍋", "word": "레몬", "syllables": ["레", "몬"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_021",
+      "question": "자 + 동 + 차 = ?",
+      "questionAudioPath": "audio/syllables/자_동_차.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "자", "imagePath": null, "audioPath": "audio/syllables/자.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "동", "imagePath": null, "audioPath": "audio/syllables/동.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "차", "imagePath": null, "audioPath": "audio/syllables/차.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "자동차",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🚗", "word": "자동차", "syllables": ["자", "동", "차"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_022",
+      "question": "비 + 행 + 기 = ?",
+      "questionAudioPath": "audio/syllables/비_행_기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "비", "imagePath": null, "audioPath": "audio/syllables/비.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "행", "imagePath": null, "audioPath": "audio/syllables/행.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "기", "imagePath": null, "audioPath": "audio/syllables/기.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "비행기",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "✈️", "word": "비행기", "syllables": ["비", "행", "기"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_023",
+      "question": "무 + 지 + 개 = ?",
+      "questionAudioPath": "audio/syllables/무_지_개.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "무", "imagePath": null, "audioPath": "audio/syllables/무.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "지", "imagePath": null, "audioPath": "audio/syllables/지.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "개", "imagePath": null, "audioPath": "audio/syllables/개.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "무지개",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🌈", "word": "무지개", "syllables": ["무", "지", "개"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_024",
+      "question": "기 + 린 = ?",
+      "questionAudioPath": "audio/syllables/기_린.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "기", "imagePath": null, "audioPath": "audio/syllables/기.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "린", "imagePath": null, "audioPath": "audio/syllables/린.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "기린",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🦒", "word": "기린", "syllables": ["기", "린"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_025",
+      "question": "다 + 람 + 쥐 = ?",
+      "questionAudioPath": "audio/syllables/다_람_쥐.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "다", "imagePath": null, "audioPath": "audio/syllables/다.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "람", "imagePath": null, "audioPath": "audio/syllables/람.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "쥐", "imagePath": null, "audioPath": "audio/syllables/쥐.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "다람쥐",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐿️", "word": "다람쥐", "syllables": ["다", "람", "쥐"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_026",
+      "question": "펭 + 귄 = ?",
+      "questionAudioPath": "audio/syllables/펭_귄.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "펭", "imagePath": null, "audioPath": "audio/syllables/펭.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "귄", "imagePath": null, "audioPath": "audio/syllables/귄.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "펭귄",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐧", "word": "펭귄", "syllables": ["펭", "귄"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_027",
+      "question": "돌 + 고 + 래 = ?",
+      "questionAudioPath": "audio/syllables/돌_고_래.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "돌", "imagePath": null, "audioPath": "audio/syllables/돌.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "고", "imagePath": null, "audioPath": "audio/syllables/고.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "래", "imagePath": null, "audioPath": "audio/syllables/래.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "돌고래",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐬", "word": "돌고래", "syllables": ["돌", "고", "래"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_028",
+      "question": "공 + 룡 = ?",
+      "questionAudioPath": "audio/syllables/공_룡.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "공", "imagePath": null, "audioPath": "audio/syllables/공.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "룡", "imagePath": null, "audioPath": "audio/syllables/룡.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "공룡",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🦕", "word": "공룡", "syllables": ["공", "룡"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_029",
+      "question": "악 + 어 = ?",
+      "questionAudioPath": "audio/syllables/악_어.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "악", "imagePath": null, "audioPath": "audio/syllables/악.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "어", "imagePath": null, "audioPath": "audio/syllables/어.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "악어",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐊", "word": "악어", "syllables": ["악", "어"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_030",
+      "question": "개 + 미 = ?",
+      "questionAudioPath": "audio/syllables/개_미.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "개", "imagePath": null, "audioPath": "audio/syllables/개.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "미", "imagePath": null, "audioPath": "audio/syllables/미.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "개미",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐜", "word": "개미", "syllables": ["개", "미"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_031",
+      "question": "잠 + 자 + 리 = ?",
+      "questionAudioPath": "audio/syllables/잠_자_리.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "잠", "imagePath": null, "audioPath": "audio/syllables/잠.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "자", "imagePath": null, "audioPath": "audio/syllables/자.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "리", "imagePath": null, "audioPath": "audio/syllables/리.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "잠자리",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🪰", "word": "잠자리", "syllables": ["잠", "자", "리"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_032",
+      "question": "무 + 당 + 벌 + 레 = ?",
+      "questionAudioPath": "audio/syllables/무_당_벌_레.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "무", "imagePath": null, "audioPath": "audio/syllables/무.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "당", "imagePath": null, "audioPath": "audio/syllables/당.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "벌", "imagePath": null, "audioPath": "audio/syllables/벌.mp3", "optionData": null},
+        {"optionId": "syl4", "label": "레", "imagePath": null, "audioPath": "audio/syllables/레.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3,syl4",
+      "explanation": "무당벌레",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🐞", "word": "무당벌레", "syllables": ["무", "당", "벌", "레"], "syllableCount": 4}
+    },
+    {
+      "itemId": "sm_033",
+      "question": "연 + 필 = ?",
+      "questionAudioPath": "audio/syllables/연_필.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "연", "imagePath": null, "audioPath": "audio/syllables/연.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "필", "imagePath": null, "audioPath": "audio/syllables/필.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "연필",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "✏️", "word": "연필", "syllables": ["연", "필"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_034",
+      "question": "지 + 우 + 개 = ?",
+      "questionAudioPath": "audio/syllables/지_우_개.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "지", "imagePath": null, "audioPath": "audio/syllables/지.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "우", "imagePath": null, "audioPath": "audio/syllables/우.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "개", "imagePath": null, "audioPath": "audio/syllables/개.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "지우개",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🧹", "word": "지우개", "syllables": ["지", "우", "개"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_035",
+      "question": "가 + 위 = ?",
+      "questionAudioPath": "audio/syllables/가_위.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "가", "imagePath": null, "audioPath": "audio/syllables/가.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "위", "imagePath": null, "audioPath": "audio/syllables/위.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "가위",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "✂️", "word": "가위", "syllables": ["가", "위"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_036",
+      "question": "공 + 책 = ?",
+      "questionAudioPath": "audio/syllables/공_책.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "공", "imagePath": null, "audioPath": "audio/syllables/공.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "책", "imagePath": null, "audioPath": "audio/syllables/책.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "공책",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "📓", "word": "공책", "syllables": ["공", "책"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_037",
+      "question": "책 + 상 = ?",
+      "questionAudioPath": "audio/syllables/책_상.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "책", "imagePath": null, "audioPath": "audio/syllables/책.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "상", "imagePath": null, "audioPath": "audio/syllables/상.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "책상",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🪑", "word": "책상", "syllables": ["책", "상"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_038",
+      "question": "창 + 문 = ?",
+      "questionAudioPath": "audio/syllables/창_문.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "창", "imagePath": null, "audioPath": "audio/syllables/창.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "문", "imagePath": null, "audioPath": "audio/syllables/문.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "창문",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🪟", "word": "창문", "syllables": ["창", "문"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_039",
+      "question": "컴 + 퓨 + 터 = ?",
+      "questionAudioPath": "audio/syllables/컴_퓨_터.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "컴", "imagePath": null, "audioPath": "audio/syllables/컴.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "퓨", "imagePath": null, "audioPath": "audio/syllables/퓨.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "터", "imagePath": null, "audioPath": "audio/syllables/터.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "컴퓨터",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "💻", "word": "컴퓨터", "syllables": ["컴", "퓨", "터"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_040",
+      "question": "핸 + 드 + 폰 = ?",
+      "questionAudioPath": "audio/syllables/핸_드_폰.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "핸", "imagePath": null, "audioPath": "audio/syllables/핸.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "드", "imagePath": null, "audioPath": "audio/syllables/드.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "폰", "imagePath": null, "audioPath": "audio/syllables/폰.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "핸드폰",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "📱", "word": "핸드폰", "syllables": ["핸", "드", "폰"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_041",
+      "question": "텔 + 레 + 비 + 전 = ?",
+      "questionAudioPath": "audio/syllables/텔_레_비_전.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "텔", "imagePath": null, "audioPath": "audio/syllables/텔.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "레", "imagePath": null, "audioPath": "audio/syllables/레.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "비", "imagePath": null, "audioPath": "audio/syllables/비.mp3", "optionData": null},
+        {"optionId": "syl4", "label": "전", "imagePath": null, "audioPath": "audio/syllables/전.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3,syl4",
+      "explanation": "텔레비전",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "📺", "word": "텔레비전", "syllables": ["텔", "레", "비", "전"], "syllableCount": 4}
+    },
+    {
+      "itemId": "sm_042",
+      "question": "냉 + 장 + 고 = ?",
+      "questionAudioPath": "audio/syllables/냉_장_고.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "냉", "imagePath": null, "audioPath": "audio/syllables/냉.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "장", "imagePath": null, "audioPath": "audio/syllables/장.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "고", "imagePath": null, "audioPath": "audio/syllables/고.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "냉장고",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🧊", "word": "냉장고", "syllables": ["냉", "장", "고"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_043",
+      "question": "선 + 풍 + 기 = ?",
+      "questionAudioPath": "audio/syllables/선_풍_기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "선", "imagePath": null, "audioPath": "audio/syllables/선.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "풍", "imagePath": null, "audioPath": "audio/syllables/풍.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "기", "imagePath": null, "audioPath": "audio/syllables/기.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "선풍기",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🌀", "word": "선풍기", "syllables": ["선", "풍", "기"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_044",
+      "question": "에 + 어 + 컨 = ?",
+      "questionAudioPath": "audio/syllables/에_어_컨.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "에", "imagePath": null, "audioPath": "audio/syllables/에.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "어", "imagePath": null, "audioPath": "audio/syllables/어.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "컨", "imagePath": null, "audioPath": "audio/syllables/컨.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "에어컨",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "❄️", "word": "에어컨", "syllables": ["에", "어", "컨"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_045",
+      "question": "세 + 탁 + 기 = ?",
+      "questionAudioPath": "audio/syllables/세_탁_기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "세", "imagePath": null, "audioPath": "audio/syllables/세.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "탁", "imagePath": null, "audioPath": "audio/syllables/탁.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "기", "imagePath": null, "audioPath": "audio/syllables/기.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "세탁기",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🧺", "word": "세탁기", "syllables": ["세", "탁", "기"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_046",
+      "question": "청 + 소 + 기 = ?",
+      "questionAudioPath": "audio/syllables/청_소_기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "청", "imagePath": null, "audioPath": "audio/syllables/청.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "소", "imagePath": null, "audioPath": "audio/syllables/소.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "기", "imagePath": null, "audioPath": "audio/syllables/기.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "청소기",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🧹", "word": "청소기", "syllables": ["청", "소", "기"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_047",
+      "question": "로 + 봇 = ?",
+      "questionAudioPath": "audio/syllables/로_봇.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "로", "imagePath": null, "audioPath": "audio/syllables/로.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "봇", "imagePath": null, "audioPath": "audio/syllables/봇.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2",
+      "explanation": "로봇",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🤖", "word": "로봇", "syllables": ["로", "봇"], "syllableCount": 2}
+    },
+    {
+      "itemId": "sm_048",
+      "question": "자 + 전 + 거 = ?",
+      "questionAudioPath": "audio/syllables/자_전_거.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "자", "imagePath": null, "audioPath": "audio/syllables/자.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "전", "imagePath": null, "audioPath": "audio/syllables/전.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "거", "imagePath": null, "audioPath": "audio/syllables/거.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3",
+      "explanation": "자전거",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🚲", "word": "자전거", "syllables": ["자", "전", "거"], "syllableCount": 3}
+    },
+    {
+      "itemId": "sm_049",
+      "question": "오 + 토 + 바 + 이 = ?",
+      "questionAudioPath": "audio/syllables/오_토_바_이.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "오", "imagePath": null, "audioPath": "audio/syllables/오.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "토", "imagePath": null, "audioPath": "audio/syllables/토.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "바", "imagePath": null, "audioPath": "audio/syllables/바.mp3", "optionData": null},
+        {"optionId": "syl4", "label": "이", "imagePath": null, "audioPath": "audio/syllables/이.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3,syl4",
+      "explanation": "오토바이",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🏍️", "word": "오토바이", "syllables": ["오", "토", "바", "이"], "syllableCount": 4}
+    },
+    {
+      "itemId": "sm_050",
+      "question": "헬 + 리 + 콥 + 터 = ?",
+      "questionAudioPath": "audio/syllables/헬_리_콥_터.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "syl1", "label": "헬", "imagePath": null, "audioPath": "audio/syllables/헬.mp3", "optionData": null},
+        {"optionId": "syl2", "label": "리", "imagePath": null, "audioPath": "audio/syllables/리.mp3", "optionData": null},
+        {"optionId": "syl3", "label": "콥", "imagePath": null, "audioPath": "audio/syllables/콥.mp3", "optionData": null},
+        {"optionId": "syl4", "label": "터", "imagePath": null, "audioPath": "audio/syllables/터.mp3", "optionData": null}
+      ],
+      "correctAnswer": "syl1,syl2,syl3,syl4",
+      "explanation": "헬리콥터",
+      "explanationAudioPath": null,
+      "itemData": {"emoji": "🚁", "word": "헬리콥터", "syllables": ["헬", "리", "콥", "터"], "syllableCount": 4}
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["phonological", "syllable_synthesis", "blending"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 8
+  }
+}

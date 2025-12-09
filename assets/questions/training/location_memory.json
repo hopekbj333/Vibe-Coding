@@ -1,0 +1,34 @@
+{
+  "contentId": "working_memory_location_memory_v1",
+  "moduleId": "working_memory",
+  "type": "workingMemory",
+  "pattern": "multipleChoice",
+  "title": "위치 기억",
+  "instruction": "물건의 위치를 기억하세요",
+  "instructionAudioPath": "audio/instructions/location_memory.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "lm_001",
+      "question": "사과가 어디 있었나요?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "왼쪽", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "가운데", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "오른쪽", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "왼쪽이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["working_memory", "location", "spatial"],
+    "note": "신규 게임 - 1개 샘플"
+  }
+}

@@ -1,0 +1,780 @@
+{
+  "contentId": "phonological_rhyme_v1",
+  "moduleId": "phonological_intermediate",
+  "type": "phonological",
+  "pattern": "multipleChoice",
+  "title": "각운(끝소리) 찾기",
+  "instruction": "같은 소리로 끝나는 단어 2개를 찾아보세요",
+  "instructionAudioPath": "audio/instructions/rhyme_instruction.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 3,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "rhymeType": "ending_sound"
+    }
+  },
+  "items": [
+    {
+      "itemId": "rh_001",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "고양이 🐱", "imagePath": null, "audioPath": "audio/words/고양이.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "강아지 🐕", "imagePath": null, "audioPath": "audio/words/강아지.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "토끼 🐰", "imagePath": null, "audioPath": "audio/words/토끼.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~이'로 끝나요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "이"}
+    },
+    {
+      "itemId": "rh_002",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "개미 🐜", "imagePath": null, "audioPath": "audio/words/개미.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "나비 🦋", "imagePath": null, "audioPath": "audio/words/나비.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "잠자리 🪰", "imagePath": null, "audioPath": "audio/words/잠자리.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~이'로 끝나요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "이"}
+    },
+    {
+      "itemId": "rh_003",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "자동차 🚗", "imagePath": null, "audioPath": "audio/words/자동차.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "기차 🚂", "imagePath": null, "audioPath": "audio/words/기차.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "버스 🚌", "imagePath": null, "audioPath": "audio/words/버스.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~차'로 끝나요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "차"}
+    },
+    {
+      "itemId": "rh_004",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "하마 🦛", "imagePath": null, "audioPath": "audio/words/하마.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "엄마 👩", "imagePath": null, "audioPath": "audio/words/엄마.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "오빠 👦", "imagePath": null, "audioPath": "audio/words/오빠.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~마'로 끝나요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "마"}
+    },
+    {
+      "itemId": "rh_005",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "공 ⚽", "imagePath": null, "audioPath": "audio/words/공.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "종 🔔", "imagePath": null, "audioPath": "audio/words/종.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "집 🏠", "imagePath": null, "audioPath": "audio/words/집.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅇ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅇ"}
+    },
+    {
+      "itemId": "rh_006",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "연필 ✏️", "imagePath": null, "audioPath": "audio/words/연필.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "칠판 📋", "imagePath": null, "audioPath": "audio/words/칠판.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "책상 📚", "imagePath": null, "audioPath": "audio/words/책상.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄹ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄹ"}
+    },
+    {
+      "itemId": "rh_007",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "무지개 🌈", "imagePath": null, "audioPath": "audio/words/무지개.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "계단 🪜", "imagePath": null, "audioPath": "audio/words/계단.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "개구리 🐸", "imagePath": null, "audioPath": "audio/words/개구리.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~개/~단' 유사음!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㅐ"}
+    },
+    {
+      "itemId": "rh_008",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "꽃 🌸", "imagePath": null, "audioPath": "audio/words/꽃.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "빗 💧", "imagePath": null, "audioPath": "audio/words/빗.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "밧줄 🪢", "imagePath": null, "audioPath": "audio/words/밧줄.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅅ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㅅ"}
+    },
+    {
+      "itemId": "rh_009",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "밤 🌰", "imagePath": null, "audioPath": "audio/words/밤.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "잠 💤", "imagePath": null, "audioPath": "audio/words/잠.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "빵 🍞", "imagePath": null, "audioPath": "audio/words/빵.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅁ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅁ"}
+    },
+    {
+      "itemId": "rh_010",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "코 👃", "imagePath": null, "audioPath": "audio/words/코.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "고 (옛날)", "imagePath": null, "audioPath": "audio/words/고.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "손 ✋", "imagePath": null, "audioPath": "audio/words/손.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~오' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "오"}
+    },
+    {
+      "itemId": "rh_011",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "별 ⭐", "imagePath": null, "audioPath": "audio/words/별.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "달 🌙", "imagePath": null, "audioPath": "audio/words/달.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "구름 ☁️", "imagePath": null, "audioPath": "audio/words/구름.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄹ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄹ"}
+    },
+    {
+      "itemId": "rh_012",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "산 ⛰️", "imagePath": null, "audioPath": "audio/words/산.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "단 🍬", "imagePath": null, "audioPath": "audio/words/단.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "꽃 🌸", "imagePath": null, "audioPath": "audio/words/꽃.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄴ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄴ"}
+    },
+    {
+      "itemId": "rh_013",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "밥 🍚", "imagePath": null, "audioPath": "audio/words/밥.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "숲 🌲", "imagePath": null, "audioPath": "audio/words/숲.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "밥 🍚", "imagePath": null, "audioPath": "audio/words/밥2.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "받침 'ㅂ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅂ"}
+    },
+    {
+      "itemId": "rh_014",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "바다 🌊", "imagePath": null, "audioPath": "audio/words/바다.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "나라 🏛️", "imagePath": null, "audioPath": "audio/words/나라.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "하늘 ☁️", "imagePath": null, "audioPath": "audio/words/하늘.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~다/~라' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "아"}
+    },
+    {
+      "itemId": "rh_015",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "사과 🍎", "imagePath": null, "audioPath": "audio/words/사과.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "포도 🍇", "imagePath": null, "audioPath": "audio/words/포도.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "바나나 🍌", "imagePath": null, "audioPath": "audio/words/바나나.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~과/~도' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "오"}
+    },
+    {
+      "itemId": "rh_016",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "호랑이 🐯", "imagePath": null, "audioPath": "audio/words/호랑이.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "코끼리 🐘", "imagePath": null, "audioPath": "audio/words/코끼리.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "고양이 🐱", "imagePath": null, "audioPath": "audio/words/고양이.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "'~이'로 끝나요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "이"}
+    },
+    {
+      "itemId": "rh_017",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "사탕 🍬", "imagePath": null, "audioPath": "audio/words/사탕.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "빵 🍞", "imagePath": null, "audioPath": "audio/words/빵.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "땅 🌍", "imagePath": null, "audioPath": "audio/words/땅.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "받침 'ㅇ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅇ"}
+    },
+    {
+      "itemId": "rh_018",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "눈 ❄️", "imagePath": null, "audioPath": "audio/words/눈.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "문 🚪", "imagePath": null, "audioPath": "audio/words/문.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "밤 🌰", "imagePath": null, "audioPath": "audio/words/밤.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄴ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄴ"}
+    },
+    {
+      "itemId": "rh_019",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "가위 ✂️", "imagePath": null, "audioPath": "audio/words/가위.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "나비 🦋", "imagePath": null, "audioPath": "audio/words/나비.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "토끼 🐰", "imagePath": null, "audioPath": "audio/words/토끼.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~위/~비' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "이"}
+    },
+    {
+      "itemId": "rh_020",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "구두 👞", "imagePath": null, "audioPath": "audio/words/구두.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "두부 🧈", "imagePath": null, "audioPath": "audio/words/두부.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "나무 🌳", "imagePath": null, "audioPath": "audio/words/나무.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~두' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "우"}
+    },
+    {
+      "itemId": "rh_021",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "책 📚", "imagePath": null, "audioPath": "audio/words/책.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "벽 🧱", "imagePath": null, "audioPath": "audio/words/벽.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "공 ⚽", "imagePath": null, "audioPath": "audio/words/공.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄱ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄱ"}
+    },
+    {
+      "itemId": "rh_022",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "해 ☀️", "imagePath": null, "audioPath": "audio/words/해.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "새 🐦", "imagePath": null, "audioPath": "audio/words/새.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "물 💧", "imagePath": null, "audioPath": "audio/words/물.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~애' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "애"}
+    },
+    {
+      "itemId": "rh_023",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "비 🌧️", "imagePath": null, "audioPath": "audio/words/비.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "기 (깃발)", "imagePath": null, "audioPath": "audio/words/기.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "꽃 🌸", "imagePath": null, "audioPath": "audio/words/꽃.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~이' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "이"}
+    },
+    {
+      "itemId": "rh_024",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "물고기 🐟", "imagePath": null, "audioPath": "audio/words/물고기.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "나무 🌳", "imagePath": null, "audioPath": "audio/words/나무.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "가구 🛋️", "imagePath": null, "audioPath": "audio/words/가구.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt2,opt3",
+      "explanation": "'~무/~구' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "우"}
+    },
+    {
+      "itemId": "rh_025",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "손 ✋", "imagePath": null, "audioPath": "audio/words/손.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "돈 💰", "imagePath": null, "audioPath": "audio/words/돈.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "별 ⭐", "imagePath": null, "audioPath": "audio/words/별.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄴ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄴ"}
+    },
+    {
+      "itemId": "rh_026",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "사랑 ❤️", "imagePath": null, "audioPath": "audio/words/사랑.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "바람 💨", "imagePath": null, "audioPath": "audio/words/바람.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "공 ⚽", "imagePath": null, "audioPath": "audio/words/공.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅁ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅁ"}
+    },
+    {
+      "itemId": "rh_027",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "봄 🌸", "imagePath": null, "audioPath": "audio/words/봄.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "곰 🐻", "imagePath": null, "audioPath": "audio/words/곰.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "꽃 🌺", "imagePath": null, "audioPath": "audio/words/꽃.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅁ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅁ"}
+    },
+    {
+      "itemId": "rh_028",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "옷 👕", "imagePath": null, "audioPath": "audio/words/옷.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "꽃 🌸", "imagePath": null, "audioPath": "audio/words/꽃.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "잎 🍃", "imagePath": null, "audioPath": "audio/words/잎.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅅ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㅅ"}
+    },
+    {
+      "itemId": "rh_029",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "닭 🐓", "imagePath": null, "audioPath": "audio/words/닭.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "곧", "imagePath": null, "audioPath": "audio/words/곧.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "눈 ❄️", "imagePath": null, "audioPath": "audio/words/눈.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄱ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㄱ"}
+    },
+    {
+      "itemId": "rh_030",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "빛 💡", "imagePath": null, "audioPath": "audio/words/빛.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "잇몸", "imagePath": null, "audioPath": "audio/words/잇몸.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "솥 🍲", "imagePath": null, "audioPath": "audio/words/솥.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "받침 'ㅅ/ㅅ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㅅ"}
+    },
+    {
+      "itemId": "rh_031",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "바지 👖", "imagePath": null, "audioPath": "audio/words/바지.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "강아지 🐕", "imagePath": null, "audioPath": "audio/words/강아지.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "거미 🕷️", "imagePath": null, "audioPath": "audio/words/거미.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~지'로 끝나요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "지"}
+    },
+    {
+      "itemId": "rh_032",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "하늘 ☁️", "imagePath": null, "audioPath": "audio/words/하늘.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "구름 ☁️", "imagePath": null, "audioPath": "audio/words/구름.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "바다 🌊", "imagePath": null, "audioPath": "audio/words/바다.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄹ/ㅁ' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄹ"}
+    },
+    {
+      "itemId": "rh_033",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "소나기 🌧️", "imagePath": null, "audioPath": "audio/words/소나기.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "해바라기 🌻", "imagePath": null, "audioPath": "audio/words/해바라기.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "토끼 🐰", "imagePath": null, "audioPath": "audio/words/토끼.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~기'로 끝나요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "기"}
+    },
+    {
+      "itemId": "rh_034",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "다리 🦵", "imagePath": null, "audioPath": "audio/words/다리.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "코끼리 🐘", "imagePath": null, "audioPath": "audio/words/코끼리.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "거미 🕷️", "imagePath": null, "audioPath": "audio/words/거미.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~리'로 끝나요!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "리"}
+    },
+    {
+      "itemId": "rh_035",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "토끼 🐰", "imagePath": null, "audioPath": "audio/words/토끼.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "떡 🍡", "imagePath": null, "audioPath": "audio/words/떡.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "먹이", "imagePath": null, "audioPath": "audio/words/먹이.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "'~끼/~이' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "이"}
+    },
+    {
+      "itemId": "rh_036",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "우유 🥛", "imagePath": null, "audioPath": "audio/words/우유.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "고구마 🍠", "imagePath": null, "audioPath": "audio/words/고구마.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "기차 🚂", "imagePath": null, "audioPath": "audio/words/기차.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt2,opt3",
+      "explanation": "'~마/~차' 받침!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "아"}
+    },
+    {
+      "itemId": "rh_037",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "나무 🌳", "imagePath": null, "audioPath": "audio/words/나무.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "누구 ❓", "imagePath": null, "audioPath": "audio/words/누구.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "공부 📖", "imagePath": null, "audioPath": "audio/words/공부.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~무/~구' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "우"}
+    },
+    {
+      "itemId": "rh_038",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "거울 🪞", "imagePath": null, "audioPath": "audio/words/거울.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "바늘 🪡", "imagePath": null, "audioPath": "audio/words/바늘.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "사람 👤", "imagePath": null, "audioPath": "audio/words/사람.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄹ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄹ"}
+    },
+    {
+      "itemId": "rh_039",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "방 🛏️", "imagePath": null, "audioPath": "audio/words/방.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "빵 🍞", "imagePath": null, "audioPath": "audio/words/빵.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "밤 🌰", "imagePath": null, "audioPath": "audio/words/밤.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅇ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅇ"}
+    },
+    {
+      "itemId": "rh_040",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "학교 🏫", "imagePath": null, "audioPath": "audio/words/학교.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "교실 🏫", "imagePath": null, "audioPath": "audio/words/교실.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "운동장 🏃", "imagePath": null, "audioPath": "audio/words/운동장.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~교/~실' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "오"}
+    },
+    {
+      "itemId": "rh_041",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "산 ⛰️", "imagePath": null, "audioPath": "audio/words/산.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "물 💧", "imagePath": null, "audioPath": "audio/words/물.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "단 🍬", "imagePath": null, "audioPath": "audio/words/단.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "받침 'ㄴ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄴ"}
+    },
+    {
+      "itemId": "rh_042",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "집 🏠", "imagePath": null, "audioPath": "audio/words/집.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "입 👄", "imagePath": null, "audioPath": "audio/words/입.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "물 💧", "imagePath": null, "audioPath": "audio/words/물.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅂ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㅂ"}
+    },
+    {
+      "itemId": "rh_043",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "책 📚", "imagePath": null, "audioPath": "audio/words/책.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "밤 🌰", "imagePath": null, "audioPath": "audio/words/밤.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "색 🎨", "imagePath": null, "audioPath": "audio/words/색.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "받침 'ㄱ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㄱ"}
+    },
+    {
+      "itemId": "rh_044",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "물 💧", "imagePath": null, "audioPath": "audio/words/물.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "불 🔥", "imagePath": null, "audioPath": "audio/words/불.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "눈 ❄️", "imagePath": null, "audioPath": "audio/words/눈.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㄹ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㄹ"}
+    },
+    {
+      "itemId": "rh_045",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "친구 👫", "imagePath": null, "audioPath": "audio/words/친구.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "가족 👨‍👩‍👧", "imagePath": null, "audioPath": "audio/words/가족.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "옷 👕", "imagePath": null, "audioPath": "audio/words/옷.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt2,opt3",
+      "explanation": "받침 'ㄱ/ㅅ' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㄱ"}
+    },
+    {
+      "itemId": "rh_046",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "아빠 👨", "imagePath": null, "audioPath": "audio/words/아빠.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "할아버지 👴", "imagePath": null, "audioPath": "audio/words/할아버지.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "형 👦", "imagePath": null, "audioPath": "audio/words/형.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~파/~지' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "아"}
+    },
+    {
+      "itemId": "rh_047",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "곰 🐻", "imagePath": null, "audioPath": "audio/words/곰.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "잠 💤", "imagePath": null, "audioPath": "audio/words/잠.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "봄 🌸", "imagePath": null, "audioPath": "audio/words/봄.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "받침 'ㅁ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅁ"}
+    },
+    {
+      "itemId": "rh_048",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "공책 📗", "imagePath": null, "audioPath": "audio/words/공책.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "잎 🍃", "imagePath": null, "audioPath": "audio/words/잎.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "식빵 🍞", "imagePath": null, "audioPath": "audio/words/식빵.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt3",
+      "explanation": "받침 'ㄱ/ㅇ' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 3, "endSound": "ㅇ"}
+    },
+    {
+      "itemId": "rh_049",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "사탕 🍬", "imagePath": null, "audioPath": "audio/words/사탕.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "땅 🌍", "imagePath": null, "audioPath": "audio/words/땅.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "잠 💤", "imagePath": null, "audioPath": "audio/words/잠.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "받침 'ㅇ' 소리!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 2, "endSound": "ㅇ"}
+    },
+    {
+      "itemId": "rh_050",
+      "question": "같은 소리로 끝나는 단어를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "나라 🏛️", "imagePath": null, "audioPath": "audio/words/나라.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "바다 🌊", "imagePath": null, "audioPath": "audio/words/바다.mp3", "optionData": null},
+        {"optionId": "opt3", "label": "하늘 ☁️", "imagePath": null, "audioPath": "audio/words/하늘.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1,opt2",
+      "explanation": "'~라/~다' 유사!",
+      "explanationAudioPath": null,
+      "itemData": {"level": 1, "endSound": "아"}
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["phonological", "rhyme", "ending_sound"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 8
+  }
+}

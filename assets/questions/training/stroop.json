@@ -1,0 +1,34 @@
+{
+  "contentId": "attention_stroop_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "multipleChoice",
+  "title": "스트룹 과제",
+  "instruction": "글자의 색을 말하세요 (글자 내용 무시)",
+  "instructionAudioPath": "audio/instructions/stroop.mp3",
+  "difficulty": {"level": 3, "minLevel": 2, "maxLevel": 4},
+  "items": [
+    {
+      "itemId": "st_001",
+      "question": "이 글자의 '색'은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "빨강", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "파랑", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "초록", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "파란색이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "빨강", "color": "blue", "congruent": false, "level": 3}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["attention", "stroop", "inhibition"],
+    "note": "스트룹 과제 - 1개 샘플"
+  }
+}

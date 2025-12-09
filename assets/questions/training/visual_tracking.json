@@ -1,0 +1,103 @@
+{
+  "contentId": "visual_tracking_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "multipleChoice",
+  "title": "시각 추적",
+  "instruction": "움직인 경로를 따라가세요",
+  "instructionAudioPath": "audio/instructions/visual_tracking.mp3",
+  "difficulty": {
+    "level": 1,
+    "minLevel": 1,
+    "maxLevel": 3,
+    "adjustmentThreshold": 3
+  },
+  "items": [
+    {
+      "itemId": "vt_001",
+      "question": "➡️ 다음은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬇️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬆️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "⬅️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "아래로 가요!",
+      "explanationAudioPath": null,
+      "itemData": {"path": "right-down", "level": 1}
+    },
+    {
+      "itemId": "vt_002",
+      "question": "⬆️ 다음은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "➡️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬅️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "⬇️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "오른쪽으로 가요!",
+      "explanationAudioPath": null,
+      "itemData": {"path": "up-right", "level": 1}
+    },
+    {
+      "itemId": "vt_003",
+      "question": "⬅️ → ⬆️ 다음은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "➡️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬇️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "⬅️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "오른쪽으로 가요!",
+      "explanationAudioPath": null,
+      "itemData": {"path": "left-up-right", "level": 2}
+    },
+    {
+      "itemId": "vt_004",
+      "question": "➡️ → ⬇️ 다음은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬅️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "⬆️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "➡️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "왼쪽으로 가요!",
+      "explanationAudioPath": null,
+      "itemData": {"path": "right-down-left", "level": 2}
+    },
+    {
+      "itemId": "vt_005",
+      "question": "⬆️ → ➡️ → ⬇️ 다음은?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬅️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "➡️", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "⬆️", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "왼쪽으로 가요!",
+      "explanationAudioPath": null,
+      "itemData": {"path": "up-right-down-left", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "lastUpdated": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["visual", "tracking", "direction", "sequence"],
+    "estimatedDuration": 1200,
+    "minAge": 6,
+    "maxAge": 9,
+    "note": "시각 추적 - 6개 샘플 (쉬운 게임)"
+  }
+}

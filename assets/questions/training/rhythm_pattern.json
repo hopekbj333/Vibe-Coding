@@ -1,0 +1,73 @@
+{
+  "contentId": "auditory_rhythm_pattern_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "multipleChoice",
+  "title": "리듬 패턴",
+  "instruction": "빠진 리듬을 찾으세요",
+  "instructionAudioPath": "audio/instructions/rhythm_pattern_instruction.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 4,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "patternComplexity": "medium"
+    }
+  },
+  "items": [
+    {
+      "itemId": "rp_001",
+      "question": "쿵-짝-쿵-? (ABAB)",
+      "questionAudioPath": "audio/patterns/abab_missing.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🥁 쿵", "imagePath": null, "audioPath": "audio/rhythm/kung.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "👏 짝", "imagePath": null, "audioPath": "audio/rhythm/clap.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "짝이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "ABAB", "missing": 3, "level": 1}
+    },
+    {
+      "itemId": "rp_002",
+      "question": "딩-똥-똥-딩-?-똥 (ABB)",
+      "questionAudioPath": "audio/patterns/abb_missing.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔔 딩", "imagePath": null, "audioPath": "audio/rhythm/ding.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "🎵 똥", "imagePath": null, "audioPath": "audio/rhythm/dong.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "딩이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "ABB", "missing": 4, "level": 2}
+    },
+    {
+      "itemId": "rp_003",
+      "question": "쿵-쿵-짝-쿵-쿵-? (AAB)",
+      "questionAudioPath": "audio/patterns/aab_missing.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🥁 쿵", "imagePath": null, "audioPath": "audio/rhythm/kung.mp3", "optionData": null},
+        {"optionId": "opt2", "label": "👏 짝", "imagePath": null, "audioPath": "audio/rhythm/clap.mp3", "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "짝이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"pattern": "AAB", "missing": 5, "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["auditory", "pattern", "rhythm", "completion"],
+    "estimatedDuration": 1800,
+    "minAge": 6,
+    "maxAge": 10,
+    "note": "복잡한 패턴 게임 - 3개 샘플만 제공"
+  }
+}

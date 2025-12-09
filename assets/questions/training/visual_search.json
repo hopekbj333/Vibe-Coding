@@ -1,0 +1,24 @@
+{
+  "contentId": "attention_visual_search_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "matching",
+  "title": "시각 탐색",
+  "instruction": "타겟을 빠르게 찾으세요",
+  "instructionAudioPath": "audio/instructions/visual_search.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "vs_001",
+      "question": "빨간 별을 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "red_star",
+      "explanation": "빠르게 찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "red_star", "distractors": 15, "level": 1}
+    }
+  ],
+  "metadata": {"version": "1.0.0", "createdAt": "2025-12-07", "author": "AI Assistant", "tags": ["attention", "visual_search"], "note": "1개 샘플"}
+}

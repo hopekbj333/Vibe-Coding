@@ -1,0 +1,780 @@
+{
+  "contentId": "visual_letter_direction_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "multipleChoice",
+  "title": "글자 방향 구별",
+  "instruction": "방향이 다른 글자를 찾으세요",
+  "instructionAudioPath": "audio/instructions/letter_direction_instruction.mp3",
+  "difficulty": {
+    "level": 2,
+    "minLevel": 1,
+    "maxLevel": 3,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "similarity": "high"
+    }
+  },
+  "items": [
+    {
+      "itemId": "ld_001",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㄴ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㄱ", "distractor": "ㄴ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_002",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "ㄱ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㄴ", "distractor": "ㄱ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_003",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "6", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "6", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "9", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "9가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "6", "distractor": "9", "category": "숫자", "level": 2}
+    },
+    {
+      "itemId": "ld_004",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "9", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "6", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "9", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "6이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "9", "distractor": "6", "category": "숫자", "level": 2}
+    },
+    {
+      "itemId": "ld_005",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "b", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "b", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "d", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "d가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "b", "distractor": "d", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_006",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "d", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "b", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "d", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "b가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "d", "distractor": "b", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_007",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "p", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "p", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "q", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "q가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "p", "distractor": "q", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_008",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "q", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "p", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "q", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "p가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "q", "distractor": "p", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_009",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅂ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㄹ", "distractor": "ㅂ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_010",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "2", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "5", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "2", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "5가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "2", "distractor": "5", "category": "숫자", "level": 2}
+    },
+    {
+      "itemId": "ld_011",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅂ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅁ", "distractor": "ㅂ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_012",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "ㅈ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅅ", "distractor": "ㅈ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_013",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "ㅊ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅈ", "distractor": "ㅊ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_014",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅌ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅋ", "distractor": "ㅌ", "category": "한글", "level": 2}
+    },
+    {
+      "itemId": "ld_015",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "u", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "n", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "u", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "n이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "u", "distractor": "n", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_016",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "n", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "n", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "u", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "u가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "n", "distractor": "u", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_017",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "m", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "w", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "m", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "w가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "m", "distractor": "w", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_018",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "w", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "w", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "m", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "m이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "w", "distractor": "m", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_019",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅇ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅇ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅎ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅇ", "distractor": "ㅎ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_020",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "ㅂ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅍ", "distractor": "ㅂ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_021",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅇ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅇ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅁ", "distractor": "ㅇ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_022",
+      "question": "다른 숫자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "1", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "7", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "1", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "7이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "1", "distractor": "7", "category": "숫자", "level": 2}
+    },
+    {
+      "itemId": "ld_023",
+      "question": "다른 숫자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "0", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "0", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "O", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "O(영문)가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "0", "distractor": "O", "category": "숫자", "level": 3}
+    },
+    {
+      "itemId": "ld_024",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "s", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "s", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "z", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "z가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "s", "distractor": "z", "category": "영문", "level": 3}
+    },
+    {
+      "itemId": "ld_025",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅌ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㄷ", "distractor": "ㅌ", "category": "한글", "level": 2}
+    },
+    {
+      "itemId": "ld_026",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "E", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "F", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "E", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "F가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "E", "distractor": "F", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_027",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "C", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "C", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "G", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "G가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "C", "distractor": "G", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_028",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "M", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "W", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "M", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "W가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "M", "distractor": "W", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_029",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㄴ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㄱ", "distractor": "ㄴ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_030",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "3", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "8", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "3", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "8이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "3", "distractor": "8", "category": "숫자", "level": 2}
+    },
+    {
+      "itemId": "ld_031",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅍ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅂ", "distractor": "ㅍ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_032",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "ㅂ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅍ", "distractor": "ㅂ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_033",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "I", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "l", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "I", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "l(소문자)이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "I", "distractor": "l", "category": "영문", "level": 3}
+    },
+    {
+      "itemId": "ld_034",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "S", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "S", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "5", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "5가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "S", "distractor": "5", "category": "혼합", "level": 3}
+    },
+    {
+      "itemId": "ld_035",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "ㄴ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㄱ", "distractor": "ㄴ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_036",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "b", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "d", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "b", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "d가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "b", "distractor": "d", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_037",
+      "question": "다른 숫자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "6", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "9", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "6", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "9가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "6", "distractor": "9", "category": "숫자", "level": 2}
+    },
+    {
+      "itemId": "ld_038",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "p", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "q", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "p", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "q가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "p", "distractor": "q", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_039",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "ㅅ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅈ", "distractor": "ㅅ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_040",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "n", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "u", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "n", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "u가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "n", "distractor": "u", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_041",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "ㅂ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅁ", "distractor": "ㅂ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_042",
+      "question": "다른 숫자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "2", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "2", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "5", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "5가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "2", "distractor": "5", "category": "숫자", "level": 2}
+    },
+    {
+      "itemId": "ld_043",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "d", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "d", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "b", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "b가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "d", "distractor": "b", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_044",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅈ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅊ", "distractor": "ㅈ", "category": "한글", "level": 1}
+    },
+    {
+      "itemId": "ld_045",
+      "question": "다른 숫자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "9", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "6", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "9", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "6이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "9", "distractor": "6", "category": "숫자", "level": 2}
+    },
+    {
+      "itemId": "ld_046",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "q", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "p", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "q", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "p가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "q", "distractor": "p", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_047",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "m", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "m", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "w", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "w가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "m", "distractor": "w", "category": "영문", "level": 2}
+    },
+    {
+      "itemId": "ld_048",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "ㅋ이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "ㅌ", "distractor": "ㅋ", "category": "한글", "level": 2}
+    },
+    {
+      "itemId": "ld_049",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "O", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "0", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "O", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "0(숫자)이 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "O", "distractor": "0", "category": "혼합", "level": 3}
+    },
+    {
+      "itemId": "ld_050",
+      "question": "다른 글자를 찾으세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "Z", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "Z", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "2", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "2가 달라요!",
+      "explanationAudioPath": null,
+      "itemData": {"target": "Z", "distractor": "2", "category": "혼합", "level": 3}
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["visual", "orientation", "discrimination", "mirror_letters"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 8
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 배 몸통 -->
+  <path d="M 20 130 L 40 170 L 160 170 L 180 130 Z" fill="#795548"/>
+  <!-- 갑판 -->
+  <rect x="30" y="110" width="140" height="25" fill="#8D6E63"/>
+  <!-- 선실 -->
+  <rect x="60" y="70" width="80" height="45" fill="#FFECB3"/>
+  <!-- 창문 -->
+  <rect x="70" y="80" width="20" height="20" fill="#4FC3F7" rx="2"/>
+  <rect x="110" y="80" width="20" height="20" fill="#4FC3F7" rx="2"/>
+  <!-- 굴뚝 -->
+  <rect x="90" y="40" width="20" height="35" fill="#F44336"/>
+  <ellipse cx="100" cy="40" rx="12" ry="5" fill="#D32F2F"/>
+  <!-- 연기 -->
+  <circle cx="100" cy="25" r="8" fill="#9E9E9E" opacity="0.6"/>
+  <circle cx="110" cy="15" r="6" fill="#BDBDBD" opacity="0.4"/>
+  <!-- 물결 -->
+  <path d="M 10 175 Q 30 165 50 175 Q 70 185 90 175 Q 110 165 130 175 Q 150 185 170 175 Q 190 165 200 175" fill="none" stroke="#29B6F6" stroke-width="4"/>
+</svg>
+

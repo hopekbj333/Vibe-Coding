@@ -1,0 +1,101 @@
+{
+  "contentId": "auditory_volume_comparison_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "multipleChoice",
+  "title": "소리 크기 비교",
+  "instruction": "더 큰 소리를 찾으세요",
+  "instructionAudioPath": "audio/instructions/volume_comparison.mp3",
+  "difficulty": {
+    "level": 1,
+    "minLevel": 1,
+    "maxLevel": 2,
+    "adjustmentThreshold": 3
+  },
+  "items": [
+    {
+      "itemId": "vc_001",
+      "question": "더 큰 소리는?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔊 소리1", "imagePath": null, "audioPath": "audio/volume/loud1.mp3", "optionData": {"volume": "loud"}},
+        {"optionId": "opt2", "label": "🔉 소리2", "imagePath": null, "audioPath": "audio/volume/soft1.mp3", "optionData": {"volume": "soft"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "크게 들렸어요!",
+      "explanationAudioPath": null,
+      "itemData": {"contrast": "high", "level": 1}
+    },
+    {
+      "itemId": "vc_002",
+      "question": "더 작은 소리는?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔊 소리1", "imagePath": null, "audioPath": "audio/volume/loud2.mp3", "optionData": {"volume": "loud"}},
+        {"optionId": "opt2", "label": "🔉 소리2", "imagePath": null, "audioPath": "audio/volume/soft2.mp3", "optionData": {"volume": "soft"}}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "작게 들렸어요!",
+      "explanationAudioPath": null,
+      "itemData": {"contrast": "high", "level": 1}
+    },
+    {
+      "itemId": "vc_003",
+      "question": "가장 큰 소리는?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔊 소리1", "imagePath": null, "audioPath": "audio/volume/loud3.mp3", "optionData": {"volume": "loud"}},
+        {"optionId": "opt2", "label": "🔉 소리2", "imagePath": null, "audioPath": "audio/volume/medium1.mp3", "optionData": {"volume": "medium"}},
+        {"optionId": "opt3", "label": "🔈 소리3", "imagePath": null, "audioPath": "audio/volume/soft3.mp3", "optionData": {"volume": "soft"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "가장 크게 들렸어요!",
+      "explanationAudioPath": null,
+      "itemData": {"contrast": "medium", "level": 1}
+    },
+    {
+      "itemId": "vc_004",
+      "question": "가장 작은 소리는?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔊 소리1", "imagePath": null, "audioPath": "audio/volume/loud4.mp3", "optionData": {"volume": "loud"}},
+        {"optionId": "opt2", "label": "🔉 소리2", "imagePath": null, "audioPath": "audio/volume/medium2.mp3", "optionData": {"volume": "medium"}},
+        {"optionId": "opt3", "label": "🔈 소리3", "imagePath": null, "audioPath": "audio/volume/soft4.mp3", "optionData": {"volume": "soft"}}
+      ],
+      "correctAnswer": "opt3",
+      "explanation": "가장 작게 들렸어요!",
+      "explanationAudioPath": null,
+      "itemData": {"contrast": "medium", "level": 1}
+    },
+    {
+      "itemId": "vc_005",
+      "question": "중간 크기 소리는?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "🔊 소리1", "imagePath": null, "audioPath": "audio/volume/loud5.mp3", "optionData": {"volume": "loud"}},
+        {"optionId": "opt2", "label": "🔉 소리2", "imagePath": null, "audioPath": "audio/volume/medium3.mp3", "optionData": {"volume": "medium"}},
+        {"optionId": "opt3", "label": "🔈 소리3", "imagePath": null, "audioPath": "audio/volume/soft5.mp3", "optionData": {"volume": "soft"}}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "중간 크기예요!",
+      "explanationAudioPath": null,
+      "itemData": {"contrast": "low", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "lastUpdated": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["auditory", "volume", "comparison", "discrimination"],
+    "estimatedDuration": 1200,
+    "minAge": 6,
+    "maxAge": 9,
+    "note": "소리 크기 비교 - 5개 샘플 (쉬운 게임)"
+  }
+}

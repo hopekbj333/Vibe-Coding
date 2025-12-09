@@ -1,0 +1,780 @@
+{
+  "contentId": "phonological_onset_separation_v1",
+  "moduleId": "phonological_advanced",
+  "type": "phonological",
+  "pattern": "multipleChoice",
+  "title": "초성 분리",
+  "instruction": "단어의 첫소리(초성)를 찾아보세요",
+  "instructionAudioPath": "audio/instructions/onset_separation_instruction.mp3",
+  "difficulty": {
+    "level": 3,
+    "minLevel": 2,
+    "maxLevel": 4,
+    "adjustmentThreshold": 3,
+    "difficultyFactors": {
+      "onsetType": "single"
+    }
+  },
+  "items": [
+    {
+      "itemId": "os_001",
+      "question": "'강아지'의 첫소리는?",
+      "questionAudioPath": "audio/words/강아지.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄱ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "강아지", "char": "강", "onset": "ㄱ", "emoji": "🐕"}
+    },
+    {
+      "itemId": "os_002",
+      "question": "'나비'의 첫소리는?",
+      "questionAudioPath": "audio/words/나비.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄴ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "나비", "char": "나", "onset": "ㄴ", "emoji": "🦋"}
+    },
+    {
+      "itemId": "os_003",
+      "question": "'다람쥐'의 첫소리는?",
+      "questionAudioPath": "audio/words/다람쥐.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄷ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "다람쥐", "char": "다", "onset": "ㄷ", "emoji": "🐿️"}
+    },
+    {
+      "itemId": "os_004",
+      "question": "'라면'의 첫소리는?",
+      "questionAudioPath": "audio/words/라면.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄹ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "라면", "char": "라", "onset": "ㄹ", "emoji": "🍜"}
+    },
+    {
+      "itemId": "os_005",
+      "question": "'마차'의 첫소리는?",
+      "questionAudioPath": "audio/words/마차.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅁ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "마차", "char": "마", "onset": "ㅁ", "emoji": "🛞"}
+    },
+    {
+      "itemId": "os_006",
+      "question": "'바나나'의 첫소리는?",
+      "questionAudioPath": "audio/words/바나나.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅂ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "바나나", "char": "바", "onset": "ㅂ", "emoji": "🍌"}
+    },
+    {
+      "itemId": "os_007",
+      "question": "'사과'의 첫소리는?",
+      "questionAudioPath": "audio/words/사과.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅅ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "사과", "char": "사", "onset": "ㅅ", "emoji": "🍎"}
+    },
+    {
+      "itemId": "os_008",
+      "question": "'아기'의 첫소리는?",
+      "questionAudioPath": "audio/words/아기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅇ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅇ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "아기", "char": "아", "onset": "ㅇ", "emoji": "👶"}
+    },
+    {
+      "itemId": "os_009",
+      "question": "'자동차'의 첫소리는?",
+      "questionAudioPath": "audio/words/자동차.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅈ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "자동차", "char": "자", "onset": "ㅈ", "emoji": "🚗"}
+    },
+    {
+      "itemId": "os_010",
+      "question": "'차가운'의 첫소리는?",
+      "questionAudioPath": "audio/words/차가운.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅊ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "차가운", "char": "차", "onset": "ㅊ", "emoji": "🧊"}
+    },
+    {
+      "itemId": "os_011",
+      "question": "'카메라'의 첫소리는?",
+      "questionAudioPath": "audio/words/카메라.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅋ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "카메라", "char": "카", "onset": "ㅋ", "emoji": "📷"}
+    },
+    {
+      "itemId": "os_012",
+      "question": "'토끼'의 첫소리는?",
+      "questionAudioPath": "audio/words/토끼.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅌ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "토끼", "char": "토", "onset": "ㅌ", "emoji": "🐰"}
+    },
+    {
+      "itemId": "os_013",
+      "question": "'파랑'의 첫소리는?",
+      "questionAudioPath": "audio/words/파랑.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅍ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "파랑", "char": "파", "onset": "ㅍ", "emoji": "🔵"}
+    },
+    {
+      "itemId": "os_014",
+      "question": "'하마'의 첫소리는?",
+      "questionAudioPath": "audio/words/하마.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅎ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "하마", "char": "하", "onset": "ㅎ", "emoji": "🦛"}
+    },
+    {
+      "itemId": "os_015",
+      "question": "'고양이'의 첫소리는?",
+      "questionAudioPath": "audio/words/고양이.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄲ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄱ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "고양이", "char": "고", "onset": "ㄱ", "emoji": "🐱"}
+    },
+    {
+      "itemId": "os_016",
+      "question": "'노래'의 첫소리는?",
+      "questionAudioPath": "audio/words/노래.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄴ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "노래", "char": "노", "onset": "ㄴ", "emoji": "🎵"}
+    },
+    {
+      "itemId": "os_017",
+      "question": "'도넛'의 첫소리는?",
+      "questionAudioPath": "audio/words/도넛.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄸ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄷ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "도넛", "char": "도", "onset": "ㄷ", "emoji": "🍩"}
+    },
+    {
+      "itemId": "os_018",
+      "question": "'로봇'의 첫소리는?",
+      "questionAudioPath": "audio/words/로봇.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅇ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄹ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "로봇", "char": "로", "onset": "ㄹ", "emoji": "🤖"}
+    },
+    {
+      "itemId": "os_019",
+      "question": "'모자'의 첫소리는?",
+      "questionAudioPath": "audio/words/모자.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅁ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "모자", "char": "모", "onset": "ㅁ", "emoji": "🎩"}
+    },
+    {
+      "itemId": "os_020",
+      "question": "'보물'의 첫소리는?",
+      "questionAudioPath": "audio/words/보물.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅂ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "보물", "char": "보", "onset": "ㅂ", "emoji": "💎"}
+    },
+    {
+      "itemId": "os_021",
+      "question": "'소라'의 첫소리는?",
+      "questionAudioPath": "audio/words/소라.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅅ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "소라", "char": "소", "onset": "ㅅ", "emoji": "🐚"}
+    },
+    {
+      "itemId": "os_022",
+      "question": "'오징어'의 첫소리는?",
+      "questionAudioPath": "audio/words/오징어.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅇ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅇ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "오징어", "char": "오", "onset": "ㅇ", "emoji": "🦑"}
+    },
+    {
+      "itemId": "os_023",
+      "question": "'조개'의 첫소리는?",
+      "questionAudioPath": "audio/words/조개.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅈ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "조개", "char": "조", "onset": "ㅈ", "emoji": "🦪"}
+    },
+    {
+      "itemId": "os_024",
+      "question": "'초콜릿'의 첫소리는?",
+      "questionAudioPath": "audio/words/초콜릿.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅊ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "초콜릿", "char": "초", "onset": "ㅊ", "emoji": "🍫"}
+    },
+    {
+      "itemId": "os_025",
+      "question": "'코끼리'의 첫소리는?",
+      "questionAudioPath": "audio/words/코끼리.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅋ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "코끼리", "char": "코", "onset": "ㅋ", "emoji": "🐘"}
+    },
+    {
+      "itemId": "os_026",
+      "question": "'태양'의 첫소리는?",
+      "questionAudioPath": "audio/words/태양.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅌ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "태양", "char": "태", "onset": "ㅌ", "emoji": "☀️"}
+    },
+    {
+      "itemId": "os_027",
+      "question": "'포도'의 첫소리는?",
+      "questionAudioPath": "audio/words/포도.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅍ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "포도", "char": "포", "onset": "ㅍ", "emoji": "🍇"}
+    },
+    {
+      "itemId": "os_028",
+      "question": "'호랑이'의 첫소리는?",
+      "questionAudioPath": "audio/words/호랑이.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅎ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "호랑이", "char": "호", "onset": "ㅎ", "emoji": "🐯"}
+    },
+    {
+      "itemId": "os_029",
+      "question": "'꽃'의 첫소리는?",
+      "questionAudioPath": "audio/words/꽃.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄲ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄲ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "꽃", "char": "꽃", "onset": "ㄲ", "emoji": "🌸"}
+    },
+    {
+      "itemId": "os_030",
+      "question": "'딸기'의 첫소리는?",
+      "questionAudioPath": "audio/words/딸기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄸ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄸ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "딸기", "char": "딸", "onset": "ㄸ", "emoji": "🍓"}
+    },
+    {
+      "itemId": "os_031",
+      "question": "'빵'의 첫소리는?",
+      "questionAudioPath": "audio/words/빵.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅃ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅃ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "빵", "char": "빵", "onset": "ㅃ", "emoji": "🍞"}
+    },
+    {
+      "itemId": "os_032",
+      "question": "'쏘다'의 첫소리는?",
+      "questionAudioPath": "audio/words/쏘다.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅆ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅆ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "쏘다", "char": "쏘", "onset": "ㅆ", "emoji": "🏹"}
+    },
+    {
+      "itemId": "os_033",
+      "question": "'찌개'의 첫소리는?",
+      "questionAudioPath": "audio/words/찌개.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅉ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅉ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "찌개", "char": "찌", "onset": "ㅉ", "emoji": "🍲"}
+    },
+    {
+      "itemId": "os_034",
+      "question": "'기차'의 첫소리는?",
+      "questionAudioPath": "audio/words/기차.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄲ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄱ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "기차", "char": "기", "onset": "ㄱ", "emoji": "🚂"}
+    },
+    {
+      "itemId": "os_035",
+      "question": "'니트'의 첫소리는?",
+      "questionAudioPath": "audio/words/니트.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄴ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "니트", "char": "니", "onset": "ㄴ", "emoji": "🧶"}
+    },
+    {
+      "itemId": "os_036",
+      "question": "'디저트'의 첫소리는?",
+      "questionAudioPath": "audio/words/디저트.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄸ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄷ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "디저트", "char": "디", "onset": "ㄷ", "emoji": "🍰"}
+    },
+    {
+      "itemId": "os_037",
+      "question": "'리본'의 첫소리는?",
+      "questionAudioPath": "audio/words/리본.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄹ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄴ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅇ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄹ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "리본", "char": "리", "onset": "ㄹ", "emoji": "🎀"}
+    },
+    {
+      "itemId": "os_038",
+      "question": "'미소'의 첫소리는?",
+      "questionAudioPath": "audio/words/미소.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅁ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "미소", "char": "미", "onset": "ㅁ", "emoji": "😊"}
+    },
+    {
+      "itemId": "os_039",
+      "question": "'비행기'의 첫소리는?",
+      "questionAudioPath": "audio/words/비행기.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅁ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅂ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "비행기", "char": "비", "onset": "ㅂ", "emoji": "✈️"}
+    },
+    {
+      "itemId": "os_040",
+      "question": "'시계'의 첫소리는?",
+      "questionAudioPath": "audio/words/시계.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅅ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "시계", "char": "시", "onset": "ㅅ", "emoji": "⏰"}
+    },
+    {
+      "itemId": "os_041",
+      "question": "'이모'의 첫소리는?",
+      "questionAudioPath": "audio/words/이모.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅇ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅇ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "이모", "char": "이", "onset": "ㅇ", "emoji": "👩"}
+    },
+    {
+      "itemId": "os_042",
+      "question": "'지우개'의 첫소리는?",
+      "questionAudioPath": "audio/words/지우개.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅈ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "지우개", "char": "지", "onset": "ㅈ", "emoji": "🧹"}
+    },
+    {
+      "itemId": "os_043",
+      "question": "'치약'의 첫소리는?",
+      "questionAudioPath": "audio/words/치약.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅊ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅈ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅅ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅊ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "치약", "char": "치", "onset": "ㅊ", "emoji": "🪥"}
+    },
+    {
+      "itemId": "os_044",
+      "question": "'키보드'의 첫소리는?",
+      "questionAudioPath": "audio/words/키보드.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅋ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "키보드", "char": "키", "onset": "ㅋ", "emoji": "⌨️"}
+    },
+    {
+      "itemId": "os_045",
+      "question": "'티셔츠'의 첫소리는?",
+      "questionAudioPath": "audio/words/티셔츠.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅌ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "티셔츠", "char": "티", "onset": "ㅌ", "emoji": "👕"}
+    },
+    {
+      "itemId": "os_046",
+      "question": "'피자'의 첫소리는?",
+      "questionAudioPath": "audio/words/피자.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅍ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "피자", "char": "피", "onset": "ㅍ", "emoji": "🍕"}
+    },
+    {
+      "itemId": "os_047",
+      "question": "'히어로'의 첫소리는?",
+      "questionAudioPath": "audio/words/히어로.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅎ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅎ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "히어로", "char": "히", "onset": "ㅎ", "emoji": "🦸"}
+    },
+    {
+      "itemId": "os_048",
+      "question": "'까마귀'의 첫소리는?",
+      "questionAudioPath": "audio/words/까마귀.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄲ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄱ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅋ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄲ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "까마귀", "char": "까", "onset": "ㄲ", "emoji": "🦅"}
+    },
+    {
+      "itemId": "os_049",
+      "question": "'뜨거운'의 첫소리는?",
+      "questionAudioPath": "audio/words/뜨거운.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㄸ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㄷ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅌ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㄸ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "뜨거운", "char": "뜨", "onset": "ㄸ", "emoji": "🔥"}
+    },
+    {
+      "itemId": "os_050",
+      "question": "'뽀뽀'의 첫소리는?",
+      "questionAudioPath": "audio/words/뽀뽀.mp3",
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "ㅃ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "ㅂ", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "ㅍ", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "ㅃ이 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"word": "뽀뽀", "char": "뽀", "onset": "ㅃ", "emoji": "💋"}
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "createdAt": "2025-12-06",
+    "lastUpdated": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["phonological", "onset", "initial_sound", "advanced"],
+    "estimatedDuration": 1500,
+    "minAge": 6,
+    "maxAge": 8
+  }
+}

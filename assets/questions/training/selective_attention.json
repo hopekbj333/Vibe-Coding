@@ -1,0 +1,28 @@
+{
+  "contentId": "attention_selective_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "multipleChoice",
+  "title": "선택적 주의",
+  "instruction": "지시한 것만 찾으세요",
+  "instructionAudioPath": "audio/instructions/selective_attention.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "sa_001",
+      "question": "빨간 것만 세세요",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "1개", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "2개", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "3개", "imagePath": null, "audioPath": null, "optionData": null}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "2개 맞아요!",
+      "explanationAudioPath": null,
+      "itemData": {"targetColor": "red", "count": 2, "level": 1}
+    }
+  ],
+  "metadata": {"version": "1.0.0", "createdAt": "2025-12-07", "author": "AI Assistant", "tags": ["attention", "selective"], "note": "1개 샘플"}
+}

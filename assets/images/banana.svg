@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 바나나 몸통 -->
+  <path d="M 40 140 Q 60 60 140 50 Q 170 50 180 70 Q 160 80 150 90 Q 80 100 60 160 Q 50 170 40 140" fill="#FFD54F"/>
+  <!-- 바나나 끝 -->
+  <ellipse cx="45" cy="145" rx="10" ry="15" fill="#8D6E63"/>
+  <!-- 바나나 하이라이트 -->
+  <path d="M 60 130 Q 80 80 130 70" stroke="#FFF59D" stroke-width="8" fill="none" stroke-linecap="round"/>
+</svg>
+

@@ -1,0 +1,30 @@
+{
+  "contentId": "visual_spot_difference_v1",
+  "moduleId": "visual_processing",
+  "type": "visual",
+  "pattern": "matching",
+  "title": "틀린 그림 찾기",
+  "instruction": "다른 부분을 찾으세요",
+  "instructionAudioPath": "audio/instructions/spot_difference.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "sd_001",
+      "question": "다른 부분을 터치하세요",
+      "questionAudioPath": null,
+      "questionImagePath": "images/spot_difference/pair1.png",
+      "options": [],
+      "correctAnswer": "dynamic",
+      "explanation": "찾았어요!",
+      "explanationAudioPath": null,
+      "itemData": {"differenceCount": 3, "level": 1}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-06",
+    "author": "AI Assistant",
+    "tags": ["visual", "difference", "attention"],
+    "note": "이미지 기반 - 1개 샘플"
+  }
+}

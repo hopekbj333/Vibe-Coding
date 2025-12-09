@@ -1,0 +1,24 @@
+{
+  "contentId": "attention_sustained_v1",
+  "moduleId": "attention",
+  "type": "attention",
+  "pattern": "goNoGo",
+  "title": "지속적 주의",
+  "instruction": "30초 동안 집중하세요",
+  "instructionAudioPath": "audio/instructions/sustained_attention.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "sta_001",
+      "question": "빨간 불만 터치하세요 (30초)",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [],
+      "correctAnswer": "red",
+      "explanation": "집중력이 좋아요!",
+      "explanationAudioPath": null,
+      "itemData": {"duration": 30, "target": "red", "level": 1}
+    }
+  ],
+  "metadata": {"version": "1.0.0", "createdAt": "2025-12-07", "author": "AI Assistant", "tags": ["attention", "sustained"], "note": "1개 샘플"}
+}

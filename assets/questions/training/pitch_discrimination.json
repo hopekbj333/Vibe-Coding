@@ -1,0 +1,62 @@
+{
+  "contentId": "auditory_pitch_discrimination_v1",
+  "moduleId": "auditory_processing",
+  "type": "auditory",
+  "pattern": "multipleChoice",
+  "title": "음높이 구별",
+  "instruction": "더 높은 소리를 찾으세요",
+  "instructionAudioPath": "audio/instructions/pitch_discrimination.mp3",
+  "difficulty": {"level": 2, "minLevel": 1, "maxLevel": 3},
+  "items": [
+    {
+      "itemId": "pd_001",
+      "question": "더 높은 소리는?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬆️ 소리1", "imagePath": null, "audioPath": "audio/pitch/high1.mp3", "optionData": {"pitch": "high"}},
+        {"optionId": "opt2", "label": "⬇️ 소리2", "imagePath": null, "audioPath": "audio/pitch/low1.mp3", "optionData": {"pitch": "low"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "높은 소리예요!",
+      "explanationAudioPath": null,
+      "itemData": {"contrast": "high", "level": 1}
+    },
+    {
+      "itemId": "pd_002",
+      "question": "더 낮은 소리는?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬆️ 소리1", "imagePath": null, "audioPath": "audio/pitch/high2.mp3", "optionData": {"pitch": "high"}},
+        {"optionId": "opt2", "label": "⬇️ 소리2", "imagePath": null, "audioPath": "audio/pitch/low2.mp3", "optionData": {"pitch": "low"}}
+      ],
+      "correctAnswer": "opt2",
+      "explanation": "낮은 소리예요!",
+      "explanationAudioPath": null,
+      "itemData": {"contrast": "high", "level": 1}
+    },
+    {
+      "itemId": "pd_003",
+      "question": "가장 높은 소리는?",
+      "questionAudioPath": null,
+      "questionImagePath": null,
+      "options": [
+        {"optionId": "opt1", "label": "⬆️ 소리1", "imagePath": null, "audioPath": "audio/pitch/high3.mp3", "optionData": {"pitch": "high"}},
+        {"optionId": "opt2", "label": "➡️ 소리2", "imagePath": null, "audioPath": "audio/pitch/mid1.mp3", "optionData": {"pitch": "mid"}},
+        {"optionId": "opt3", "label": "⬇️ 소리3", "imagePath": null, "audioPath": "audio/pitch/low3.mp3", "optionData": {"pitch": "low"}}
+      ],
+      "correctAnswer": "opt1",
+      "explanation": "가장 높아요!",
+      "explanationAudioPath": null,
+      "itemData": {"contrast": "medium", "level": 2}
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2025-12-07",
+    "author": "AI Assistant",
+    "tags": ["auditory", "pitch", "discrimination"],
+    "note": "음높이 구별 - 3개 샘플"
+  }
+}
