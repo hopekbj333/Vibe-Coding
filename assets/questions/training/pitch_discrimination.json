@@ -10,15 +10,15 @@
   "items": [
     {
       "itemId": "pd_001",
-      "question": "더 높은 소리는?",
+      "question": "더 긴 소리는?",
       "questionAudioPath": null,
       "questionImagePath": null,
       "options": [
-        {"optionId": "opt1", "label": "⬆️ 소리1", "imagePath": null, "audioPath": "audio/pitch/high1.mp3", "optionData": {"pitch": "high"}},
-        {"optionId": "opt2", "label": "⬇️ 소리2", "imagePath": null, "audioPath": "audio/pitch/low1.mp3", "optionData": {"pitch": "low"}}
+        {"optionId": "opt1", "label": "⏱️ 소리1", "imagePath": null, "audioPath": "audio/pitch/long1.mp3", "optionData": {"pitch": "high"}},
+        {"optionId": "opt2", "label": "⏱️ 소리2", "imagePath": null, "audioPath": "audio/pitch/short1.mp3", "optionData": {"pitch": "low"}}
       ],
       "correctAnswer": "opt1",
-      "explanation": "높은 소리예요!",
+      "explanation": "긴 소리예요!",
       "explanationAudioPath": null,
       "itemData": {"contrast": "high", "level": 1}
     },

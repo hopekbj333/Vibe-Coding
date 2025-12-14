@@ -176,4 +176,51 @@ class AssessmentQuestion {
       'difficulty': difficulty?.toJson(),
     };
   }
+
+  factory AssessmentQuestion.fromJson(Map<String, dynamic> json) {
+    // TrainingContentType과 GamePattern은 toString() 결과가 "TrainingContentType.phonological" 형식이므로
+    // 마지막 부분만 추출하여 비교
+    final typeString = json['type'] as String;
+    final patternString = json['pattern'] as String;
+    
+    TrainingContentType type;
+    try {
+      final typeName = typeString.split('.').last;
+      type = TrainingContentType.values.firstWhere(
+        (e) => e.name == typeName,
+        orElse: () => TrainingContentType.phonological,
+      );
+    } catch (e) {
+      type = TrainingContentType.phonological;
+    }
+    
+    GamePattern pattern;
+    try {
+      final patternName = patternString.split('.').last;
+      pattern = GamePattern.values.firstWhere(
+        (e) => e.name == patternName,
+        orElse: () => GamePattern.multipleChoice,
+      );
+    } catch (e) {
+      pattern = GamePattern.multipleChoice;
+    }
+    
+    return AssessmentQuestion(
+      questionNumber: json['questionNumber'] as int,
+      gameId: json['gameId'] as String,
+      gameTitle: json['gameTitle'] as String,
+      contentId: json['contentId'] as String,
+      type: type,
+      pattern: pattern,
+      itemId: json['itemId'] as String,
+      question: json['question'] as String,
+      options: (json['options'] as List)
+          .map((o) => ContentOption.fromJson(o as Map<String, dynamic>))
+          .toList(),
+      correctAnswer: json['correctAnswer'] as String,
+      difficulty: json['difficulty'] != null
+          ? DifficultyParams.fromJson(json['difficulty'] as Map<String, dynamic>)
+          : null,
+    );
+  }
 }

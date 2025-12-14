@@ -60,6 +60,7 @@ class CharacterWidget extends StatelessWidget {
       width: size,
       height: size,
       fit: fit,
+      key: ValueKey('character_image_$emotion'), // 이미지 위젯에 key 추가하여 리빌드 방지
       errorBuilder: (context, error, stackTrace) {
         // 이미지 로드 실패 시 Placeholder 표시
         return _buildPlaceholder();
@@ -74,7 +75,10 @@ class CharacterWidget extends StatelessWidget {
       );
     }
 
-    return imageWidget;
+    // 애니메이션이 비활성화된 경우 RepaintBoundary로 감싸서 리페인트 방지
+    return RepaintBoundary(
+      child: imageWidget,
+    );
   }
 
   /// Placeholder 위젯 (이미지 로드 실패 시)

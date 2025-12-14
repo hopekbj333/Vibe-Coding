@@ -213,6 +213,17 @@ class ChildSelectPage extends ConsumerWidget {
           ref.read(selectedChildProvider.notifier).selectChild(child);
           context.go('/assessment');
         },
+        onLongPress: () {
+          // 길게 누르면 스토리형 검사로 이동
+          ref.read(selectedChildProvider.notifier).selectChild(child);
+          context.push(
+            '/story/intro',
+            extra: {
+              'childId': child.id,
+              'childName': child.name,
+            },
+          );
+        },
         borderRadius: BorderRadius.circular(DesignSystem.borderRadiusLG),
         child: Padding(
           padding: const EdgeInsets.all(DesignSystem.spacingMD),

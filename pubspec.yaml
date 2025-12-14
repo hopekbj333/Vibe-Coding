@@ -89,6 +89,8 @@ flutter:
     - assets/audio/effects/
     - assets/audio/voice/
     - assets/audio/music/
+    - assets/audio/environment/
+    - assets/audio/pitch/
     - assets/characters/
     - assets/games/
     - assets/games/phonological/

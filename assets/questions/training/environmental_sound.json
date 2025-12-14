@@ -16,15 +16,15 @@
     {
       "itemId": "es_001",
       "question": "무슨 소리일까요?",
-      "questionAudioPath": "audio/environment/rain.mp3",
+      "questionAudioPath": "audio/environment/dog.mp3",
       "questionImagePath": null,
       "options": [
-        {"optionId": "opt1", "label": "🌧️ 비", "imagePath": null, "audioPath": null, "optionData": null},
-        {"optionId": "opt2", "label": "🌊 파도", "imagePath": null, "audioPath": null, "optionData": null},
-        {"optionId": "opt3", "label": "💨 바람", "imagePath": null, "audioPath": null, "optionData": null}
+        {"optionId": "opt1", "label": "🐕 강아지", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt2", "label": "🐱 고양이", "imagePath": null, "audioPath": null, "optionData": null},
+        {"optionId": "opt3", "label": "🐦 새", "imagePath": null, "audioPath": null, "optionData": null}
       ],
       "correctAnswer": "opt1",
-      "explanation": "비 소리예요!",
+      "explanation": "강아지 소리예요!",
       "explanationAudioPath": null,
       "itemData": {"category": "weather", "level": 1}
     },

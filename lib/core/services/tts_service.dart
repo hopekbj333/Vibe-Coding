@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter_tts/flutter_tts.dart';
 
 /// Text-to-Speech 서비스
@@ -38,15 +39,44 @@ class TtsService {
     }
 
     try {
-      // Completer를 사용해서 재생 완료 대기
-      await _flutterTts.speak(text);
+      print('🗣️ TTS 시작: $text');
       
-      // TTS는 비동기로 시작되므로, 재생 시간 예측해서 대기
-      // 한글 1글자당 약 0.5초 (느린 속도 기준)
-      final estimatedDuration = (text.length * 0.5 * 1000).toInt();
-      await Future.delayed(Duration(milliseconds: estimatedDuration.clamp(500, 3000)));
-    } catch (e) {
+      // Completer를 사용해서 재생 완료 대기
+      final completer = Completer<void>();
+      
+      // TTS 완료 핸들러 설정
+      _flutterTts.setCompletionHandler(() {
+        if (!completer.isCompleted) {
+          completer.complete();
+          print('🗣️ TTS 완료 이벤트 수신');
+        }
+      });
+      
+      final result = await _flutterTts.speak(text);
+      print('🗣️ TTS 명령 전송 완료: $result');
+      
+      // TTS 완료 이벤트를 기다림 (최대 10초 타임아웃)
+      try {
+        await completer.future.timeout(const Duration(seconds: 10));
+      } on TimeoutException {
+        print('⚠️ TTS 완료 이벤트 타임아웃 - 예상 시간으로 대기');
+        // 타임아웃 시 예상 시간만큼 대기
+        final estimatedDuration = (text.length * 0.6 * 1000).toInt();
+        final waitTime = estimatedDuration.clamp(800, 5000);
+        await Future.delayed(Duration(milliseconds: waitTime));
+      } catch (e) {
+        print('⚠️ TTS 완료 대기 중 오류: $e');
+        // 오류 발생 시 예상 시간만큼 대기
+        final estimatedDuration = (text.length * 0.6 * 1000).toInt();
+        final waitTime = estimatedDuration.clamp(800, 5000);
+        await Future.delayed(Duration(milliseconds: waitTime));
+      }
+      
+      print('🗣️ TTS 완료');
+    } catch (e, stackTrace) {
       print('❌ TTS 재생 실패: $e');
+      print('스택: $stackTrace');
+      // TTS 실패 시에도 계속 진행 (오디오 재생 시도)
     }
   }
 

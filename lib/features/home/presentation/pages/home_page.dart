@@ -6,6 +6,7 @@ import '../../../../core/design/design_system.dart';
 import '../../../../core/state/app_mode_providers.dart';
 import '../../../../core/state/app_state.dart';
 import '../../../../core/state/auth_providers.dart';
+import '../../../../core/state/child_providers.dart';
 import '../../../../core/widgets/child_friendly_button.dart';
 import '../../../auth/domain/services/auth_service.dart';
 
@@ -80,6 +81,15 @@ class HomePage extends ConsumerWidget {
             const SizedBox(height: 16),
             ChildFriendlyButton(
               onPressed: () {
+                _startStoryAssessment(context, ref);
+              },
+              label: '📖 스토리형 검사 시작',
+              color: const Color(0xFF4CAF50), // 초록색
+              icon: Icons.auto_stories,
+            ),
+            const SizedBox(height: 16),
+            ChildFriendlyButton(
+              onPressed: () {
                 // 아동 모드로 전환
                 ref.read(appModeProvider.notifier).switchToChildMode();
                 context.go('/kids/select');
@@ -132,6 +142,64 @@ class HomePage extends ConsumerWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void _startStoryAssessment(BuildContext context, WidgetRef ref) {
+    // 아동 목록 확인
+    final childrenAsync = ref.read(childrenListProvider);
+    
+    childrenAsync.when(
+      data: (children) {
+        if (children.isEmpty) {
+          // 아동이 없으면 아동 프로필 관리 페이지로 이동
+          showDialog(
+            context: context,
+            builder: (dialogContext) => AlertDialog(
+              title: const Text('아동 프로필 필요'),
+              content: const Text('스토리형 검사를 시작하려면 먼저 아동 프로필을 등록해주세요.'),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(dialogContext).pop(),
+                  child: const Text('취소'),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(dialogContext).pop();
+                    context.push('/child/new');
+                  },
+                  child: const Text('아동 등록하기'),
+                ),
+              ],
+            ),
+          );
+        } else if (children.length == 1) {
+          // 아동이 1명이면 바로 시작
+          final child = children.first;
+          context.push(
+            '/story/intro',
+            extra: {
+              'childId': child.id,
+              'childName': child.name,
+            },
+          );
+        } else {
+          // 아동이 여러 명이면 선택 페이지로 이동
+          // 아동 선택 후 스토리 검사로 이동할 수 있도록 처리
+          context.push('/kids/select');
+        }
+      },
+      loading: () {
+        // 로딩 중이면 잠시 대기
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('아동 정보를 불러오는 중...')),
+        );
+      },
+      error: (error, stack) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('오류: $error')),
+        );
+      },
     );
   }
 

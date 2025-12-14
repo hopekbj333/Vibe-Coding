@@ -9,6 +9,14 @@ import '../../features/assessment/presentation/pages/scoring_queue_page.dart';
 import '../../features/assessment/presentation/pages/scoring_detail_page.dart';
 import '../../features/assessment/presentation/pages/report_page.dart';
 import '../../features/assessment/presentation/pages/assessment_demo_page.dart';
+import 'package:flutter/material.dart';
+import '../../features/assessment/presentation/pages/story/story_intro_page.dart';
+import '../../features/assessment/presentation/pages/story/story_chapter_page.dart';
+import '../../features/assessment/presentation/pages/story/story_question_page.dart';
+import '../../features/assessment/presentation/pages/story/story_feedback_page.dart';
+import '../../features/assessment/presentation/pages/story/story_chapter_complete_page.dart';
+import '../../features/assessment/presentation/pages/story/story_result_page.dart';
+import '../../features/assessment/data/models/story_assessment_model.dart';
 import '../../features/auth/presentation/pages/login_page.dart';
 import '../../features/auth/presentation/pages/signup_page.dart';
 import '../../features/child/presentation/pages/child_form_page.dart';
@@ -342,6 +350,94 @@ class AppRouter {
           path: '/offline-settings',
           name: 'offline-settings',
           builder: (context, state) => const OfflineSettingsPage(),
+        ),
+        // 스토리형 검사
+        GoRoute(
+          path: '/story/intro',
+          name: 'story-intro',
+          builder: (context, state) {
+            final extra = state.extra as Map<String, dynamic>?;
+            final childId = extra?['childId'] as String? ?? '';
+            final childName = extra?['childName'] as String? ?? '아동';
+            return StoryIntroPage(
+              childId: childId,
+              childName: childName,
+            );
+          },
+        ),
+        GoRoute(
+          path: '/story/chapter',
+          name: 'story-chapter',
+          builder: (context, state) {
+            final extra = state.extra as Map<String, dynamic>?;
+            final childId = extra?['childId'] as String? ?? '';
+            final childName = extra?['childName'] as String? ?? '아동';
+            return StoryChapterPage(
+              childId: childId,
+              childName: childName,
+            );
+          },
+        ),
+        GoRoute(
+          path: '/story/question',
+          name: 'story-question',
+          builder: (context, state) {
+            final extra = state.extra as Map<String, dynamic>?;
+            final childId = extra?['childId'] as String? ?? '';
+            final childName = extra?['childName'] as String? ?? '아동';
+            return StoryQuestionPage(
+              childId: childId,
+              childName: childName,
+            );
+          },
+        ),
+        GoRoute(
+          path: '/story/feedback',
+          name: 'story-feedback',
+          builder: (context, state) {
+            final extra = state.extra as Map<String, dynamic>?;
+            final childId = extra?['childId'] as String? ?? '';
+            final childName = extra?['childName'] as String? ?? '아동';
+            final isCorrect = extra?['isCorrect'] as bool? ?? false;
+            final feedback = extra?['feedback'] as StoryFeedback?;
+            if (feedback == null) {
+              return const Scaffold(
+                body: Center(child: Text('피드백 정보가 없습니다.')),
+              );
+            }
+            return StoryFeedbackPage(
+              childId: childId,
+              childName: childName,
+              isCorrect: isCorrect,
+              feedback: feedback,
+            );
+          },
+        ),
+        GoRoute(
+          path: '/story/chapter-complete',
+          name: 'story-chapter-complete',
+          builder: (context, state) {
+            final extra = state.extra as Map<String, dynamic>?;
+            final childId = extra?['childId'] as String? ?? '';
+            final childName = extra?['childName'] as String? ?? '아동';
+            return StoryChapterCompletePage(
+              childId: childId,
+              childName: childName,
+            );
+          },
+        ),
+        GoRoute(
+          path: '/story/result',
+          name: 'story-result',
+          builder: (context, state) {
+            final extra = state.extra as Map<String, dynamic>?;
+            final childId = extra?['childId'] as String? ?? '';
+            final childName = extra?['childName'] as String? ?? '아동';
+            return StoryResultPage(
+              childId: childId,
+              childName: childName,
+            );
+          },
         ),
       ],
     );
