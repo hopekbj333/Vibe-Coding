@@ -433,6 +433,10 @@ class AppRouter {
             final extra = state.extra as Map<String, dynamic>?;
             final childId = extra?['childId'] as String? ?? '';
             final childName = extra?['childName'] as String? ?? '아동';
+            // Note: story_chapter_complete_page.dart에서 accuracy, totalStars, completedCount를 전달하지만,
+            // StoryResultPage는 현재 session state에서 직접 읽어야 합니다.
+            // route builder에서 이 값들을 추출하지 않는 것은 의도된 동작입니다.
+            // StoryResultPage가 필요시 ref.watch(currentStorySessionProvider)로 session.progress에서 읽을 수 있습니다.
             return StoryResultPage(
               childId: childId,
               childName: childName,

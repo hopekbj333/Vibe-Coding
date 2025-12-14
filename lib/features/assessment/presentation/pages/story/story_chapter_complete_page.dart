@@ -119,7 +119,8 @@ class StoryChapterCompletePage extends ConsumerWidget {
                 ChildFriendlyButton(
                   onPressed: () {
                     // 다음 챕터로 이동하거나 결과 페이지로 이동
-                    if (session.currentChapterIndex < session.chapters.length) {
+                    // completedChapters 길이로 완료 여부 확인 (더 명확한 로직)
+                    if (session.progress.completedChapters.length < session.chapters.length) {
                       context.pushReplacement(
                         '/story/chapter',
                         extra: {

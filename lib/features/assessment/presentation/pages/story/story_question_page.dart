@@ -422,7 +422,7 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
     if (currentQuestion != null && 
         _lastQuestionId != currentQuestion.questionId) {
       // #region agent log
-      _debugLog('story_question_page.dart:145', '새 문항 로드', {'questionId': currentQuestion.questionId, 'lastQuestionId': _lastQuestionId, 'audioPath': currentQuestion.questionAudioPath}, hypothesisId: 'H1');
+      await _debugLog('story_question_page.dart:145', '새 문항 로드', {'questionId': currentQuestion.questionId, 'lastQuestionId': _lastQuestionId, 'audioPath': currentQuestion.questionAudioPath}, hypothesisId: 'H1');
       // #endregion
       
       // 이전 안내 시퀀스가 재생 중이면 중지 (중복 재생 방지)
