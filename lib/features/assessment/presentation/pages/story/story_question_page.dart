@@ -423,7 +423,8 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
         _lastQuestionId != currentQuestion.questionId) {
       // #region agent log
       // build() 메서드는 동기 메서드이므로 await 사용 불가
-      _debugLog('story_question_page.dart:145', '새 문항 로드', {'questionId': currentQuestion.questionId, 'lastQuestionId': _lastQuestionId, 'audioPath': currentQuestion.questionAudioPath}, hypothesisId: 'H1');
+      // unawaited()를 사용하여 fire-and-forget 패턴으로 명시적으로 처리
+      unawaited(_debugLog('story_question_page.dart:145', '새 문항 로드', {'questionId': currentQuestion.questionId, 'lastQuestionId': _lastQuestionId, 'audioPath': currentQuestion.questionAudioPath}, hypothesisId: 'H1'));
       // #endregion
       
       // 이전 안내 시퀀스가 재생 중이면 중지 (중복 재생 방지)
