@@ -256,6 +256,72 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
       await _debugLog('story_question_page.dart:96', 'TTS 초기화 완료', {}, hypothesisId: 'H5');
       // #endregion
       
+      final question = storyQuestion.question;
+      
+      // 3번 문항(음절 개수 인식) 특별 처리
+      if (question.pattern == GamePattern.rhythmTap && 
+          question.correctAnswer.isNotEmpty) {
+        try {
+          int.parse(question.correctAnswer); // 정답이 숫자인 경우
+          print('🎵 3번 문항 (음절 개수 인식) 처리');
+          
+          // 이전 오디오 정리
+          await _audioPlayer.stop();
+          _isPlayingAudio = false;
+          
+          // 1. 안내 멘트 (TTS)
+          print('🎵 1단계: TTS 안내 시작');
+          await _ttsService.speak('다음에 들리는 말소리가 몇 개인지 맞춰 보세요');
+          print('🎵 1단계 완료 - TTS 완료 확인됨');
+          
+          // 안내 멘트가 완전히 끝나고 1초 대기
+          await Future.delayed(const Duration(seconds: 1));
+          
+          // 2. '나비' 말소리 재생 (오디오 또는 TTS)
+          print('🎵 2단계: 나비 말소리 재생 시작');
+          bool playedAudio = false;
+          
+          if (storyQuestion.questionAudioPath != null && 
+              storyQuestion.questionAudioPath!.isNotEmpty) {
+            print('🎵 오디오 재생 시도: ${storyQuestion.questionAudioPath}');
+            try {
+              await _playQuestionAudio(storyQuestion.questionAudioPath);
+              print('🎵 2단계 완료 - 오디오 재생 완료');
+              playedAudio = true;
+            } catch (e) {
+              print('⚠️ 오디오 재생 실패: ${storyQuestion.questionAudioPath}');
+              print('에러: $e');
+              // 오디오 재생 실패 시 TTS로 대체
+              print('🔄 오디오 재생 실패, TTS로 대체 재생: ${question.question}');
+              await _ttsService.speak(question.question);
+              playedAudio = true;
+            }
+          } else {
+            print('⚠️ 오디오 경로가 없습니다: ${storyQuestion.questionAudioPath}');
+            // 오디오 경로가 없으면 TTS로 대체
+            print('🔄 오디오 경로 없음, TTS로 대체 재생: ${question.question}');
+            await _ttsService.speak(question.question);
+            playedAudio = true;
+          }
+          
+          // '나비' 말소리 재생이 완료된 후 1초 대기
+          if (playedAudio) {
+            await Future.delayed(const Duration(seconds: 1));
+          }
+          
+          // 3. 다시 듣기 안내 (TTS)
+          print('🎵 3단계: 다시 듣기 안내 시작');
+          await _ttsService.speak('다시 듣고 싶으면 스피커 버튼을 눌러 주세요');
+          print('🎵 3단계 완료 - 전체 시퀀스 완료');
+          
+          // 3번 문항 처리 완료
+          return;
+        } catch (e) {
+          // 정답이 숫자가 아니면 일반 처리로 진행
+          print('⚠️ 3번 문항 처리 실패, 일반 처리로 진행: $e');
+        }
+      }
+      
       // 2번 문항(abilityId '0.2': 소리 크기/높이 변별) 특별 처리
       if (storyQuestion.abilityId == '0.2') {
         print('🎵 2번 문항 (소리 크기/높이 변별) 처리');
@@ -273,7 +339,6 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
         await Future.delayed(const Duration(seconds: 1));
         
         // 2. options에서 audioPath가 있는 소리들을 순차적으로 재생
-        final question = storyQuestion.question;
         print('🔍 2번 문항 options 확인: ${question.options.length}개');
         for (var opt in question.options) {
           print('  - optionId: ${opt.optionId}, audioPath: ${opt.audioPath}, audioPath==null: ${opt.audioPath == null}, isEmpty: ${opt.audioPath?.isEmpty ?? true}');
@@ -683,28 +748,60 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
         // 1~5개 음절 선택지 생성
         final syllableOptions = List.generate(5, (i) => i + 1);
         
+        // 오디오 재생 버튼 (다시 들을 수 있도록)
+        final hasAudio = storyQuestion.questionAudioPath != null && 
+            storyQuestion.questionAudioPath!.isNotEmpty;
+        
         return Column(
           children: [
-            // 질문
-            Text(
-              question.question,
-              style: const TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF424242),
+            // 질문 텍스트 제거 (아동은 한글을 읽을 수 없으므로)
+            // 오디오만 재생
+            
+            // 스피커 버튼 (항상 표시 - 3번 문항은 항상 '나비' 소리 재생)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              child: IconButton(
+                iconSize: 64,
+                icon: Icon(
+                  _isPlayingAudio ? Icons.volume_up : Icons.volume_down,
+                  color: _isPlayingAudio ? Colors.green : Colors.grey,
+                ),
+                onPressed: _isPlayingAudio ? null : () async {
+                  // 스피커 버튼 클릭 시 '나비' 소리 재생 (3번 문항 전용)
+                  print('🔊 스피커 버튼 클릭: 나비 소리 재생 시작');
+                  print('🔍 question.question: ${question.question}');
+                  print('🔍 questionAudioPath: ${storyQuestion.questionAudioPath}');
+                  
+                  // 이전 오디오 정리
+                  await _audioPlayer.stop();
+                  setState(() => _isPlayingAudio = false);
+                  
+                  final audioPath = storyQuestion.questionAudioPath;
+                  bool audioPlayed = false;
+                  
+                  // 오디오 재생 시도
+                  if (audioPath != null && audioPath.isNotEmpty) {
+                    try {
+                      print('🔊 오디오 재생 시도: $audioPath');
+                      await _playQuestionAudio(audioPath);
+                      print('✅ 오디오 재생 완료');
+                      audioPlayed = true;
+                    } catch (e) {
+                      print('⚠️ 오디오 재생 실패: $e');
+                      // 오디오 재생 실패 시 TTS로 대체
+                    }
+                  }
+                  
+                  // 오디오 재생 실패하거나 경로가 없으면 TTS로 재생
+                  if (!audioPlayed) {
+                    print('🔄 TTS로 나비 읽기: ${question.question}');
+                    await _ttsService.speak(question.question);
+                  }
+                },
               ),
-              textAlign: TextAlign.center,
             ),
+            
             const SizedBox(height: 16),
-            const Text(
-              '몇 개의 음절인가요?',
-              style: TextStyle(
-                fontSize: 20,
-                color: Color(0xFF757575),
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 32),
             
             // 음절 개수 선택 버튼들
             Expanded(
