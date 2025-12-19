@@ -1,7 +1,11 @@
 import 'dart:math';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import '../../../training/data/models/training_content_model.dart';
 import '../../../training/data/models/difficulty_params_model.dart';
 import '../../../training/data/services/question_loader_service.dart';
+
+part 'assessment_sampling_service.freezed.dart';
+part 'assessment_sampling_service.g.dart';
 
 /// Assessment를 위해 Training 문항에서 샘플링하는 서비스
 class AssessmentSamplingService {
@@ -134,93 +138,22 @@ class AssessmentSamplingService {
 }
 
 /// Assessment용 문항 모델 (Training 문항의 간소화 버전)
-class AssessmentQuestion {
-  final int questionNumber; // 1~50
-  final String gameId; // 'same_sound'
-  final String gameTitle; // '같은 소리 찾기'
-  final String contentId;
-  final TrainingContentType type;
-  final GamePattern pattern;
-  final String itemId;
-  final String question;
-  final List<ContentOption> options;
-  final String correctAnswer;
-  final DifficultyParams? difficulty;
+@freezed
+class AssessmentQuestion with _$AssessmentQuestion {
+  const factory AssessmentQuestion({
+    required int questionNumber, // 1~50
+    required String gameId, // 'same_sound'
+    required String gameTitle, // '같은 소리 찾기'
+    required String contentId,
+    required TrainingContentType type,
+    required GamePattern pattern,
+    required String itemId,
+    required String question,
+    required List<ContentOption> options,
+    required String correctAnswer,
+    DifficultyParams? difficulty,
+  }) = _AssessmentQuestion;
 
-  AssessmentQuestion({
-    required this.questionNumber,
-    required this.gameId,
-    required this.gameTitle,
-    required this.contentId,
-    required this.type,
-    required this.pattern,
-    required this.itemId,
-    required this.question,
-    required this.options,
-    required this.correctAnswer,
-    this.difficulty,
-  });
-
-  Map<String, dynamic> toJson() {
-    return {
-      'questionNumber': questionNumber,
-      'gameId': gameId,
-      'gameTitle': gameTitle,
-      'contentId': contentId,
-      'type': type.toString(),
-      'pattern': pattern.toString(),
-      'itemId': itemId,
-      'question': question,
-      'options': options.map((o) => o.toJson()).toList(),
-      'correctAnswer': correctAnswer,
-      'difficulty': difficulty?.toJson(),
-    };
-  }
-
-  factory AssessmentQuestion.fromJson(Map<String, dynamic> json) {
-    // TrainingContentType과 GamePattern은 toString() 결과가 "TrainingContentType.phonological" 형식이므로
-    // 마지막 부분만 추출하여 비교
-    final typeString = json['type'] as String;
-    final patternString = json['pattern'] as String;
-    
-    TrainingContentType type;
-    try {
-      final typeName = typeString.split('.').last;
-      type = TrainingContentType.values.firstWhere(
-        (e) => e.name == typeName,
-        orElse: () => TrainingContentType.phonological,
-      );
-    } catch (e) {
-      type = TrainingContentType.phonological;
-    }
-    
-    GamePattern pattern;
-    try {
-      final patternName = patternString.split('.').last;
-      pattern = GamePattern.values.firstWhere(
-        (e) => e.name == patternName,
-        orElse: () => GamePattern.multipleChoice,
-      );
-    } catch (e) {
-      pattern = GamePattern.multipleChoice;
-    }
-    
-    return AssessmentQuestion(
-      questionNumber: json['questionNumber'] as int,
-      gameId: json['gameId'] as String,
-      gameTitle: json['gameTitle'] as String,
-      contentId: json['contentId'] as String,
-      type: type,
-      pattern: pattern,
-      itemId: json['itemId'] as String,
-      question: json['question'] as String,
-      options: (json['options'] as List)
-          .map((o) => ContentOption.fromJson(o as Map<String, dynamic>))
-          .toList(),
-      correctAnswer: json['correctAnswer'] as String,
-      difficulty: json['difficulty'] != null
-          ? DifficultyParams.fromJson(json['difficulty'] as Map<String, dynamic>)
-          : null,
-    );
-  }
+  factory AssessmentQuestion.fromJson(Map<String, dynamic> json) =>
+      _$AssessmentQuestionFromJson(json);
 }

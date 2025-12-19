@@ -1,4 +1,7 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'question_model.freezed.dart';
+part 'question_model.g.dart';
 
 enum QuestionType {
   choice, // 선택형 (O/X, N지선다)
@@ -41,124 +44,39 @@ enum QuestionType {
   continuousPerformance, // 지속적 주의력 (S 1.6.7)
 }
 
-class QuestionModel extends Equatable {
-  final String id;
-  final QuestionType type;
-  final String promptText; // 질문 텍스트 (성우 대본용)
-  final String promptAudioUrl; // 질문 오디오 URL
-  final List<String> optionsImageUrl; // 보기 이미지 URL 목록
-  final List<String> optionsText; // 보기 텍스트 (접근성용)
-  final dynamic correctAnswer; // 정답 (인덱스 or 텍스트)
-  final int timeLimitSeconds; // 제한 시간
-  
-  // S 1.4.1: 소리 식별용 추가 필드
-  final List<String> soundUrls; // 재생할 소리 URL 목록
-  final List<String> soundLabels; // 소리 라벨 (예: "북소리", "피아노 소리")
+@freezed
+class QuestionModel with _$QuestionModel {
+  const factory QuestionModel({
+    required String id,
+    required QuestionType type,
+    required String promptText, // 질문 텍스트 (성우 대본용)
+    required String promptAudioUrl, // 질문 오디오 URL
+    @Default([]) List<String> optionsImageUrl, // 보기 이미지 URL 목록
+    @Default([]) List<String> optionsText, // 보기 텍스트 (접근성용)
+    @JsonKey() required dynamic correctAnswer, // 정답 (인덱스 or 텍스트)
+    @Default(10) int timeLimitSeconds, // 제한 시간
+    // S 1.4.1: 소리 식별용 추가 필드
+    @Default([]) List<String> soundUrls, // 재생할 소리 URL 목록
+    @Default([]) List<String> soundLabels, // 소리 라벨 (예: "북소리", "피아노 소리")
+  }) = _QuestionModel;
 
-  const QuestionModel({
-    required this.id,
-    required this.type,
-    required this.promptText,
-    required this.promptAudioUrl,
-    this.optionsImageUrl = const [],
-    this.optionsText = const [],
-    required this.correctAnswer,
-    this.timeLimitSeconds = 10,
-    this.soundUrls = const [],
-    this.soundLabels = const [],
-  });
-
-  @override
-  List<Object?> get props => [
-        id,
-        type,
-        promptText,
-        promptAudioUrl,
-        optionsImageUrl,
-        optionsText,
-        correctAnswer,
-        timeLimitSeconds,
-        soundUrls,
-        soundLabels,
-      ];
-
-  factory QuestionModel.fromJson(Map<String, dynamic> json) {
-    return QuestionModel(
-      id: json['id'] as String,
-      type: QuestionType.values.byName(json['type'] as String),
-      promptText: json['promptText'] as String,
-      promptAudioUrl: json['promptAudioUrl'] as String,
-      optionsImageUrl: (json['optionsImageUrl'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      optionsText: (json['optionsText'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      correctAnswer: json['correctAnswer'],
-      timeLimitSeconds: json['timeLimitSeconds'] as int? ?? 10,
-      soundUrls: (json['soundUrls'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-      soundLabels: (json['soundLabels'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          const [],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'type': type.name,
-      'promptText': promptText,
-      'promptAudioUrl': promptAudioUrl,
-      'optionsImageUrl': optionsImageUrl,
-      'optionsText': optionsText,
-      'correctAnswer': correctAnswer,
-      'timeLimitSeconds': timeLimitSeconds,
-      'soundUrls': soundUrls,
-      'soundLabels': soundLabels,
-    };
-  }
+  factory QuestionModel.fromJson(Map<String, dynamic> json) =>
+      _$QuestionModelFromJson(json);
 }
 
 /// 사용자 답변 데이터 (S 1.3.4)
 /// 
 /// 사용자가 입력한 답변과 관련 메타데이터를 저장합니다.
-class AnswerData extends Equatable {
-  final String questionId;
-  final dynamic selectedAnswer; // 선택한 인덱스 또는 텍스트
-  final int reactionTimeMs; // 반응 시간 (밀리초)
-  final DateTime answeredAt; // 답변 시각
-  final String? recordingPath; // 녹음 파일 경로 (recording 타입일 때)
+@freezed
+class AnswerData with _$AnswerData {
+  const factory AnswerData({
+    required String questionId,
+    @JsonKey() required dynamic selectedAnswer, // 선택한 인덱스 또는 텍스트
+    required int reactionTimeMs, // 반응 시간 (밀리초)
+    required DateTime answeredAt, // 답변 시각
+    String? recordingPath, // 녹음 파일 경로 (recording 타입일 때)
+  }) = _AnswerData;
 
-  const AnswerData({
-    required this.questionId,
-    required this.selectedAnswer,
-    required this.reactionTimeMs,
-    required this.answeredAt,
-    this.recordingPath,
-  });
-
-  @override
-  List<Object?> get props => [
-        questionId,
-        selectedAnswer,
-        reactionTimeMs,
-        answeredAt,
-        recordingPath,
-      ];
-
-  Map<String, dynamic> toJson() {
-    return {
-      'questionId': questionId,
-      'selectedAnswer': selectedAnswer,
-      'reactionTimeMs': reactionTimeMs,
-      'answeredAt': answeredAt.toIso8601String(),
-      'recordingPath': recordingPath,
-    };
-  }
+  factory AnswerData.fromJson(Map<String, dynamic> json) =>
+      _$AnswerDataFromJson(json);
 }

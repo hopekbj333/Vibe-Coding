@@ -1,6 +1,10 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'assessment_session_model.dart';
 import '../services/assessment_sampling_service.dart';
+import 'dart:convert';
+
+part 'story_assessment_model.freezed.dart';
+part 'story_assessment_model.g.dart';
 
 /// 스토리 테마
 enum StoryTheme {
@@ -25,30 +29,22 @@ enum StoryProgressStatus {
 }
 
 /// 스토리형 검사 세션
-class StoryAssessmentSession extends Equatable {
-  final String sessionId;
-  final String childId;
-  final StoryTheme theme;
-  final DateTime startedAt;
-  final DateTime? completedAt;
-  final StoryProgressStatus status;
-  final List<StoryChapter> chapters;
-  final int currentChapterIndex;
-  final int currentQuestionIndex;
-  final StoryProgress progress;
+@freezed
+class StoryAssessmentSession with _$StoryAssessmentSession {
+  const StoryAssessmentSession._();
 
-  const StoryAssessmentSession({
-    required this.sessionId,
-    required this.childId,
-    required this.theme,
-    required this.startedAt,
-    this.completedAt,
-    required this.status,
-    required this.chapters,
-    required this.currentChapterIndex,
-    required this.currentQuestionIndex,
-    required this.progress,
-  });
+  const factory StoryAssessmentSession({
+    required String sessionId,
+    required String childId,
+    required StoryTheme theme,
+    required DateTime startedAt,
+    DateTime? completedAt,
+    required StoryProgressStatus status,
+    required List<StoryChapter> chapters,
+    required int currentChapterIndex,
+    required int currentQuestionIndex,
+    required StoryProgress progress,
+  }) = _StoryAssessmentSession;
 
   /// 전체 문항 수 (35개)
   int get totalQuestions => 35;
@@ -78,266 +74,83 @@ class StoryAssessmentSession extends Equatable {
     return null;
   }
 
-  @override
-  List<Object?> get props => [
-        sessionId,
-        childId,
-        theme,
-        startedAt,
-        completedAt,
-        status,
-        chapters,
-        currentChapterIndex,
-        currentQuestionIndex,
-        progress,
-      ];
-
-  StoryAssessmentSession copyWith({
-    String? sessionId,
-    String? childId,
-    StoryTheme? theme,
-    DateTime? startedAt,
-    DateTime? completedAt,
-    StoryProgressStatus? status,
-    List<StoryChapter>? chapters,
-    int? currentChapterIndex,
-    int? currentQuestionIndex,
-    StoryProgress? progress,
-  }) {
-    return StoryAssessmentSession(
-      sessionId: sessionId ?? this.sessionId,
-      childId: childId ?? this.childId,
-      theme: theme ?? this.theme,
-      startedAt: startedAt ?? this.startedAt,
-      completedAt: completedAt ?? this.completedAt,
-      status: status ?? this.status,
-      chapters: chapters ?? this.chapters,
-      currentChapterIndex: currentChapterIndex ?? this.currentChapterIndex,
-      currentQuestionIndex: currentQuestionIndex ?? this.currentQuestionIndex,
-      progress: progress ?? this.progress,
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'sessionId': sessionId,
-      'childId': childId,
-      'theme': theme.toString(),
-      'startedAt': startedAt.toIso8601String(),
-      'completedAt': completedAt?.toIso8601String(),
-      'status': status.toString(),
-      'chapters': chapters.map((c) => c.toJson()).toList(),
-      'currentChapterIndex': currentChapterIndex,
-      'currentQuestionIndex': currentQuestionIndex,
-      'progress': progress.toJson(),
-    };
-  }
-
-  factory StoryAssessmentSession.fromJson(Map<String, dynamic> json) {
-    return StoryAssessmentSession(
-      sessionId: json['sessionId'] as String,
-      childId: json['childId'] as String,
-      theme: StoryTheme.values.firstWhere(
-        (e) => e.toString() == json['theme'],
-        orElse: () => StoryTheme.hangeulLand,
-      ),
-      startedAt: DateTime.parse(json['startedAt'] as String),
-      completedAt: json['completedAt'] != null
-          ? DateTime.parse(json['completedAt'] as String)
-          : null,
-      status: StoryProgressStatus.values.firstWhere(
-        (e) => e.toString() == json['status'],
-        orElse: () => StoryProgressStatus.notStarted,
-      ),
-      chapters: (json['chapters'] as List)
-          .map((c) => StoryChapter.fromJson(c as Map<String, dynamic>))
-          .toList(),
-      currentChapterIndex: json['currentChapterIndex'] as int,
-      currentQuestionIndex: json['currentQuestionIndex'] as int,
-      progress: StoryProgress.fromJson(json['progress'] as Map<String, dynamic>),
-    );
-  }
+  factory StoryAssessmentSession.fromJson(Map<String, dynamic> json) =>
+      _$StoryAssessmentSessionFromJson(json);
 }
 
 /// 스토리 챕터
-class StoryChapter extends Equatable {
-  final String chapterId;
-  final String title; // "소리 섬", "기억 바다" 등
-  final String description;
-  final StoryChapterType type;
-  final List<StoryQuestion> questions;
-  final String introDialogue; // 한글 캐릭터의 인트로 대사
-  final String completeDialogue; // 챕터 완료 대사
-  final StoryReward reward; // 완료 시 보상
+@freezed
+class StoryChapter with _$StoryChapter {
+  const StoryChapter._();
 
-  const StoryChapter({
-    required this.chapterId,
-    required this.title,
-    required this.description,
-    required this.type,
-    required this.questions,
-    required this.introDialogue,
-    required this.completeDialogue,
-    required this.reward,
-  });
+  const factory StoryChapter({
+    required String chapterId,
+    required String title, // "소리 섬", "기억 바다" 등
+    required String description,
+    required StoryChapterType type,
+    required List<StoryQuestion> questions,
+    required String introDialogue, // 한글 캐릭터의 인트로 대사
+    required String completeDialogue, // 챕터 완료 대사
+    required StoryReward reward, // 완료 시 보상
+  }) = _StoryChapter;
 
   /// 문항 수
   int get questionCount => questions.length;
 
-  @override
-  List<Object?> get props => [
-        chapterId,
-        title,
-        description,
-        type,
-        questions,
-        introDialogue,
-        completeDialogue,
-        reward,
-      ];
-
-  Map<String, dynamic> toJson() {
-    return {
-      'chapterId': chapterId,
-      'title': title,
-      'description': description,
-      'type': type.toString(),
-      'questions': questions.map((q) => q.toJson()).toList(),
-      'introDialogue': introDialogue,
-      'completeDialogue': completeDialogue,
-      'reward': reward.toJson(),
-    };
-  }
-
-  factory StoryChapter.fromJson(Map<String, dynamic> json) {
-    return StoryChapter(
-      chapterId: json['chapterId'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      type: StoryChapterType.values.firstWhere(
-        (e) => e.toString() == json['type'],
-        orElse: () => StoryChapterType.phonologicalAwareness,
-      ),
-      questions: (json['questions'] as List)
-          .map((q) => StoryQuestion.fromJson(q as Map<String, dynamic>))
-          .toList(),
-      introDialogue: json['introDialogue'] as String,
-      completeDialogue: json['completeDialogue'] as String,
-      reward: StoryReward.fromJson(json['reward'] as Map<String, dynamic>),
-    );
-  }
+  factory StoryChapter.fromJson(Map<String, dynamic> json) =>
+      _$StoryChapterFromJson(json);
 }
 
 /// 스토리 문항
-class StoryQuestion extends Equatable {
-  final String questionId;
-  final String abilityId; // 35개 능력 중 하나 (예: "0.1", "1.1")
-  final String abilityName; // 능력명
-  final String storyContext; // 스토리 맥락 설명
-  final String characterDialogue; // 캐릭터 대사
-  final AssessmentQuestion question; // 실제 검사 문항
-  final String? stageTitle; // Stage 제목 (예: "Stage 1-1: 기초 청각 능력")
-  final String? questionAudioPath; // 문항 오디오 경로
+@freezed
+class StoryQuestion with _$StoryQuestion {
+  const factory StoryQuestion({
+    required String questionId,
+    required String abilityId, // 35개 능력 중 하나 (예: "0.1", "1.1")
+    required String abilityName, // 능력명
+    required String storyContext, // 스토리 맥락 설명
+    required String characterDialogue, // 캐릭터 대사
+    @JsonKey(toJson: _assessmentQuestionToJson, fromJson: _assessmentQuestionFromJson)
+    required AssessmentQuestion question, // 실제 검사 문항
+    String? stageTitle, // Stage 제목 (예: "Stage 1-1: 기초 청각 능력")
+    String? questionAudioPath, // 문항 오디오 경로
+  }) = _StoryQuestion;
 
-  const StoryQuestion({
-    required this.questionId,
-    required this.abilityId,
-    required this.abilityName,
-    required this.storyContext,
-    required this.characterDialogue,
-    required this.question,
-    this.stageTitle,
-    this.questionAudioPath,
-  });
+  static Map<String, dynamic> _assessmentQuestionToJson(AssessmentQuestion question) =>
+      question.toJson();
+  
+  static AssessmentQuestion _assessmentQuestionFromJson(Map<String, dynamic> json) =>
+      AssessmentQuestion.fromJson(json);
 
-  @override
-  List<Object?> get props => [
-        questionId,
-        abilityId,
-        abilityName,
-        storyContext,
-        characterDialogue,
-        question,
-        stageTitle,
-        questionAudioPath,
-      ];
-
-  Map<String, dynamic> toJson() {
-    return {
-      'questionId': questionId,
-      'abilityId': abilityId,
-      'abilityName': abilityName,
-      'storyContext': storyContext,
-      'characterDialogue': characterDialogue,
-      'question': question.toJson(),
-      'stageTitle': stageTitle,
-      'questionAudioPath': questionAudioPath,
-    };
-  }
-
-  factory StoryQuestion.fromJson(Map<String, dynamic> json) {
-    return StoryQuestion(
-      questionId: json['questionId'] as String,
-      abilityId: json['abilityId'] as String,
-      abilityName: json['abilityName'] as String,
-      storyContext: json['storyContext'] as String,
-      characterDialogue: json['characterDialogue'] as String,
-      question: AssessmentQuestion.fromJson(
-        json['question'] as Map<String, dynamic>,
-      ),
-      stageTitle: json['stageTitle'] as String?,
-      questionAudioPath: json['questionAudioPath'] as String?,
-    );
-  }
+  factory StoryQuestion.fromJson(Map<String, dynamic> json) =>
+      _$StoryQuestionFromJson(json);
 }
 
 /// 스토리 보상
-class StoryReward extends Equatable {
-  final int stars; // 별 개수
-  final String? badge; // 배지 이름 (선택)
-  final String message; // 보상 메시지
+@freezed
+class StoryReward with _$StoryReward {
+  const factory StoryReward({
+    required int stars, // 별 개수
+    String? badge, // 배지 이름 (선택)
+    required String message, // 보상 메시지
+  }) = _StoryReward;
 
-  const StoryReward({
-    required this.stars,
-    this.badge,
-    required this.message,
-  });
-
-  @override
-  List<Object?> get props => [stars, badge, message];
-
-  Map<String, dynamic> toJson() {
-    return {
-      'stars': stars,
-      'badge': badge,
-      'message': message,
-    };
-  }
-
-  factory StoryReward.fromJson(Map<String, dynamic> json) {
-    return StoryReward(
-      stars: json['stars'] as int,
-      badge: json['badge'] as String?,
-      message: json['message'] as String,
-    );
-  }
+  factory StoryReward.fromJson(Map<String, dynamic> json) =>
+      _$StoryRewardFromJson(json);
 }
 
 /// 스토리 진행 상황
-class StoryProgress extends Equatable {
-  final List<String> completedQuestions; // 완료한 문항 ID 리스트
-  final Map<String, bool> questionResults; // 문항별 정답 여부
-  final Map<String, int> questionResponseTimes; // 문항별 응답 시간 (ms)
-  final List<String> completedChapters; // 완료한 챕터 ID 리스트
-  final int totalStars; // 획득한 별 총 개수
+@freezed
+class StoryProgress with _$StoryProgress {
+  const StoryProgress._();
 
-  const StoryProgress({
-    required this.completedQuestions,
-    required this.questionResults,
-    required this.questionResponseTimes,
-    required this.completedChapters,
-    required this.totalStars,
-  });
+  const factory StoryProgress({
+    required List<String> completedQuestions, // 완료한 문항 ID 리스트
+    required Map<String, bool> questionResults, // 문항별 정답 여부
+    required Map<String, int> questionResponseTimes, // 문항별 응답 시간 (ms)
+    required List<String> completedChapters, // 완료한 챕터 ID 리스트
+    required int totalStars, // 획득한 별 총 개수
+  }) = _StoryProgress;
 
   /// 정답 개수
   int get correctCount =>
@@ -349,53 +162,7 @@ class StoryProgress extends Equatable {
     return correctCount / questionResults.length;
   }
 
-  @override
-  List<Object?> get props => [
-        completedQuestions,
-        questionResults,
-        questionResponseTimes,
-        completedChapters,
-        totalStars,
-      ];
-
-  StoryProgress copyWith({
-    List<String>? completedQuestions,
-    Map<String, bool>? questionResults,
-    Map<String, int>? questionResponseTimes,
-    List<String>? completedChapters,
-    int? totalStars,
-  }) {
-    return StoryProgress(
-      completedQuestions: completedQuestions ?? this.completedQuestions,
-      questionResults: questionResults ?? this.questionResults,
-      questionResponseTimes: questionResponseTimes ?? this.questionResponseTimes,
-      completedChapters: completedChapters ?? this.completedChapters,
-      totalStars: totalStars ?? this.totalStars,
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'completedQuestions': completedQuestions,
-      'questionResults': questionResults,
-      'questionResponseTimes': questionResponseTimes,
-      'completedChapters': completedChapters,
-      'totalStars': totalStars,
-    };
-  }
-
-  factory StoryProgress.fromJson(Map<String, dynamic> json) {
-    return StoryProgress(
-      completedQuestions: List<String>.from(json['completedQuestions'] as List),
-      questionResults: Map<String, bool>.from(
-        json['questionResults'] as Map,
-      ),
-      questionResponseTimes: Map<String, int>.from(
-        json['questionResponseTimes'] as Map,
-      ),
-      completedChapters: List<String>.from(json['completedChapters'] as List),
-      totalStars: json['totalStars'] as int,
-    );
-  }
+  factory StoryProgress.fromJson(Map<String, dynamic> json) =>
+      _$StoryProgressFromJson(json);
 }
 
