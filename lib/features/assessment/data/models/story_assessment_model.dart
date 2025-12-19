@@ -236,7 +236,6 @@ class StoryQuestion extends Equatable {
   final String storyContext; // 스토리 맥락 설명
   final String characterDialogue; // 캐릭터 대사
   final AssessmentQuestion question; // 실제 검사 문항
-  final StoryFeedback feedback; // 피드백 메시지
   final String? stageTitle; // Stage 제목 (예: "Stage 1-1: 기초 청각 능력")
   final String? questionAudioPath; // 문항 오디오 경로
 
@@ -247,7 +246,6 @@ class StoryQuestion extends Equatable {
     required this.storyContext,
     required this.characterDialogue,
     required this.question,
-    required this.feedback,
     this.stageTitle,
     this.questionAudioPath,
   });
@@ -260,7 +258,6 @@ class StoryQuestion extends Equatable {
         storyContext,
         characterDialogue,
         question,
-        feedback,
         stageTitle,
         questionAudioPath,
       ];
@@ -273,7 +270,6 @@ class StoryQuestion extends Equatable {
       'storyContext': storyContext,
       'characterDialogue': characterDialogue,
       'question': question.toJson(),
-      'feedback': feedback.toJson(),
       'stageTitle': stageTitle,
       'questionAudioPath': questionAudioPath,
     };
@@ -289,52 +285,8 @@ class StoryQuestion extends Equatable {
       question: AssessmentQuestion.fromJson(
         json['question'] as Map<String, dynamic>,
       ),
-      feedback: StoryFeedback.fromJson(
-        json['feedback'] as Map<String, dynamic>,
-      ),
       stageTitle: json['stageTitle'] as String?,
       questionAudioPath: json['questionAudioPath'] as String?,
-    );
-  }
-}
-
-/// 스토리 피드백
-class StoryFeedback extends Equatable {
-  final String correctMessage; // 정답 시 메시지
-  final String incorrectMessage; // 오답 시 메시지
-  final String? correctEmoji; // 정답 시 이모지
-  final String? incorrectEmoji; // 오답 시 이모지
-
-  const StoryFeedback({
-    required this.correctMessage,
-    required this.incorrectMessage,
-    this.correctEmoji,
-    this.incorrectEmoji,
-  });
-
-  @override
-  List<Object?> get props => [
-        correctMessage,
-        incorrectMessage,
-        correctEmoji,
-        incorrectEmoji,
-      ];
-
-  Map<String, dynamic> toJson() {
-    return {
-      'correctMessage': correctMessage,
-      'incorrectMessage': incorrectMessage,
-      'correctEmoji': correctEmoji,
-      'incorrectEmoji': incorrectEmoji,
-    };
-  }
-
-  factory StoryFeedback.fromJson(Map<String, dynamic> json) {
-    return StoryFeedback(
-      correctMessage: json['correctMessage'] as String,
-      incorrectMessage: json['incorrectMessage'] as String,
-      correctEmoji: json['correctEmoji'] as String?,
-      incorrectEmoji: json['incorrectEmoji'] as String?,
     );
   }
 }

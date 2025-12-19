@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/foundation.dart' show kIsWeb, unawaited;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,6 +11,8 @@ import '../../../../../core/services/tts_service.dart';
 import '../../providers/story_assessment_provider.dart';
 import '../../../data/models/story_assessment_model.dart';
 import '../../../../training/data/models/training_content_model.dart';
+import '../../../data/services/instruction_sequence_loader_service.dart';
+import '../../../domain/services/instruction_sequence_executor.dart';
 
 // #region agent log
 Future<void> _debugLog(String location, String message, Map<String, dynamic> data, {String? hypothesisId}) async {
@@ -76,6 +78,7 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
   String? _lastQuestionId;
   final AudioPlayer _audioPlayer = AudioPlayer();
   final TtsService _ttsService = TtsService();
+  final InstructionSequenceLoaderService _sequenceLoader = InstructionSequenceLoaderService();
   bool _isPlayingAudio = false;
 
   @override
@@ -149,13 +152,19 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
     try {
       // audio_option_button 패턴 사용: AssetSource는 'assets/' 접두사를 제외하고 경로를 받습니다
       // 예: 'audio/environment/rain.mp3' (assets/ 제외)
-      final assetSource = AssetSource(audioPath);
+      // audioPath가 'assets/audio/environment/dog.mp3' 형태이면 'assets/'를 제거하여 'audio/environment/dog.mp3'로 변환
+      String assetSourcePath = audioPath;
+      if (assetSourcePath.startsWith('assets/')) {
+        assetSourcePath = assetSourcePath.substring(7); // 'assets/'.length = 7
+        print('🔧 [오디오] 경로 변환: "$audioPath" → "$assetSourcePath"');
+      }
+      final assetSource = AssetSource(assetSourcePath);
       
       // #region agent log
-      await _debugLog('story_question_page.dart:73', 'AssetSource 생성 완료', {'audioPath': audioPath}, hypothesisId: 'H2');
+      await _debugLog('story_question_page.dart:73', 'AssetSource 생성 완료', {'audioPath': audioPath, 'assetSourcePath': assetSourcePath}, hypothesisId: 'H2');
       // #endregion
       
-      print('🔊 AssetSource 생성: $audioPath');
+      print('🔊 [오디오] AssetSource 생성: 원본="$audioPath", 변환="$assetSourcePath"');
       
       // #region agent log
       await _debugLog('story_question_page.dart:77', '오디오 재생 명령 전송 전', {'audioPath': audioPath}, hypothesisId: 'H3');
@@ -234,229 +243,76 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
     }
   }
 
-  /// 전체 안내 시퀀스: TTS 안내 → 오디오 재생 → 다시 듣기 안내
+  /// 전체 안내 시퀀스: JSON 기반 실행
   Future<void> _playFullInstructionSequence(StoryQuestion storyQuestion) async {
-    // 중복 재생 방지: 이미 재생 중이면 무시
+    print('🎬 [시퀀스 시작] _playFullInstructionSequence 호출됨');
+    print('  - questionId: ${storyQuestion.questionId}');
+    print('  - _isPlayingAudio: $_isPlayingAudio');
+    
+    // 중복 재생 방지: 이미 오디오 재생 중이면 무시 (TTS는 별도 관리)
     if (_isPlayingAudio) {
-      print('⚠️ 이미 오디오 재생 중이므로 안내 시퀀스 건너뜀');
+      print('⚠️ [시퀀스 중단] 이미 오디오 재생 중이므로 안내 시퀀스 건너뜀');
       return;
     }
     
     // #region agent log
-    await _debugLog('story_question_page.dart:88', '안내 시퀀스 시작', {'questionId': storyQuestion.questionId, 'audioPath': storyQuestion.questionAudioPath}, hypothesisId: 'H1');
+    await _debugLog('story_question_page.dart:88', '안내 시퀀스 시작 (JSON 기반)', {'questionId': storyQuestion.questionId, 'audioPath': storyQuestion.questionAudioPath}, hypothesisId: 'H1');
     // #endregion
     
     try {
-      print('🎵 시작: 전체 안내 시퀀스');
+      print('🎵 [시퀀스] JSON 기반 안내 시퀀스 시작');
       
-      // TTS 초기화 확인
-      await _ttsService.initialize();
-      
-      // #region agent log
-      await _debugLog('story_question_page.dart:96', 'TTS 초기화 완료', {}, hypothesisId: 'H5');
-      // #endregion
-      
-      final question = storyQuestion.question;
-      
-      // 3번 문항(음절 개수 인식) 특별 처리
-      if (question.pattern == GamePattern.rhythmTap && 
-          question.correctAnswer.isNotEmpty) {
-        try {
-          int.parse(question.correctAnswer); // 정답이 숫자인 경우
-          print('🎵 3번 문항 (음절 개수 인식) 처리');
-          
-          // 이전 오디오 정리
-          await _audioPlayer.stop();
-          _isPlayingAudio = false;
-          
-          // 1. 안내 멘트 (TTS)
-          print('🎵 1단계: TTS 안내 시작');
-          await _ttsService.speak('다음에 들리는 말소리가 몇 개인지 맞춰 보세요');
-          print('🎵 1단계 완료 - TTS 완료 확인됨');
-          
-          // 안내 멘트가 완전히 끝나고 1초 대기
-          await Future.delayed(const Duration(seconds: 1));
-          
-          // 2. '나비' 말소리 재생 (오디오 또는 TTS)
-          print('🎵 2단계: 나비 말소리 재생 시작');
-          bool playedAudio = false;
-          
-          if (storyQuestion.questionAudioPath != null && 
-              storyQuestion.questionAudioPath!.isNotEmpty) {
-            print('🎵 오디오 재생 시도: ${storyQuestion.questionAudioPath}');
-            try {
-              await _playQuestionAudio(storyQuestion.questionAudioPath);
-              print('🎵 2단계 완료 - 오디오 재생 완료');
-              playedAudio = true;
-            } catch (e) {
-              print('⚠️ 오디오 재생 실패: ${storyQuestion.questionAudioPath}');
-              print('에러: $e');
-              // 오디오 재생 실패 시 TTS로 대체
-              print('🔄 오디오 재생 실패, TTS로 대체 재생: ${question.question}');
-              await _ttsService.speak(question.question);
-              playedAudio = true;
-            }
-          } else {
-            print('⚠️ 오디오 경로가 없습니다: ${storyQuestion.questionAudioPath}');
-            // 오디오 경로가 없으면 TTS로 대체
-            print('🔄 오디오 경로 없음, TTS로 대체 재생: ${question.question}');
-            await _ttsService.speak(question.question);
-            playedAudio = true;
-          }
-          
-          // '나비' 말소리 재생이 완료된 후 1초 대기
-          if (playedAudio) {
-            await Future.delayed(const Duration(seconds: 1));
-          }
-          
-          // 3. 다시 듣기 안내 (TTS)
-          print('🎵 3단계: 다시 듣기 안내 시작');
-          await _ttsService.speak('다시 듣고 싶으면 스피커 버튼을 눌러 주세요');
-          print('🎵 3단계 완료 - 전체 시퀀스 완료');
-          
-          // 3번 문항 처리 완료
-          return;
-        } catch (e) {
-          // 정답이 숫자가 아니면 일반 처리로 진행
-          print('⚠️ 3번 문항 처리 실패, 일반 처리로 진행: $e');
-        }
-      }
-      
-      // 2번 문항(abilityId '0.2': 소리 크기/높이 변별) 특별 처리
-      if (storyQuestion.abilityId == '0.2') {
-        print('🎵 2번 문항 (소리 크기/높이 변별) 처리');
-        
-        // 이전 오디오 정리 (이전 문항의 오디오가 남아있을 수 있음)
-        await _audioPlayer.stop();
-        _isPlayingAudio = false;
-        
-        // 1. 안내 멘트 (TTS) - 완료될 때까지 대기
-        print('🎵 1단계: TTS 안내 시작');
-        await _ttsService.speak('이제 두 가지의 소리를 들려 주겠습니다. 두 가지 중에서 어떤 소리가 더 긴지, 긴 소리를 화면에서 선택해 주세요.');
-        print('🎵 1단계 완료 - TTS 완료 확인됨');
-        
-        // 안내 멘트가 완전히 끝나고 1초 대기
-        await Future.delayed(const Duration(seconds: 1));
-        
-        // 2. options에서 audioPath가 있는 소리들을 순차적으로 재생
-        print('🔍 2번 문항 options 확인: ${question.options.length}개');
-        for (var opt in question.options) {
-          print('  - optionId: ${opt.optionId}, audioPath: ${opt.audioPath}, audioPath==null: ${opt.audioPath == null}, isEmpty: ${opt.audioPath?.isEmpty ?? true}');
-        }
-        
-        final audioOptions = question.options.where((opt) {
-          final hasAudioPath = opt.audioPath != null && opt.audioPath!.isNotEmpty;
-          print('🔍 필터링: optionId=${opt.optionId}, audioPath=${opt.audioPath}, hasAudioPath=$hasAudioPath');
-          return hasAudioPath;
-        }).toList();
-        print('🔍 audioPath가 있는 options: ${audioOptions.length}개');
-        
-        if (audioOptions.isNotEmpty) {
-          print('🎵 2단계: 순차 오디오 재생 시작 (${audioOptions.length}개)');
-          
-          // 각 오디오를 순차적으로 재생 (완전히 끝날 때까지 기다림)
-          for (int i = 0; i < audioOptions.length; i++) {
-            final option = audioOptions[i];
-            final audioPath = option.audioPath!;
-            
-            print('🎵 소리${i + 1} 재생 시작: audioPath=$audioPath, optionId=${option.optionId}');
-            
-            try {
-              // 오디오 재생 (완료될 때까지 대기)
-              await _playQuestionAudio(audioPath);
-              print('✅ 소리${i + 1} 재생 완료: $audioPath');
-              
-              // 소리가 끝나고 1초 대기 (마지막 소리가 아닌 경우)
-              if (i < audioOptions.length - 1) {
-                print('⏳ 다음 소리 재생 전 1초 대기...');
-                await Future.delayed(const Duration(seconds: 1));
-              }
-            } catch (e, stackTrace) {
-              print('❌ 소리${i + 1} 재생 실패: $audioPath');
-              print('❌ 에러: $e');
-              print('❌ 스택: $stackTrace');
-              // 계속 진행 (다음 오디오 시도)
-            }
-          }
-          
-          print('🎵 2단계 완료 - 모든 오디오 재생 완료');
-          
-          // 모든 오디오 재생이 끝나고 1초 대기 후 스피커 멘트
-          print('⏳ 스피커 멘트 전 1초 대기...');
-          await Future.delayed(const Duration(seconds: 1));
-        } else {
-          print('⚠️ 재생할 오디오가 없습니다. options 개수: ${question.options.length}');
-        }
-        
-        // 3. 다시 듣기 안내 (TTS) - 모든 소리가 끝난 후에만 재생
-        print('🎵 3단계: 다시 듣기 안내 시작');
-        await _ttsService.speak('소리를 다시 듣고 싶으면 스피커 모양을 누르세요');
-        print('🎵 3단계 완료 - 전체 시퀀스 완료');
-        
-        // 2번 문항 처리 완료 - else 블록 실행 방지
+      // 문항 번호 가져오기 (session에서)
+      final sessionState = ref.read(currentStorySessionProvider);
+      final session = sessionState.session;
+      if (session == null) {
+        print('❌ [시퀀스 중단] 세션이 없습니다');
         return;
-      } else {
-        // 1번 문항 및 기타 문항 처리 (기존 로직)
-        // 1. 문항 안내 (TTS)
-        print('🎵 1단계: TTS 안내 시작');
-        await _ttsService.speak('무슨 소리인지 맞춰보세요');
-        
-        // #region agent log
-        await _debugLog('story_question_page.dart:101', 'TTS 1단계 완료', {}, hypothesisId: 'H5');
-        // #endregion
-        
-        print('🎵 1단계 완료');
-        
-        // 안내 멘트가 끝나고 1초 대기
-        await Future.delayed(const Duration(seconds: 1));
-        
-        // 2. 오디오 재생 (비 소리 등)
-        // #region agent log
-        await _debugLog('story_question_page.dart:107', '오디오 경로 확인', {'questionAudioPath': storyQuestion.questionAudioPath, 'isNull': storyQuestion.questionAudioPath == null, 'isEmpty': storyQuestion.questionAudioPath?.isEmpty ?? true}, hypothesisId: 'H1');
-        // #endregion
-        
-        if (storyQuestion.questionAudioPath != null && 
-            storyQuestion.questionAudioPath!.isNotEmpty) {
-          print('🎵 2단계: 오디오 재생 시작 - ${storyQuestion.questionAudioPath}');
-          try {
-            // 오디오 재생을 완료할 때까지 기다림 (_playQuestionAudio가 완료되면 오디오도 끝난 상태)
-            await _playQuestionAudio(storyQuestion.questionAudioPath);
-            print('🎵 2단계 완료 - 오디오 재생 완료');
-            
-            // 오디오 재생이 완전히 끝난 후 1초 대기
-            await Future.delayed(const Duration(seconds: 1));
-            print('🎵 오디오 완료 후 1초 대기 완료');
-          } catch (e) {
-            // #region agent log
-            await _debugLog('story_question_page.dart:113', '오디오 재생 실패 (시퀀스 계속 진행)', {'audioPath': storyQuestion.questionAudioPath, 'error': e.toString()}, hypothesisId: 'H1');
-            // #endregion
-            print('⚠️ 오디오 재생 실패, TTS만으로 진행: ${storyQuestion.questionAudioPath}');
-            print('에러: $e');
-            // 오디오 재생 실패해도 시퀀스는 계속 진행 (TTS만으로도 충분)
-          }
-        } else {
-          // #region agent log
-          await _debugLog('story_question_page.dart:113', '오디오 경로 없음', {'questionAudioPath': storyQuestion.questionAudioPath}, hypothesisId: 'H1');
-          // #endregion
-          print('⚠️ 오디오 경로가 없습니다: ${storyQuestion.questionAudioPath}');
-        }
-        
-        // 3. 다시 듣기 안내 (TTS)
-        print('🎵 3단계: 다시 듣기 안내 시작');
-        await _ttsService.speak('다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요');
-        print('🎵 3단계 완료 - 전체 시퀀스 완료');
       }
       
+      final questionNumber = session.progress.completedQuestions.length + 1;
+      print('📝 [시퀀스] 문항 번호 계산: $questionNumber');
+      print('  - completedQuestions.length: ${session.progress.completedQuestions.length}');
+      
+      // JSON에서 시퀀스 로드
+      print('📂 [시퀀스] JSON 파일에서 시퀀스 로드 시작 (문항 번호: $questionNumber)');
+      final sequence = await _sequenceLoader.getSequenceForQuestion(questionNumber);
+      if (sequence == null) {
+        print('❌ [시퀀스 중단] 문항 $questionNumber에 대한 시퀀스를 찾을 수 없습니다');
+        print('  - JSON 파일 경로: assets/questions/story/instruction_sequences.json');
+        print('  - 찾는 키: "$questionNumber" (문자열)');
+        return;
+      }
+      
+      print('✅ [시퀀스] 시퀀스 로드 완료: ${sequence.steps.length}개 step');
+      for (int i = 0; i < sequence.steps.length; i++) {
+        final step = sequence.steps[i];
+        print('  Step ${i + 1}: action=${step.action}, params=${step.params}');
+      }
+      
+      // 실행 엔진 생성 및 실행
+      print('🔧 [시퀀스] 실행 엔진 생성');
+      final executor = InstructionSequenceExecutor(
+        ttsService: _ttsService,
+        audioPlayer: _audioPlayer,
+        playQuestionAudio: _playQuestionAudio,
+      );
+      
+      print('🚀 [시퀀스] 시퀀스 실행 시작');
+      await executor.executeSequence(sequence, storyQuestion);
+      print('✅ [시퀀스] 시퀀스 실행 완료');
+      
       // #region agent log
-      await _debugLog('story_question_page.dart:122', '안내 시퀀스 완료', {}, hypothesisId: 'H1');
+      await _debugLog('story_question_page.dart:122', '안내 시퀀스 완료 (JSON 기반)', {}, hypothesisId: 'H1');
       // #endregion
     } catch (e, stackTrace) {
       // #region agent log
       await _debugLog('story_question_page.dart:125', '안내 시퀀스 실패', {'error': e.toString(), 'stackTrace': stackTrace.toString()}, hypothesisId: 'H4');
       // #endregion
       
-      print('❌ 오디오 시퀀스 재생 실패: $e');
+      print('❌ [시퀀스 실패] 오디오 시퀀스 재생 실패: $e');
       print('스택: $stackTrace');
+      rethrow; // 에러를 다시 던져서 호출자가 인지할 수 있도록
     }
   }
 
@@ -484,8 +340,11 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
     final currentQuestion = session.currentQuestion;
     
     // 문항이 바뀌었는지 확인하고 초기화
+    print('🔍 [문항 체크] currentQuestion: ${currentQuestion?.questionId}, _lastQuestionId: $_lastQuestionId');
     if (currentQuestion != null && 
         _lastQuestionId != currentQuestion.questionId) {
+      print('✅ [문항 변경 감지] 새 문항: ${currentQuestion.questionId}');
+      
       // #region agent log
       // build() 메서드는 동기 메서드이므로 await 사용 불가
       // unawaited()를 사용하여 fire-and-forget 패턴으로 명시적으로 처리
@@ -493,6 +352,7 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
       // #endregion
       
       // 이전 안내 시퀀스가 재생 중이면 중지 (중복 재생 방지)
+      print('🛑 [정리] 이전 오디오/TTS 중지');
       _ttsService.stop();
       _audioPlayer.stop();
       
@@ -501,19 +361,41 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
       _selectedAnswer = null;
       _isPlayingAudio = false;
       
+      print('📋 [설정] _lastQuestionId 업데이트: $_lastQuestionId, _isPlayingAudio: $_isPlayingAudio');
+      
       // 전체 안내 시퀀스 자동 재생 (TTS 안내 → 오디오 → 다시 듣기 안내)
       // 약간의 딜레이를 주어 화면이 완전히 로드된 후 재생
       // 단, 이미 재생 중이면 재생하지 않음 (중복 방지)
+      print('⏰ [스케줄] addPostFrameCallback 등록');
       WidgetsBinding.instance.addPostFrameCallback((_) {
+        print('⏰ [스케줄] postFrameCallback 실행, 300ms 딜레이 시작');
         Future.delayed(const Duration(milliseconds: 300), () {
+          print('⏰ [스케줄] 300ms 딜레이 완료, 조건 체크 시작');
+          print('  - mounted: $mounted');
+          print('  - _lastQuestionId: $_lastQuestionId');
+          print('  - currentQuestion.questionId: ${currentQuestion.questionId}');
+          print('  - _isPlayingAudio: $_isPlayingAudio');
+          
           // 마운트 상태와 문항 ID를 다시 확인 (상태 변경 방지)
           if (mounted && 
               _lastQuestionId == currentQuestion.questionId &&
               !_isPlayingAudio) {
+            print('✅ [조건 통과] _playFullInstructionSequence 호출 시작');
             _playFullInstructionSequence(currentQuestion);
+          } else {
+            print('❌ [조건 실패] _playFullInstructionSequence 호출 안 함');
+            if (!mounted) print('  이유: mounted = false');
+            if (_lastQuestionId != currentQuestion.questionId) print('  이유: 문항 ID 불일치');
+            if (_isPlayingAudio) print('  이유: _isPlayingAudio = true');
           }
         });
       });
+    } else {
+      if (currentQuestion == null) {
+        print('⚠️ [문항 체크] currentQuestion이 null입니다');
+      } else if (_lastQuestionId == currentQuestion.questionId) {
+        print('ℹ️ [문항 체크] 문항이 변경되지 않음 (동일한 문항)');
+      }
     }
     
     if (currentQuestion == null) {
@@ -567,6 +449,13 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
     final questionNumber = session.progress.completedQuestions.length + 1;
     final totalQuestions = session.totalQuestions;
 
+    // 이전/다음 버튼 활성화 여부 확인
+    final canGoPrevious = session.currentChapterIndex > 0 || 
+                         session.currentQuestionIndex > 0;
+    final canGoNext = (session.currentChapterIndex < session.chapters.length - 1) ||
+                     (session.currentChapterIndex == session.chapters.length - 1 &&
+                      session.currentQuestionIndex < (currentChapter?.questions.length ?? 0) - 1);
+
     return Scaffold(
       backgroundColor: _getChapterBackgroundColor(
         currentChapter?.type ?? StoryChapterType.phonologicalAwareness,
@@ -619,6 +508,57 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
                 child: _buildQuestionWidget(currentQuestion),
               ),
             ),
+
+            // 이전/다음 버튼
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // 이전 버튼
+                  IconButton(
+                    iconSize: 48,
+                    icon: Icon(
+                      Icons.arrow_back_ios,
+                      color: canGoPrevious ? Colors.white : Colors.white.withOpacity(0.3),
+                    ),
+                    onPressed: canGoPrevious ? () {
+                      // 오디오/TTS 중지
+                      _ttsService.stop();
+                      _audioPlayer.stop();
+                      setState(() {
+                        _isPlayingAudio = false;
+                        _selectedAnswer = null;
+                        _lastQuestionId = null; // 다음 문항 로드 시 안내 시퀀스 재생을 위해
+                      });
+                      ref.read(currentStorySessionProvider.notifier).moveToPreviousQuestion();
+                    } : null,
+                    tooltip: '이전 문항',
+                  ),
+
+                  // 다음 버튼
+                  IconButton(
+                    iconSize: 48,
+                    icon: Icon(
+                      Icons.arrow_forward_ios,
+                      color: canGoNext ? Colors.white : Colors.white.withOpacity(0.3),
+                    ),
+                    onPressed: canGoNext ? () {
+                      // 오디오/TTS 중지
+                      _ttsService.stop();
+                      _audioPlayer.stop();
+                      setState(() {
+                        _isPlayingAudio = false;
+                        _selectedAnswer = null;
+                        _lastQuestionId = null; // 다음 문항 로드 시 안내 시퀀스 재생을 위해
+                      });
+                      ref.read(currentStorySessionProvider.notifier).moveToNextQuestion();
+                    } : null,
+                    tooltip: '다음 문항',
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
@@ -652,19 +592,56 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
                   color: _isPlayingAudio ? Colors.green : Colors.grey,
                 ),
                 onPressed: _isPlayingAudio ? null : () async {
-                  // 2번 문항: options의 오디오들을 순차 재생
+                  // 2번 문항: options의 오디오들을 순차 재생 (각 소리 전에 TTS 멘트 추가)
                   if (storyQuestion.abilityId == '0.2') {
+                    print('🔊 [스피커 버튼] 2번 문항 오디오 시퀀스 재생 시작');
+                    
+                    // TTS 서비스 초기화 확인
+                    await _ttsService.initialize();
+                    
                     final audioOptions = storyQuestion.question.options
                         .where((opt) => opt.audioPath != null && opt.audioPath!.isNotEmpty)
                         .toList();
                     
+                    print('📋 [스피커 버튼] 재생할 오디오 개수: ${audioOptions.length}');
+                    
                     for (int i = 0; i < audioOptions.length; i++) {
                       final audioPath = audioOptions[i].audioPath!;
-                      await _playQuestionAudio(audioPath);
+                      
+                      // 각 오디오 재생 전에 TTS 멘트 추가
+                      final ttsText = i == 0 ? '첫 번째 소리입니다.' : '두 번째 소리입니다.';
+                      print('🗣️ [스피커 버튼] ${i + 1}번째 오디오 전 TTS 시작: "$ttsText"');
+                      
+                      try {
+                        final ttsStartTime = DateTime.now();
+                        await _ttsService.speak(ttsText);
+                        final ttsDuration = DateTime.now().difference(ttsStartTime).inMilliseconds;
+                        print('✅ [스피커 버튼] ${i + 1}번째 오디오 전 TTS 완료 (소요 시간: ${ttsDuration}ms)');
+                      } catch (e, stackTrace) {
+                        print('❌ [스피커 버튼] TTS 재생 실패: $e');
+                        print('  - 스택 트레이스: $stackTrace');
+                        // TTS 실패해도 오디오는 재생
+                      }
+                      
+                      // 오디오 재생
+                      print('🎵 [스피커 버튼] 소리${i + 1} 재생 시작: $audioPath');
+                      try {
+                        await _playQuestionAudio(audioPath);
+                        print('✅ [스피커 버튼] 소리${i + 1} 재생 완료');
+                      } catch (e, stackTrace) {
+                        print('❌ [스피커 버튼] 오디오 재생 실패: $e');
+                        print('  - 스택 트레이스: $stackTrace');
+                        // 계속 진행
+                      }
+                      
+                      // 마지막이 아니면 딜레이
                       if (i < audioOptions.length - 1) {
+                        print('⏳ [스피커 버튼] 다음 소리 전 딜레이: 1000ms');
                         await Future.delayed(const Duration(seconds: 1));
                       }
                     }
+                    
+                    print('✅ [스피커 버튼] 모든 오디오 재생 완료');
                   } else {
                     // 기타 문항: 단일 오디오 재생
                     await _playQuestionAudio(storyQuestion.questionAudioPath!);

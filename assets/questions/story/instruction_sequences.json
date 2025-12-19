@@ -1,0 +1,317 @@
+{
+  "1": {
+    "steps": [
+      {"action": "tts", "text": "첫 번째 질문입니다. 이제 소리를 들려 드리겠습니다. 어떤 동물의 소리인지, 보기에서 선택해 주세요."},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "assets/audio/environment/dog.mp3"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 스피커 모양을 눌러주세요"}
+    ]
+  },
+  "2": {
+    "steps": [
+      {"action": "tts", "text": "두 번째 질문입니다. 이제 두 가지의 소리를 들려 주겠습니다. 두 가지 소리 중에서 어떤 소리가 더 길게 나오는지, 더 오래 나오는 소리를 보기기에서 선택해 주세요."},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio_sequence", "source": "options", "field": "audioPath", "delayBetween": 1000},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "소리를 다시 듣고 싶으면 스피커 모양을 누르세요"}
+    ]
+  },
+  "3": {
+    "steps": [
+      {"action": "tts", "text": "다음에 들리는 말소리가 몇 개인지 맞춰 보세요"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio_or_tts", "audioPath": "questionAudioPath", "ttsFallback": "question.question"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 스피커 버튼을 눌러 주세요"}
+    ]
+  },
+  "4": {
+    "steps": [
+      {"action": "tts", "text": "단어를 음절로 나눠볼게. 가방을 가와 방으로 나눌 수 있을까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "5": {
+    "steps": [
+      {"action": "tts", "text": "반대로 음절을 합쳐서 단어를 만들어볼게. 가와 방을 합치면 뭐가 될까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "6": {
+    "steps": [
+      {"action": "tts", "text": "같은 소리와 다른 소리를 구별해볼게. 가방과 가지는 같은가요, 다른가요?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "7": {
+    "steps": [
+      {"action": "tts", "text": "이번엔 음절을 빼는 게임이야. 가방에서 가를 빼면 뭐가 남을까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "8": {
+    "steps": [
+      {"action": "tts", "text": "와! 특별한 동굴이야! 이 동굴은 한글만의 특별한 구조를 가지고 있어. 본체와 종성이라는 개념이지."},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "9": {
+    "steps": [
+      {"action": "tts", "text": "이번엔 가운데소리야. 곰의 가운데소리는 뭘까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "10": {
+    "steps": [
+      {"action": "tts", "text": "마지막으로 끝소리야. 곰의 끝소리는 뭘까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "11": {
+    "steps": [
+      {"action": "tts", "text": "이제 본체와 종성을 나눠볼게. 곰을 고와 ㅁ으로 나눌 수 있을까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "12": {
+    "steps": [
+      {"action": "tts", "text": "드디어 소리 섬의 최고봉 음소 성에 도착했어! 음소는 가장 작은 소리 단위야."},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "13": {
+    "steps": [
+      {"action": "tts", "text": "반대로 음소를 합쳐볼게. ㄱ과 ㅏ를 합치면 뭐가 될까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "14": {
+    "steps": [
+      {"action": "tts", "text": "이번엔 음소를 바꿔볼게. 가방의 첫소리를 ㄴ으로 바꾸면 뭐가 될까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "15": {
+    "steps": [
+      {"action": "tts", "text": "마지막으로 음소를 빼는 게임이야. 밥에서 ㅂ을 빼면 뭐가 남을까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "16": {
+    "steps": [
+      {"action": "tts", "text": "첫 번째 섬은 기억 섬이야! 여기서는 소리를 듣고 기억하는 실력을 테스트해볼게."},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "17": {
+    "steps": [
+      {"action": "tts", "text": "이번엔 의미 없는 소리야. 타비, 무카 같은 소리를 따라 말해볼까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "18": {
+    "steps": [
+      {"action": "tts", "text": "마지막으로 숫자를 기억해볼게. 3-7-2를 듣고 똑같이 말해볼까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "19": {
+    "steps": [
+      {"action": "tts", "text": "다음 섬은 빠름 섬이야! 여기서는 그림을 보고 빠르게 이름을 말하는 실력을 테스트해볼게."},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "20": {
+    "steps": [
+      {"action": "tts", "text": "이번엔 색깔이야! 빨강, 파랑, 노랑, 초록을 빠르게 이름 말해볼까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "21": {
+    "steps": [
+      {"action": "tts", "text": "마지막으로 숫자야! 2, 5, 8, 1을 빠르게 이름 말해볼까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "22": {
+    "steps": [
+      {"action": "tts", "text": "이번엔 글자야! ㄱ, ㅏ, ㄴ, ㅣ를 빠르게 이름 말해볼까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "23": {
+    "steps": [
+      {"action": "tts", "text": "마지막은 숲 속 퀴즈야. 집중력과 기억력을 테스트해볼게."},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "24": {
+    "steps": [
+      {"action": "tts", "text": "패턴을 보고 다음 그림을 찾아볼게. 어떤 순서로 이어질까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "25": {
+    "steps": [
+      {"action": "tts", "text": "도형을 돌려서 같은 모양을 찾아볼게. 어떤 방향으로 돌려야 할까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "26": {
+    "steps": [
+      {"action": "tts", "text": "일부만 보이는 그림을 보고 전체를 맞춰볼게. 무엇일까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "27": {
+    "steps": [
+      {"action": "tts", "text": "카드를 뒤집어서 같은 그림을 찾아볼게. 기억해야 해!"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "28": {
+    "steps": [
+      {"action": "tts", "text": "지시를 듣고 순서대로 행동해볼게. 잘 기억해야 해!"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "29": {
+    "steps": [
+      {"action": "tts", "text": "기억을 계속 업데이트해야 해. 새로운 정보를 기억해볼게!"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "30": {
+    "steps": [
+      {"action": "tts", "text": "중요한 것만 집중해서 찾아볼게. 다른 것은 무시해야 해!"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "31": {
+    "steps": [
+      {"action": "tts", "text": "오랫동안 집중해야 해. 끝까지 집중해볼게!"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "32": {
+    "steps": [
+      {"action": "tts", "text": "두 가지를 동시에 해야 해. 여러 가지를 동시에 집중해볼게!"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "33": {
+    "steps": [
+      {"action": "tts", "text": "해야 할 것과 하지 말아야 할 것을 구별해볼게. 참는 것도 중요해!"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "34": {
+    "steps": [
+      {"action": "tts", "text": "규칙이 바뀌었어. 빠르게 바꿔야 해!"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  },
+  "35": {
+    "steps": [
+      {"action": "tts", "text": "퍼즐을 맞추려면 계획이 필요해. 어떻게 맞출까?"},
+      {"action": "delay", "ms": 1000},
+      {"action": "audio", "source": "questionAudioPath"},
+      {"action": "delay", "ms": 1000},
+      {"action": "tts", "text": "다시 듣고 싶으면 아래 스피커 버튼을 눌러주세요"}
+    ]
+  }
+}

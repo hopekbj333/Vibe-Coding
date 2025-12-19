@@ -100,6 +100,7 @@ flutter:
     - assets/questions/
     - assets/questions/training/
     - assets/questions/assessment/
+    - assets/questions/story/
   
   # 폰트는 향후 S 1.1.5에서 추가
   # fonts:

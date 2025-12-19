@@ -132,5 +132,23 @@ class StorySessionNotifier extends StateNotifier<StorySessionState> {
   void clearSession() {
     state = const StorySessionState();
   }
+
+  /// 이전 문항으로 이동
+  void moveToPreviousQuestion() {
+    final currentSession = state.session;
+    if (currentSession == null) return;
+
+    final updatedSession = _service.moveToPreviousQuestion(currentSession);
+    state = state.copyWith(session: updatedSession);
+  }
+
+  /// 다음 문항으로 이동
+  void moveToNextQuestion() {
+    final currentSession = state.session;
+    if (currentSession == null) return;
+
+    final updatedSession = _service.moveToNextQuestion(currentSession);
+    state = state.copyWith(session: updatedSession);
+  }
 }
 

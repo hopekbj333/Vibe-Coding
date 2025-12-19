@@ -13,7 +13,6 @@ import 'package:flutter/material.dart';
 import '../../features/assessment/presentation/pages/story/story_intro_page.dart';
 import '../../features/assessment/presentation/pages/story/story_chapter_page.dart';
 import '../../features/assessment/presentation/pages/story/story_question_page.dart';
-import '../../features/assessment/presentation/pages/story/story_feedback_page.dart';
 import '../../features/assessment/presentation/pages/story/story_chapter_complete_page.dart';
 import '../../features/assessment/presentation/pages/story/story_result_page.dart';
 import '../../features/assessment/data/models/story_assessment_model.dart';
@@ -388,28 +387,6 @@ class AppRouter {
             return StoryQuestionPage(
               childId: childId,
               childName: childName,
-            );
-          },
-        ),
-        GoRoute(
-          path: '/story/feedback',
-          name: 'story-feedback',
-          builder: (context, state) {
-            final extra = state.extra as Map<String, dynamic>?;
-            final childId = extra?['childId'] as String? ?? '';
-            final childName = extra?['childName'] as String? ?? '아동';
-            final isCorrect = extra?['isCorrect'] as bool? ?? false;
-            final feedback = extra?['feedback'] as StoryFeedback?;
-            if (feedback == null) {
-              return const Scaffold(
-                body: Center(child: Text('피드백 정보가 없습니다.')),
-              );
-            }
-            return StoryFeedbackPage(
-              childId: childId,
-              childName: childName,
-              isCorrect: isCorrect,
-              feedback: feedback,
             );
           },
         ),

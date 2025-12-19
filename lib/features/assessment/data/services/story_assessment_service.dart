@@ -234,5 +234,58 @@ class StoryAssessmentService {
       completedAt: DateTime.now(),
     );
   }
+
+  /// 이전 문항으로 이동
+  StoryAssessmentSession moveToPreviousQuestion(StoryAssessmentSession session) {
+    final currentChapter = session.currentChapter;
+    if (currentChapter == null) return session;
+
+    int prevQuestionIndex = session.currentQuestionIndex - 1;
+    int prevChapterIndex = session.currentChapterIndex;
+
+    // 현재 챕터의 첫 번째 문항이면 이전 챕터로 이동
+    if (prevQuestionIndex < 0) {
+      if (prevChapterIndex > 0) {
+        prevChapterIndex -= 1;
+        final prevChapter = session.chapters[prevChapterIndex];
+        prevQuestionIndex = prevChapter.questions.length - 1;
+      } else {
+        // 첫 번째 챕터의 첫 번째 문항이면 이동 불가
+        return session;
+      }
+    }
+
+    return session.copyWith(
+      currentChapterIndex: prevChapterIndex,
+      currentQuestionIndex: prevQuestionIndex,
+      status: StoryProgressStatus.inChapter,
+    );
+  }
+
+  /// 다음 문항으로 이동
+  StoryAssessmentSession moveToNextQuestion(StoryAssessmentSession session) {
+    final currentChapter = session.currentChapter;
+    if (currentChapter == null) return session;
+
+    int nextQuestionIndex = session.currentQuestionIndex + 1;
+    int nextChapterIndex = session.currentChapterIndex;
+
+    // 현재 챕터의 마지막 문항을 넘어가면 다음 챕터로 이동
+    if (nextQuestionIndex >= currentChapter.questions.length) {
+      if (nextChapterIndex < session.chapters.length - 1) {
+        nextChapterIndex += 1;
+        nextQuestionIndex = 0;
+      } else {
+        // 마지막 챕터의 마지막 문항이면 이동 불가
+        return session;
+      }
+    }
+
+    return session.copyWith(
+      currentChapterIndex: nextChapterIndex,
+      currentQuestionIndex: nextQuestionIndex,
+      status: StoryProgressStatus.inChapter,
+    );
+  }
 }
 
