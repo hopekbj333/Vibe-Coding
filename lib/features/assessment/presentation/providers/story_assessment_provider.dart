@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../../core/utils/logger.dart';
 import '../../data/models/story_assessment_model.dart';
 import '../../data/services/story_assessment_service.dart';
 
@@ -52,6 +53,10 @@ class StorySessionNotifier extends StateNotifier<StorySessionState> {
     StoryTheme theme = StoryTheme.hangeulLand,
   }) async {
     state = state.copyWith(isLoading: true, errorMessage: null);
+    AppLogger.debug('새 스토리 검사 시작', data: {
+      'childId': childId,
+      'theme': theme.toString(),
+    });
 
     try {
       final session = await _service.createStorySession(
@@ -65,7 +70,16 @@ class StorySessionNotifier extends StateNotifier<StorySessionState> {
         session: startedSession,
         isLoading: false,
       );
-    } catch (e) {
+      AppLogger.success('스토리 검사 시작 완료', data: {
+        'sessionId': startedSession.sessionId,
+      });
+    } catch (e, stackTrace) {
+      AppLogger.error(
+        '스토리 검사 시작 실패',
+        error: e,
+        stackTrace: stackTrace,
+        data: {'childId': childId},
+      );
       state = state.copyWith(
         isLoading: false,
         errorMessage: e.toString(),
@@ -80,7 +94,16 @@ class StorySessionNotifier extends StateNotifier<StorySessionState> {
     required int responseTimeMs,
   }) {
     final currentSession = state.session;
-    if (currentSession == null) return;
+    if (currentSession == null) {
+      AppLogger.warning('답변 제출 실패: 세션이 없음');
+      return;
+    }
+
+    AppLogger.debug('답변 제출', data: {
+      'questionId': questionId,
+      'userAnswer': userAnswer,
+      'responseTimeMs': responseTimeMs,
+    });
 
     final updatedSession = _service.submitAnswer(
       session: currentSession,
@@ -90,6 +113,7 @@ class StorySessionNotifier extends StateNotifier<StorySessionState> {
     );
 
     state = state.copyWith(session: updatedSession);
+    AppLogger.success('답변 제출 완료');
   }
 
   /// 세션 일시 중지

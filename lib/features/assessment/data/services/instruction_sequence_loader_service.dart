@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import '../../../../core/utils/logger.dart';
+import '../../../../core/constants/asset_paths.dart';
 
 /// 안내 시퀀스 스텝 모델
 class InstructionStep {
@@ -49,20 +51,28 @@ class InstructionSequenceLoaderService {
   Future<Map<String, QuestionInstructionSequence>> loadSequences() async {
     // 캐시가 있으면 반환
     if (_cachedSequences != null) {
-      print('📦 [로더] 캐시에서 시퀀스 반환 (${_cachedSequences!.length}개)');
+      AppLogger.debug('캐시에서 시퀀스 반환', data: {
+        'count': _cachedSequences!.length,
+      });
       return _cachedSequences!;
     }
 
     try {
-      print('📂 [로더] JSON 파일 로드 시작: assets/questions/story/instruction_sequences.json');
+      AppLogger.debug('JSON 파일 로드 시작', data: {
+        'path': AssetPaths.instructionSequences,
+      });
       final jsonString = await rootBundle.loadString(
-        'assets/questions/story/instruction_sequences.json',
+        AssetPaths.instructionSequences,
       );
-      print('✅ [로더] JSON 파일 로드 완료 (길이: ${jsonString.length}자)');
+      AppLogger.success('JSON 파일 로드 완료', data: {
+        'length': jsonString.length,
+      });
       
       final jsonData = json.decode(jsonString) as Map<String, dynamic>;
-      print('✅ [로더] JSON 파싱 완료 (키 개수: ${jsonData.length})');
-      print('  - 사용 가능한 키: ${jsonData.keys.toList()}');
+      AppLogger.success('JSON 파싱 완료', data: {
+        'keyCount': jsonData.length,
+        'availableKeys': jsonData.keys.toList(),
+      });
       
       final sequences = <String, QuestionInstructionSequence>{};
       
@@ -70,34 +80,50 @@ class InstructionSequenceLoaderService {
         final questionNumber = entry.key;
         final sequenceJson = entry.value as Map<String, dynamic>;
         sequences[questionNumber] = QuestionInstructionSequence.fromJson(sequenceJson);
-        print('  - 문항 $questionNumber: ${sequences[questionNumber]!.steps.length}개 step');
+        AppLogger.debug('문항 시퀀스 로드', data: {
+          'questionNumber': questionNumber,
+          'stepCount': sequences[questionNumber]!.steps.length,
+        });
       }
       
       // 캐시에 저장
       _cachedSequences = sequences;
-      print('✅ [로더] 캐시에 저장 완료 (${sequences.length}개 문항)');
+      AppLogger.success('캐시에 저장 완료', data: {
+        'count': sequences.length,
+      });
       
       return sequences;
     } catch (e, stackTrace) {
-      print('❌ [로더] JSON 파일 로드 실패: $e');
-      print('스택: $stackTrace');
+      AppLogger.error(
+        'JSON 파일 로드 실패',
+        error: e,
+        stackTrace: stackTrace,
+        data: {'path': AssetPaths.instructionSequences},
+      );
       throw Exception('Failed to load instruction_sequences.json: $e');
     }
   }
 
   /// 특정 문항 번호의 시퀀스 가져오기
   Future<QuestionInstructionSequence?> getSequenceForQuestion(int questionNumber) async {
-    print('🔍 [로더] 문항 $questionNumber의 시퀀스 찾기 시작');
+    AppLogger.debug('문항의 시퀀스 찾기 시작', data: {
+      'questionNumber': questionNumber,
+    });
     final sequences = await loadSequences();
     final key = questionNumber.toString();
-    print('  - 찾는 키: "$key"');
-    print('  - 사용 가능한 키: ${sequences.keys.toList()}');
     
     final sequence = sequences[key];
     if (sequence != null) {
-      print('✅ [로더] 문항 $questionNumber의 시퀀스 찾음 (${sequence.steps.length}개 step)');
+      AppLogger.success('문항의 시퀀스 찾음', data: {
+        'questionNumber': questionNumber,
+        'stepCount': sequence.steps.length,
+      });
     } else {
-      print('❌ [로더] 문항 $questionNumber의 시퀀스를 찾을 수 없음');
+      AppLogger.warning('문항의 시퀀스를 찾을 수 없음', data: {
+        'questionNumber': questionNumber,
+        'key': key,
+        'availableKeys': sequences.keys.toList(),
+      });
     }
     return sequence;
   }

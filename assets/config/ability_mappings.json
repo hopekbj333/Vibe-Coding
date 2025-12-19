@@ -1,0 +1,319 @@
+{
+  "abilities": [
+    {
+      "abilityId": "0.1",
+      "abilityName": "환경음 식별",
+      "gameFileName": "environmental_sound.json",
+      "gameTitle": "환경음 식별",
+      "storyContext": "동물 마을에서 다양한 소리가 들려. 어떤 소리인지 맞춰볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-1: 기초 청각 능력"
+    },
+    {
+      "abilityId": "0.2",
+      "abilityName": "소리 크기/높이 변별",
+      "gameFileName": "pitch_discrimination.json",
+      "gameTitle": "음높이 구별",
+      "storyContext": "이번엔 소리의 크기와 높이를 구별해볼게. 큰 소리와 작은 소리, 높은 소리와 낮은 소리를 찾아줘!",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-1: 기초 청각 능력"
+    },
+    {
+      "abilityId": "1.1",
+      "abilityName": "음절 수 세기",
+      "gameFileName": "syllable_clap.json",
+      "gameTitle": "박수로 음절 쪼개기",
+      "storyContext": "음절 숲의 나무들이 말을 하고 있어. 몇 개의 음절로 나뉘는지 세어볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-2: 음절 인식"
+    },
+    {
+      "abilityId": "1.2",
+      "abilityName": "음절 분절",
+      "gameFileName": "syllable_split.json",
+      "gameTitle": "음절 분리",
+      "storyContext": "이번엔 단어를 음절로 나눠볼게. 가방을 가와 방으로 나눌 수 있을까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-2: 음절 인식"
+    },
+    {
+      "abilityId": "1.3",
+      "abilityName": "음절 합성",
+      "gameFileName": "syllable_merge.json",
+      "gameTitle": "음절 합성",
+      "storyContext": "반대로 음절을 합쳐서 단어를 만들어볼게. 가와 방을 합치면 뭐가 될까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-2: 음절 인식"
+    },
+    {
+      "abilityId": "1.4",
+      "abilityName": "음절 변별",
+      "gameFileName": "same_sound.json",
+      "gameTitle": "같은 소리 찾기",
+      "storyContext": "같은 소리와 다른 소리를 구별해볼게. 가방과 가지는 같은가요, 다른가요?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-2: 음절 인식"
+    },
+    {
+      "abilityId": "1.5",
+      "abilityName": "음절 탈락",
+      "gameFileName": "rhyme.json",
+      "gameTitle": "각운 찾기",
+      "storyContext": "이번엔 음절을 빼는 게임이야. 가방에서 가를 빼면 뭐가 남을까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-2: 음절 인식"
+    },
+    {
+      "abilityId": "2.1",
+      "abilityName": "초성 인식",
+      "gameFileName": "onset_separation.json",
+      "gameTitle": "초성 분리",
+      "storyContext": "동굴 안에서 첫소리를 찾아볼게. 곰의 첫소리는 뭘까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-3: 본체-종성 인식"
+    },
+    {
+      "abilityId": "2.2",
+      "abilityName": "중성 인식",
+      "gameFileName": "onset_separation.json",
+      "gameTitle": "중성 인식",
+      "storyContext": "이번엔 가운데소리야. 곰의 가운데소리는 뭘까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-3: 본체-종성 인식"
+    },
+    {
+      "abilityId": "2.3",
+      "abilityName": "종성 인식",
+      "gameFileName": "onset_separation.json",
+      "gameTitle": "종성 인식",
+      "storyContext": "마지막으로 끝소리야. 곰의 끝소리는 뭘까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-3: 본체-종성 인식"
+    },
+    {
+      "abilityId": "2.4",
+      "abilityName": "본체-종성 분리",
+      "gameFileName": "onset_separation.json",
+      "gameTitle": "초성 분리",
+      "storyContext": "이제 본체와 종성을 나눠볼게. 곰을 고와 ㅁ으로 나눌 수 있을까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-3: 본체-종성 인식"
+    },
+    {
+      "abilityId": "3.1",
+      "abilityName": "음소 분리",
+      "gameFileName": "phoneme_synthesis.json",
+      "gameTitle": "음소 분리",
+      "storyContext": "음소 성에서 가장 작은 소리로 나눠볼게. 가를 ㄱ과 ㅏ로 나눌 수 있을까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-4: 음소 인식"
+    },
+    {
+      "abilityId": "3.2",
+      "abilityName": "음소 합성",
+      "gameFileName": "phoneme_synthesis.json",
+      "gameTitle": "음소 합성",
+      "storyContext": "반대로 음소를 합쳐볼게. ㄱ과 ㅏ를 합치면 뭐가 될까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-4: 음소 인식"
+    },
+    {
+      "abilityId": "3.3",
+      "abilityName": "음소 대치",
+      "gameFileName": "phoneme_substitution.json",
+      "gameTitle": "음소 대치",
+      "storyContext": "이번엔 음소를 바꿔볼게. 가방의 첫소리를 ㄴ으로 바꾸면 뭐가 될까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-4: 음소 인식"
+    },
+    {
+      "abilityId": "3.4",
+      "abilityName": "음소 탈락",
+      "gameFileName": "phoneme_substitution.json",
+      "gameTitle": "음소 탈락",
+      "storyContext": "마지막으로 음소를 빼는 게임이야. 밥에서 ㅂ을 빼면 뭐가 남을까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 1-4: 음소 인식"
+    },
+    {
+      "abilityId": "PM1",
+      "abilityName": "단어 반복",
+      "gameFileName": "reverse_speak.json",
+      "gameTitle": "거꾸로 말하기",
+      "storyContext": "기억 섬의 파도 소리가 단어를 말하고 있어. 똑같이 따라 말해볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 2-1: 음운 기억"
+    },
+    {
+      "abilityId": "PM2",
+      "abilityName": "비단어 반복",
+      "gameFileName": "reverse_speak.json",
+      "gameTitle": "거꾸로 말하기",
+      "storyContext": "이번엔 의미 없는 소리야. 타비, 무카 같은 소리를 따라 말해볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 2-1: 음운 기억"
+    },
+    {
+      "abilityId": "PM3",
+      "abilityName": "숫자 폭",
+      "gameFileName": "digit_span.json",
+      "gameTitle": "숫자 외우기",
+      "storyContext": "마지막으로 숫자를 기억해볼게. 3-7-2를 듣고 똑같이 말해볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 2-1: 음운 기억"
+    },
+    {
+      "abilityId": "RAN1",
+      "abilityName": "사물 빠른 이름대기",
+      "gameFileName": "spot_difference.json",
+      "gameTitle": "틀린 그림 찾기",
+      "storyContext": "빠름 섬에 그림들이 나타났어! 사과, 책, 공, 자동차를 빠르게 이름 말해볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 2-2: 빠른 이름 대기"
+    },
+    {
+      "abilityId": "RAN2",
+      "abilityName": "색상 빠른 이름대기",
+      "gameFileName": "visual_tracking.json",
+      "gameTitle": "시각 추적",
+      "storyContext": "이번엔 색깔이야! 빨강, 파랑, 노랑, 초록을 빠르게 이름 말해볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 2-2: 빠른 이름 대기"
+    },
+    {
+      "abilityId": "RAN3",
+      "abilityName": "숫자 빠른 이름대기",
+      "gameFileName": "visual_tracking.json",
+      "gameTitle": "시각 추적",
+      "storyContext": "마지막으로 숫자야! 2, 5, 8, 1을 빠르게 이름 말해볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 2-2: 빠른 이름 대기"
+    },
+    {
+      "abilityId": "RAN4",
+      "abilityName": "문자 빠른 이름대기",
+      "gameFileName": "letter_direction.json",
+      "gameTitle": "글자 방향 구별",
+      "storyContext": "이번엔 글자야! ㄱ, ㄴ, ㅁ, 을 빠르게 이름 말해볼까?",
+      "characterDialogue": "",
+      "stageTitle": "Stage 2-2: 빠른 이름 대기"
+    },
+    {
+      "abilityId": "V1",
+      "abilityName": "시각 변별",
+      "gameFileName": "spot_difference.json",
+      "gameTitle": "틀린 그림 찾기",
+      "storyContext": "숲 속 퀴즈에서 다른 그림을 찾아볼게. 어떤 그림이 다른가요?",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "V2",
+      "abilityName": "시각 순서",
+      "gameFileName": "pattern_completion.json",
+      "gameTitle": "패턴 완성",
+      "storyContext": "패턴을 보고 다음 그림을 찾아볼게. 어떤 순서로 이어질까?",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "V3",
+      "abilityName": "시각 공간 처리",
+      "gameFileName": "shape_rotation.json",
+      "gameTitle": "도형 회전",
+      "storyContext": "도형을 돌려서 같은 모양을 찾아볼게. 어떤 방향으로 돌려야 할까?",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "V4",
+      "abilityName": "시각 기억",
+      "gameFileName": "visual_closure.json",
+      "gameTitle": "부분으로 전체 추측",
+      "storyContext": "일부만 보이는 그림을 보고 전체를 맞춰볼게. 무엇일까?",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "WM1",
+      "abilityName": "단어 기억 폭",
+      "gameFileName": "card_match.json",
+      "gameTitle": "카드 짝 맞추기",
+      "storyContext": "카드를 뒤집어서 같은 그림을 찾아볼게. 기억해야 해!",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "WM2",
+      "abilityName": "지시 따르기",
+      "gameFileName": "instruction_follow.json",
+      "gameTitle": "지시 따르기",
+      "storyContext": "지시를 듣고 순서대로 행동해볼게. 잘 기억해야 해!",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "WM3",
+      "abilityName": "업데이트 기억",
+      "gameFileName": "updating_memory.json",
+      "gameTitle": "업데이트 기억",
+      "storyContext": "기억을 계속 업데이트해야 해. 새로운 정보를 기억해볼게!",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "AT1",
+      "abilityName": "선택적 주의",
+      "gameFileName": "selective_attention.json",
+      "gameTitle": "선택적 주의",
+      "storyContext": "중요한 것만 집중해서 찾아볼게. 다른 것은 무시해야 해!",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "AT2",
+      "abilityName": "지속적 주의",
+      "gameFileName": "sustained_attention.json",
+      "gameTitle": "지속적 주의",
+      "storyContext": "오랫동안 집중해야 해. 끝까지 집중해볼게!",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "AT3",
+      "abilityName": "분할 주의",
+      "gameFileName": "divided_attention.json",
+      "gameTitle": "분할 주의",
+      "storyContext": "두 가지를 동시에 해야 해. 여러 가지를 동시에 집중해볼게!",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "EF1",
+      "abilityName": "억제 제어",
+      "gameFileName": "go_no_go_basic.json",
+      "gameTitle": "Go/No-Go 기본",
+      "storyContext": "해야 할 것과 하지 말아야 할 것을 구별해볼게. 참는 것도 중요해!",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "EF2",
+      "abilityName": "인지 전환",
+      "gameFileName": "stroop.json",
+      "gameTitle": "스트룹 과제",
+      "storyContext": "규칙이 바뀌었어. 빠르게 바꿔야 해!",
+      "characterDialogue": "",
+      "stageTitle": null
+    },
+    {
+      "abilityId": "EF3",
+      "abilityName": "계획 수립",
+      "gameFileName": "puzzle.json",
+      "gameTitle": "퍼즐",
+      "storyContext": "퍼즐을 맞추려면 계획이 필요해. 어떻게 맞출까?",
+      "characterDialogue": "",
+      "stageTitle": null
+    }
+  ]
+}

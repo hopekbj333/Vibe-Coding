@@ -1,4 +1,8 @@
+import 'dart:convert';
 import 'dart:math';
+import 'package:flutter/services.dart';
+import '../../../../core/utils/logger.dart';
+import '../../../../core/constants/asset_paths.dart';
 import '../../../training/data/services/question_loader_service.dart';
 import '../models/story_assessment_model.dart';
 import 'assessment_sampling_service.dart';
@@ -29,10 +33,58 @@ class AbilityGameMapping {
 class StoryQuestionMappingService {
   final QuestionLoaderService _questionLoader = QuestionLoaderService();
   final Random _random = Random();
+  static List<AbilityGameMapping>? _cachedMappings;
 
-  /// 35개 능력과 게임 매핑 정의
+  /// JSON 파일에서 35개 능력과 게임 매핑 로드
   /// Part 1: 음운인식능력 (15개) + Part 2: 음운처리능력 (20개) = 35개
-  static const List<AbilityGameMapping> _abilityMappings = [
+  Future<List<AbilityGameMapping>> _loadAbilityMappings() async {
+    // 캐시가 있으면 반환
+    if (_cachedMappings != null) {
+      AppLogger.debug('캐시에서 매핑 반환', data: {'count': _cachedMappings!.length});
+      return _cachedMappings!;
+    }
+
+    try {
+      AppLogger.debug('JSON 파일에서 매핑 로드 시작', data: {
+        'path': AssetPaths.abilityMappings,
+      });
+      final jsonString = await rootBundle.loadString(AssetPaths.abilityMappings);
+      final jsonData = json.decode(jsonString) as Map<String, dynamic>;
+      final abilitiesJson = jsonData['abilities'] as List;
+
+      final mappings = abilitiesJson.map((abilityJson) {
+        return AbilityGameMapping(
+          abilityId: abilityJson['abilityId'] as String,
+          abilityName: abilityJson['abilityName'] as String,
+          gameFileName: abilityJson['gameFileName'] as String,
+          gameTitle: abilityJson['gameTitle'] as String,
+          storyContext: abilityJson['storyContext'] as String,
+          characterDialogue: abilityJson['characterDialogue'] as String? ?? '',
+          stageTitle: abilityJson['stageTitle'] as String?,
+        );
+      }).toList();
+
+      _cachedMappings = mappings;
+      AppLogger.success('매핑 로드 완료', data: {
+        'count': mappings.length,
+      });
+
+      return mappings;
+    } catch (e, stackTrace) {
+      AppLogger.error(
+        '매핑 JSON 파일 로드 실패, 폴백 사용',
+        error: e,
+        stackTrace: stackTrace,
+        data: {'path': AssetPaths.abilityMappings},
+      );
+      // JSON 로드 실패 시 하드코딩된 매핑 사용 (폴백)
+      AppLogger.warning('하드코딩된 매핑 사용 (폴백)');
+      return _legacyAbilityMappings;
+    }
+  }
+
+  /// 하드코딩된 매핑 (폴백용, 향후 제거 예정)
+  static const List<AbilityGameMapping> _legacyAbilityMappings = [
     // ========== Part 1: 음운인식능력 (15개) ==========
     
     // Stage 0: 기초 청각 (2개)
@@ -365,8 +417,9 @@ class StoryQuestionMappingService {
   /// 35개 능력에 대한 스토리 문항 생성
   Future<List<StoryQuestion>> generateStoryQuestions() async {
     final List<StoryQuestion> storyQuestions = [];
+    final mappings = await _loadAbilityMappings();
 
-    for (final mapping in _abilityMappings) {
+    for (final mapping in mappings) {
       try {
         // 게임 파일에서 문항 로드
         final content = await _questionLoader.loadFromLocalJson(
@@ -374,9 +427,10 @@ class StoryQuestionMappingService {
         );
 
         if (content.items.isEmpty) {
-          print('⚠️ Warning: ${mapping.gameFileName} has no items - skipping ability ${mapping.abilityId}');
-          // 문항이 없어도 빈 문항을 추가하여 순서 유지
-          // 또는 에러를 더 명확하게 처리
+          AppLogger.warning('게임 파일에 문항이 없음', data: {
+            'gameFileName': mapping.gameFileName,
+            'abilityId': mapping.abilityId,
+          });
           continue;
         }
 
@@ -399,29 +453,44 @@ class StoryQuestionMappingService {
         );
 
         // StoryQuestion으로 변환
-        // #region agent log
-        print('📝 StoryQuestion 생성: abilityId=${mapping.abilityId}, audioPath=${selectedItem.questionAudioPath}');
-        // #endregion
+        AppLogger.debug('StoryQuestion 생성', data: {
+          'abilityId': mapping.abilityId,
+          'audioPath': selectedItem.questionAudioPath,
+        });
         
         storyQuestions.add(StoryQuestion(
           questionId: 'story_${mapping.abilityId}_${selectedItem.itemId}',
           abilityId: mapping.abilityId,
           abilityName: mapping.abilityName,
-          storyContext: mapping.storyContext, // TODO: JSON으로 이동 예정
-          characterDialogue: mapping.characterDialogue, // 이미 빈 문자열
+          storyContext: mapping.storyContext,
+          characterDialogue: mapping.characterDialogue,
           question: assessmentQuestion,
-          stageTitle: mapping.stageTitle, // TODO: JSON으로 이동 예정
+          stageTitle: mapping.stageTitle,
           questionAudioPath: selectedItem.questionAudioPath,
         ));
-      } catch (e) {
-        print('❌ Error loading ${mapping.gameFileName} for ability ${mapping.abilityId}: $e');
+      } catch (e, stackTrace) {
+        AppLogger.error(
+          '게임 파일 로드 실패',
+          error: e,
+          stackTrace: stackTrace,
+          data: {
+            'gameFileName': mapping.gameFileName,
+            'abilityId': mapping.abilityId,
+          },
+        );
         // 에러 발생 시에도 계속 진행 (다음 문항 로드 시도)
       }
     }
 
-    print('✅ Generated ${storyQuestions.length} story questions (expected: 35)');
+    AppLogger.success('스토리 문항 생성 완료', data: {
+      'count': storyQuestions.length,
+      'expected': 35,
+    });
     if (storyQuestions.length != 35) {
-      print('⚠️ Warning: Expected 35 questions but got ${storyQuestions.length}');
+      AppLogger.warning('예상 문항 수와 불일치', data: {
+        'expected': 35,
+        'actual': storyQuestions.length,
+      });
     }
 
     return storyQuestions;

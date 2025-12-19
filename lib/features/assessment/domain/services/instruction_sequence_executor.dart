@@ -1,5 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import '../../../../core/services/tts_service.dart';
+import '../../../../core/utils/logger.dart';
+import '../../../../core/constants/audio_constants.dart';
 import '../../data/models/story_assessment_model.dart';
 import '../../data/services/instruction_sequence_loader_service.dart';
 
@@ -24,19 +26,25 @@ class InstructionSequenceExecutor {
     StoryQuestion storyQuestion,
   ) async {
     // TTS 초기화
-    print('🔧 TTS 초기화 시작');
+    AppLogger.debug('TTS 초기화 시작');
     await _ttsService.initialize();
-    print('✅ TTS 초기화 완료');
+    AppLogger.success('TTS 초기화 완료');
 
     // 각 step을 순서대로 실행
-    print('📋 총 ${sequence.steps.length}개 step 실행 시작');
+    AppLogger.sequence('시퀀스 실행 시작', data: {
+      'totalSteps': sequence.steps.length,
+    });
     for (int i = 0; i < sequence.steps.length; i++) {
       final step = sequence.steps[i];
-      print('▶️ Step ${i + 1}/${sequence.steps.length} 실행: ${step.action}');
+      AppLogger.sequence('Step 실행', data: {
+        'stepNumber': i + 1,
+        'totalSteps': sequence.steps.length,
+        'action': step.action,
+      });
       await _executeStep(step, storyQuestion);
-      print('✅ Step ${i + 1} 완료');
+      AppLogger.success('Step 완료', data: {'stepNumber': i + 1});
     }
-    print('✅ 모든 step 실행 완료');
+    AppLogger.success('모든 step 실행 완료');
   }
 
   /// 단일 step 실행
@@ -66,47 +74,54 @@ class InstructionSequenceExecutor {
         break;
 
       default:
-        print('⚠️ 알 수 없는 action: ${step.action}');
+        AppLogger.warning('알 수 없는 action', data: {'action': step.action});
     }
   }
 
   /// TTS 실행
   Future<void> _executeTts(InstructionStep step) async {
-    print('🗣️ [TTS] _executeTts 호출됨');
-    print('  - step.params: ${step.params}');
+    AppLogger.tts('_executeTts 호출됨', data: {'params': step.params});
     
     final text = step.params['text'] as String?;
     if (text == null || text.isEmpty) {
-      print('❌ [TTS 중단] TTS text가 없습니다');
-      print('  - step.params: ${step.params}');
+      AppLogger.warning('TTS text가 없습니다', data: {'params': step.params});
       return;
     }
     
-    print('🗣️ [TTS] 텍스트 확인 완료: "$text" (길이: ${text.length}자)');
+    AppLogger.tts('텍스트 확인 완료', data: {
+      'text': text,
+      'textLength': text.length,
+    });
     
     try {
-      print('🗣️ [TTS] TTS 서비스 speak() 호출 시작');
       final startTime = DateTime.now();
       await _ttsService.speak(text);
       final actualDuration = DateTime.now().difference(startTime).inMilliseconds;
-      print('✅ [TTS] TTS 서비스 speak() 완료 (소요 시간: ${actualDuration}ms)');
+      AppLogger.success('TTS 서비스 speak() 완료', data: {
+        'durationMs': actualDuration,
+      });
     } catch (e, stackTrace) {
-      print('❌ [TTS 실패] TTS 실행 실패: "$text"');
-      print('  - 에러 타입: ${e.runtimeType}');
-      print('  - 에러 메시지: $e');
-      print('  - 스택 트레이스: $stackTrace');
+      AppLogger.error(
+        'TTS 실행 실패',
+        error: e,
+        stackTrace: stackTrace,
+        data: {'text': text},
+      );
       // TTS 실패해도 계속 진행
     }
   }
 
   /// 딜레이 실행
   Future<void> _executeDelay(InstructionStep step) async {
-    final ms = step.params['ms'] as int? ?? 1000;
-    print('⏳ [딜레이] 시작: ${ms}ms');
+    final ms = step.params['ms'] as int? ?? AudioConstants.defaultDelayMs;
+    AppLogger.delay('딜레이 시작', data: {'ms': ms});
     final startTime = DateTime.now();
     await Future.delayed(Duration(milliseconds: ms));
     final actualDuration = DateTime.now().difference(startTime).inMilliseconds;
-    print('✅ [딜레이] 완료: 예상 ${ms}ms, 실제 ${actualDuration}ms');
+    AppLogger.success('딜레이 완료', data: {
+      'expectedMs': ms,
+      'actualMs': actualDuration,
+    });
   }
 
   /// 단일 오디오 재생
@@ -116,7 +131,7 @@ class InstructionSequenceExecutor {
   ) async {
     final source = step.params['source'] as String?;
     if (source == null || source.isEmpty) {
-      print('⚠️ audio source가 없습니다');
+      AppLogger.warning('audio source가 없습니다');
       return;
     }
 
@@ -131,11 +146,11 @@ class InstructionSequenceExecutor {
     }
 
     if (audioPath == null || audioPath.isEmpty) {
-      print('⚠️ 오디오 경로가 없습니다');
+      AppLogger.warning('오디오 경로가 없습니다');
       return;
     }
 
-    print('🎵 오디오 재생: $audioPath');
+    AppLogger.audio('오디오 재생', data: {'audioPath': audioPath});
     await _playQuestionAudio(audioPath);
   }
 
@@ -146,10 +161,13 @@ class InstructionSequenceExecutor {
   ) async {
     final source = step.params['source'] as String?;
     final field = step.params['field'] as String?;
-    final delayBetween = step.params['delayBetween'] as int? ?? 1000;
+    final delayBetween = step.params['delayBetween'] as int? ?? AudioConstants.audioSequenceDelayMs;
 
     if (source != 'options' || field == null) {
-      print('⚠️ audio_sequence 파라미터 오류: source=$source, field=$field');
+      AppLogger.warning('audio_sequence 파라미터 오류', data: {
+        'source': source,
+        'field': field,
+      });
       return;
     }
 
@@ -164,11 +182,13 @@ class InstructionSequenceExecutor {
         .toList();
 
     if (audioOptions.isEmpty) {
-      print('⚠️ 재생할 오디오가 없습니다');
+      AppLogger.warning('재생할 오디오가 없습니다');
       return;
     }
 
-    print('🎵 순차 오디오 재생 시작: ${audioOptions.length}개');
+    AppLogger.audio('순차 오디오 재생 시작', data: {
+      'audioCount': audioOptions.length,
+    });
 
     for (int i = 0; i < audioOptions.length; i++) {
       final option = audioOptions[i];
@@ -176,37 +196,54 @@ class InstructionSequenceExecutor {
 
       // 각 오디오 재생 전에 TTS 멘트 추가
       final ttsText = i == 0 ? '첫 번째 소리입니다.' : '두 번째 소리입니다.';
-      print('🗣️ [오디오 시퀀스] ${i + 1}번째 오디오 전 TTS 시작: "$ttsText"');
+      AppLogger.tts('오디오 시퀀스: ${i + 1}번째 오디오 전 TTS 시작', data: {
+        'ttsText': ttsText,
+        'audioIndex': i + 1,
+      });
       try {
         final ttsStartTime = DateTime.now();
         await _ttsService.speak(ttsText);
         final ttsDuration = DateTime.now().difference(ttsStartTime).inMilliseconds;
-        print('✅ [오디오 시퀀스] ${i + 1}번째 오디오 전 TTS 완료 (소요 시간: ${ttsDuration}ms)');
+        AppLogger.success('오디오 시퀀스: ${i + 1}번째 오디오 전 TTS 완료', data: {
+          'durationMs': ttsDuration,
+        });
       } catch (e, stackTrace) {
-        print('❌ [오디오 시퀀스] TTS 재생 실패: $e');
-        print('  - 스택 트레이스: $stackTrace');
+        AppLogger.error(
+          '오디오 시퀀스: TTS 재생 실패',
+          error: e,
+          stackTrace: stackTrace,
+        );
         // TTS 실패해도 오디오는 재생
       }
 
-      print('🎵 [오디오 시퀀스] 소리${i + 1} 재생 시작: $audioPath');
+      AppLogger.audio('오디오 시퀀스: 소리${i + 1} 재생 시작', data: {
+        'audioPath': audioPath,
+        'audioIndex': i + 1,
+      });
       
       try {
         await _playQuestionAudio(audioPath);
-        print('✅ [오디오 시퀀스] 소리${i + 1} 재생 완료');
+        AppLogger.success('오디오 시퀀스: 소리${i + 1} 재생 완료');
         
         // 마지막이 아니면 딜레이
         if (i < audioOptions.length - 1) {
-          print('⏳ [오디오 시퀀스] 다음 소리 전 딜레이: ${delayBetween}ms');
+          AppLogger.delay('오디오 시퀀스: 다음 소리 전 딜레이', data: {
+            'delayMs': delayBetween,
+          });
           await Future.delayed(Duration(milliseconds: delayBetween));
         }
       } catch (e, stackTrace) {
-        print('❌ [오디오 시퀀스] 오디오 재생 실패: $audioPath - $e');
-        print('  - 스택 트레이스: $stackTrace');
+        AppLogger.error(
+          '오디오 시퀀스: 오디오 재생 실패',
+          error: e,
+          stackTrace: stackTrace,
+          data: {'audioPath': audioPath},
+        );
         // 계속 진행
       }
     }
     
-    print('✅ [오디오 시퀀스] 모든 오디오 재생 완료');
+    AppLogger.success('오디오 시퀀스: 모든 오디오 재생 완료');
   }
 
   /// 오디오 시도, 실패 시 TTS (3번 문항용)
@@ -223,7 +260,9 @@ class InstructionSequenceExecutor {
     if (audioPathParam == 'questionAudioPath') {
       audioPath = storyQuestion.questionAudioPath;
     } else {
-      print('⚠️ 알 수 없는 audioPath 파라미터: $audioPathParam');
+      AppLogger.warning('알 수 없는 audioPath 파라미터', data: {
+        'audioPathParam': audioPathParam,
+      });
       audioPath = null;
     }
 
@@ -232,12 +271,15 @@ class InstructionSequenceExecutor {
     // 오디오 재생 시도
     if (audioPath != null && audioPath.isNotEmpty) {
       try {
-        print('🎵 오디오 재생 시도: $audioPath');
+        AppLogger.audio('오디오 재생 시도', data: {'audioPath': audioPath});
         await _playQuestionAudio(audioPath);
         audioPlayed = true;
-        print('✅ 오디오 재생 완료');
-      } catch (e) {
-        print('⚠️ 오디오 재생 실패: $e');
+        AppLogger.success('오디오 재생 완료');
+      } catch (e, stackTrace) {
+        AppLogger.warning('오디오 재생 실패', data: {
+          'error': e.toString(),
+          'audioPath': audioPath,
+        });
       }
     }
 
@@ -253,10 +295,10 @@ class InstructionSequenceExecutor {
       }
 
       if (ttsText != null && ttsText.isNotEmpty) {
-        print('🔄 TTS로 대체 재생: $ttsText');
+        AppLogger.tts('TTS로 대체 재생', data: {'ttsText': ttsText});
         await _ttsService.speak(ttsText);
       } else {
-        print('⚠️ TTS fallback 텍스트가 없습니다');
+        AppLogger.warning('TTS fallback 텍스트가 없습니다');
       }
     }
   }
