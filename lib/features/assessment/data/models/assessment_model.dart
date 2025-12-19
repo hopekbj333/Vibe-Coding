@@ -1,43 +1,19 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'question_model.dart';
 
-class AssessmentModel extends Equatable {
-  final String id;
-  final String title;
-  final String description;
-  final List<QuestionModel> questions;
-  final int totalQuestions;
+part 'assessment_model.freezed.dart';
+part 'assessment_model.g.dart';
 
-  const AssessmentModel({
-    required this.id,
-    required this.title,
-    required this.description,
-    required this.questions,
-    required this.totalQuestions,
-  });
+@freezed
+class AssessmentModel with _$AssessmentModel {
+  const factory AssessmentModel({
+    required String id,
+    required String title,
+    required String description,
+    required List<QuestionModel> questions,
+    required int totalQuestions,
+  }) = _AssessmentModel;
 
-  @override
-  List<Object?> get props => [id, title, description, questions, totalQuestions];
-
-  factory AssessmentModel.fromJson(Map<String, dynamic> json) {
-    return AssessmentModel(
-      id: json['id'] as String,
-      title: json['title'] as String,
-      description: json['description'] as String,
-      questions: (json['questions'] as List<dynamic>)
-          .map((e) => QuestionModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      totalQuestions: json['totalQuestions'] as int,
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'title': title,
-      'description': description,
-      'questions': questions.map((e) => e.toJson()).toList(),
-      'totalQuestions': totalQuestions,
-    };
-  }
+  factory AssessmentModel.fromJson(Map<String, dynamic> json) =>
+      _$AssessmentModelFromJson(json);
 }
