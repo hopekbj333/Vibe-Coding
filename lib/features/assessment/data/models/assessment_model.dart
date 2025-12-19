@@ -5,7 +5,7 @@ part 'assessment_model.freezed.dart';
 part 'assessment_model.g.dart';
 
 @freezed
-class AssessmentModel with _$AssessmentModel {
+abstract class AssessmentModel with _$AssessmentModel {
   const factory AssessmentModel({
     required String id,
     required String title,

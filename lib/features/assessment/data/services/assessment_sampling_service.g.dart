@@ -23,7 +23,8 @@ _AssessmentQuestion _$AssessmentQuestionFromJson(Map<String, dynamic> json) =>
       difficulty: json['difficulty'] == null
           ? null
           : DifficultyParams.fromJson(
-              json['difficulty'] as Map<String, dynamic>),
+              json['difficulty'] as Map<String, dynamic>,
+            ),
     );
 
 Map<String, dynamic> _$AssessmentQuestionToJson(_AssessmentQuestion instance) =>

@@ -7,43 +7,40 @@ part of 'story_assessment_model.dart';
 // **************************************************************************
 
 _StoryAssessmentSession _$StoryAssessmentSessionFromJson(
-        Map<String, dynamic> json) =>
-    _StoryAssessmentSession(
-      sessionId: json['sessionId'] as String,
-      childId: json['childId'] as String,
-      theme: $enumDecode(_$StoryThemeEnumMap, json['theme']),
-      startedAt: DateTime.parse(json['startedAt'] as String),
-      completedAt: json['completedAt'] == null
-          ? null
-          : DateTime.parse(json['completedAt'] as String),
-      status: $enumDecode(_$StoryProgressStatusEnumMap, json['status']),
-      chapters: (json['chapters'] as List<dynamic>)
-          .map((e) => StoryChapter.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      currentChapterIndex: (json['currentChapterIndex'] as num).toInt(),
-      currentQuestionIndex: (json['currentQuestionIndex'] as num).toInt(),
-      progress:
-          StoryProgress.fromJson(json['progress'] as Map<String, dynamic>),
-    );
+  Map<String, dynamic> json,
+) => _StoryAssessmentSession(
+  sessionId: json['sessionId'] as String,
+  childId: json['childId'] as String,
+  theme: $enumDecode(_$StoryThemeEnumMap, json['theme']),
+  startedAt: DateTime.parse(json['startedAt'] as String),
+  completedAt: json['completedAt'] == null
+      ? null
+      : DateTime.parse(json['completedAt'] as String),
+  status: $enumDecode(_$StoryProgressStatusEnumMap, json['status']),
+  chapters: (json['chapters'] as List<dynamic>)
+      .map((e) => StoryChapter.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  currentChapterIndex: (json['currentChapterIndex'] as num).toInt(),
+  currentQuestionIndex: (json['currentQuestionIndex'] as num).toInt(),
+  progress: StoryProgress.fromJson(json['progress'] as Map<String, dynamic>),
+);
 
 Map<String, dynamic> _$StoryAssessmentSessionToJson(
-        _StoryAssessmentSession instance) =>
-    <String, dynamic>{
-      'sessionId': instance.sessionId,
-      'childId': instance.childId,
-      'theme': _$StoryThemeEnumMap[instance.theme]!,
-      'startedAt': instance.startedAt.toIso8601String(),
-      'completedAt': instance.completedAt?.toIso8601String(),
-      'status': _$StoryProgressStatusEnumMap[instance.status]!,
-      'chapters': instance.chapters,
-      'currentChapterIndex': instance.currentChapterIndex,
-      'currentQuestionIndex': instance.currentQuestionIndex,
-      'progress': instance.progress,
-    };
-
-const _$StoryThemeEnumMap = {
-  StoryTheme.hangeulLand: 'hangeulLand',
+  _StoryAssessmentSession instance,
+) => <String, dynamic>{
+  'sessionId': instance.sessionId,
+  'childId': instance.childId,
+  'theme': _$StoryThemeEnumMap[instance.theme]!,
+  'startedAt': instance.startedAt.toIso8601String(),
+  'completedAt': instance.completedAt?.toIso8601String(),
+  'status': _$StoryProgressStatusEnumMap[instance.status]!,
+  'chapters': instance.chapters,
+  'currentChapterIndex': instance.currentChapterIndex,
+  'currentQuestionIndex': instance.currentQuestionIndex,
+  'progress': instance.progress,
 };
+
+const _$StoryThemeEnumMap = {StoryTheme.hangeulLand: 'hangeulLand'};
 
 const _$StoryProgressStatusEnumMap = {
   StoryProgressStatus.notStarted: 'notStarted',
@@ -92,8 +89,9 @@ _StoryQuestion _$StoryQuestionFromJson(Map<String, dynamic> json) =>
       abilityName: json['abilityName'] as String,
       storyContext: json['storyContext'] as String,
       characterDialogue: json['characterDialogue'] as String,
-      question:
-          AssessmentQuestion.fromJson(json['question'] as Map<String, dynamic>),
+      question: _assessmentQuestionFromJson(
+        json['question'] as Map<String, dynamic>,
+      ),
       stageTitle: json['stageTitle'] as String?,
       questionAudioPath: json['questionAudioPath'] as String?,
     );
@@ -105,16 +103,16 @@ Map<String, dynamic> _$StoryQuestionToJson(_StoryQuestion instance) =>
       'abilityName': instance.abilityName,
       'storyContext': instance.storyContext,
       'characterDialogue': instance.characterDialogue,
-      'question': instance.question,
+      'question': _assessmentQuestionToJson(instance.question),
       'stageTitle': instance.stageTitle,
       'questionAudioPath': instance.questionAudioPath,
     };
 
 _StoryReward _$StoryRewardFromJson(Map<String, dynamic> json) => _StoryReward(
-      stars: (json['stars'] as num).toInt(),
-      badge: json['badge'] as String?,
-      message: json['message'] as String,
-    );
+  stars: (json['stars'] as num).toInt(),
+  badge: json['badge'] as String?,
+  message: json['message'] as String,
+);
 
 Map<String, dynamic> _$StoryRewardToJson(_StoryReward instance) =>
     <String, dynamic>{
@@ -129,8 +127,9 @@ _StoryProgress _$StoryProgressFromJson(Map<String, dynamic> json) =>
           .map((e) => e as String)
           .toList(),
       questionResults: Map<String, bool>.from(json['questionResults'] as Map),
-      questionResponseTimes:
-          Map<String, int>.from(json['questionResponseTimes'] as Map),
+      questionResponseTimes: Map<String, int>.from(
+        json['questionResponseTimes'] as Map,
+      ),
       completedChapters: (json['completedChapters'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),

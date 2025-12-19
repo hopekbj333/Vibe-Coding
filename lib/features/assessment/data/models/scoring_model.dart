@@ -20,14 +20,14 @@ enum ScoringResult {
 
 /// 문항별 채점 정보
 @freezed
-class QuestionScore with _$QuestionScore {
+abstract class QuestionScore with _$QuestionScore {
   const factory QuestionScore({
     required String questionId,
     required ScoringResult result,
     String? memo, // 채점자 메모
     DateTime? scoredAt, // 채점 시각
     String? scoredBy, // 채점자 ID
-    @JsonKey() dynamic autoScoredData, // 자동 채점 데이터 (Go/No-Go 결과 등)
+    dynamic autoScoredData, // 자동 채점 데이터 (Go/No-Go 결과 등)
   }) = _QuestionScore;
 
   factory QuestionScore.fromJson(Map<String, dynamic> json) =>
@@ -36,7 +36,7 @@ class QuestionScore with _$QuestionScore {
 
 /// 검사 결과 (전체)
 @freezed
-class AssessmentResult with _$AssessmentResult {
+abstract class AssessmentResult with _$AssessmentResult {
   const AssessmentResult._();
 
   const factory AssessmentResult({

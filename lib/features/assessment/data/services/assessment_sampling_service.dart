@@ -139,7 +139,7 @@ class AssessmentSamplingService {
 
 /// Assessment용 문항 모델 (Training 문항의 간소화 버전)
 @freezed
-class AssessmentQuestion with _$AssessmentQuestion {
+abstract class AssessmentQuestion with _$AssessmentQuestion {
   const factory AssessmentQuestion({
     required int questionNumber, // 1~50
     required String gameId, // 'same_sound'

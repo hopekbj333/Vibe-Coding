@@ -1,4 +1,4 @@
-import 'package:audioplayers/audioplayers.dart';
+import 'package:literacy_assessment/core/services/audio_playback_service.dart';
 import '../../../../core/services/tts_service.dart';
 import '../../../../core/utils/logger.dart';
 import '../../../../core/constants/audio_constants.dart';
@@ -9,15 +9,15 @@ import '../../data/services/instruction_sequence_loader_service.dart';
 /// JSON의 steps를 순서대로 실행
 class InstructionSequenceExecutor {
   final TtsService _ttsService;
-  final AudioPlayer _audioPlayer;
+  final AudioPlaybackService _audioPlaybackService;
   final Function(String?) _playQuestionAudio;
 
   InstructionSequenceExecutor({
     required TtsService ttsService,
-    required AudioPlayer audioPlayer,
+    required AudioPlaybackService audioPlaybackService,
     required Function(String?) playQuestionAudio,
   })  : _ttsService = ttsService,
-        _audioPlayer = audioPlayer,
+        _audioPlaybackService = audioPlaybackService,
         _playQuestionAudio = playQuestionAudio;
 
   /// 시퀀스 실행

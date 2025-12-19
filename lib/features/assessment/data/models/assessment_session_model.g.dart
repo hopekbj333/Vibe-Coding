@@ -15,9 +15,7 @@ _AssessmentSession _$AssessmentSessionFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['completedAt'] as String),
       status: $enumDecode(_$AssessmentStatusEnumMap, json['status']),
-      questions: (json['questions'] as List<dynamic>)
-          .map((e) => AssessmentQuestion.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      questions: _assessmentQuestionsFromJson(json['questions'] as List),
       answers: (json['answers'] as List<dynamic>)
           .map((e) => AssessmentAnswer.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -32,7 +30,7 @@ Map<String, dynamic> _$AssessmentSessionToJson(_AssessmentSession instance) =>
       'startedAt': instance.startedAt.toIso8601String(),
       'completedAt': instance.completedAt?.toIso8601String(),
       'status': _$AssessmentStatusEnumMap[instance.status]!,
-      'questions': instance.questions,
+      'questions': _assessmentQuestionsToJson(instance.questions),
       'answers': instance.answers,
       'currentQuestionIndex': instance.currentQuestionIndex,
       'totalQuestions': instance.totalQuestions,

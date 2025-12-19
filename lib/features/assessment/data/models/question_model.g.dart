@@ -12,21 +12,25 @@ _QuestionModel _$QuestionModelFromJson(Map<String, dynamic> json) =>
       type: $enumDecode(_$QuestionTypeEnumMap, json['type']),
       promptText: json['promptText'] as String,
       promptAudioUrl: json['promptAudioUrl'] as String,
-      optionsImageUrl: (json['optionsImageUrl'] as List<dynamic>?)
+      optionsImageUrl:
+          (json['optionsImageUrl'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
           const [],
-      optionsText: (json['optionsText'] as List<dynamic>?)
+      optionsText:
+          (json['optionsText'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
           const [],
       correctAnswer: json['correctAnswer'],
       timeLimitSeconds: (json['timeLimitSeconds'] as num?)?.toInt() ?? 10,
-      soundUrls: (json['soundUrls'] as List<dynamic>?)
+      soundUrls:
+          (json['soundUrls'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
           const [],
-      soundLabels: (json['soundLabels'] as List<dynamic>?)
+      soundLabels:
+          (json['soundLabels'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
           const [],
@@ -80,12 +84,12 @@ const _$QuestionTypeEnumMap = {
 };
 
 _AnswerData _$AnswerDataFromJson(Map<String, dynamic> json) => _AnswerData(
-      questionId: json['questionId'] as String,
-      selectedAnswer: json['selectedAnswer'],
-      reactionTimeMs: (json['reactionTimeMs'] as num).toInt(),
-      answeredAt: DateTime.parse(json['answeredAt'] as String),
-      recordingPath: json['recordingPath'] as String?,
-    );
+  questionId: json['questionId'] as String,
+  selectedAnswer: json['selectedAnswer'],
+  reactionTimeMs: (json['reactionTimeMs'] as num).toInt(),
+  answeredAt: DateTime.parse(json['answeredAt'] as String),
+  recordingPath: json['recordingPath'] as String?,
+);
 
 Map<String, dynamic> _$AnswerDataToJson(_AnswerData instance) =>
     <String, dynamic>{

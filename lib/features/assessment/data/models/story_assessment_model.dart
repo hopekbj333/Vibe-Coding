@@ -6,6 +6,13 @@ import 'dart:convert';
 part 'story_assessment_model.freezed.dart';
 part 'story_assessment_model.g.dart';
 
+// Top-level functions for JSON serialization (freezed requires top-level functions)
+Map<String, dynamic> _assessmentQuestionToJson(AssessmentQuestion question) =>
+    question.toJson();
+
+AssessmentQuestion _assessmentQuestionFromJson(Map<String, dynamic> json) =>
+    AssessmentQuestion.fromJson(json);
+
 /// 스토리 테마
 enum StoryTheme {
   hangeulLand, // 한글 나라 모험
@@ -30,7 +37,7 @@ enum StoryProgressStatus {
 
 /// 스토리형 검사 세션
 @freezed
-class StoryAssessmentSession with _$StoryAssessmentSession {
+abstract class StoryAssessmentSession with _$StoryAssessmentSession {
   const StoryAssessmentSession._();
 
   const factory StoryAssessmentSession({
@@ -80,7 +87,7 @@ class StoryAssessmentSession with _$StoryAssessmentSession {
 
 /// 스토리 챕터
 @freezed
-class StoryChapter with _$StoryChapter {
+abstract class StoryChapter with _$StoryChapter {
   const StoryChapter._();
 
   const factory StoryChapter({
@@ -103,7 +110,7 @@ class StoryChapter with _$StoryChapter {
 
 /// 스토리 문항
 @freezed
-class StoryQuestion with _$StoryQuestion {
+abstract class StoryQuestion with _$StoryQuestion {
   const factory StoryQuestion({
     required String questionId,
     required String abilityId, // 35개 능력 중 하나 (예: "0.1", "1.1")
@@ -116,19 +123,13 @@ class StoryQuestion with _$StoryQuestion {
     String? questionAudioPath, // 문항 오디오 경로
   }) = _StoryQuestion;
 
-  static Map<String, dynamic> _assessmentQuestionToJson(AssessmentQuestion question) =>
-      question.toJson();
-  
-  static AssessmentQuestion _assessmentQuestionFromJson(Map<String, dynamic> json) =>
-      AssessmentQuestion.fromJson(json);
-
   factory StoryQuestion.fromJson(Map<String, dynamic> json) =>
       _$StoryQuestionFromJson(json);
 }
 
 /// 스토리 보상
 @freezed
-class StoryReward with _$StoryReward {
+abstract class StoryReward with _$StoryReward {
   const factory StoryReward({
     required int stars, // 별 개수
     String? badge, // 배지 이름 (선택)
@@ -141,7 +142,7 @@ class StoryReward with _$StoryReward {
 
 /// 스토리 진행 상황
 @freezed
-class StoryProgress with _$StoryProgress {
+abstract class StoryProgress with _$StoryProgress {
   const StoryProgress._();
 
   const factory StoryProgress({

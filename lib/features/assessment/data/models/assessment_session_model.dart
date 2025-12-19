@@ -14,9 +14,16 @@ enum AssessmentStatus {
   abandoned, // 중도 포기
 }
 
+// Top-level functions for JSON serialization (freezed requires top-level functions)
+List<Map<String, dynamic>> _assessmentQuestionsToJson(List<AssessmentQuestion> questions) =>
+    questions.map((q) => q.toJson()).toList();
+
+List<AssessmentQuestion> _assessmentQuestionsFromJson(List<dynamic> json) =>
+    json.map((e) => AssessmentQuestion.fromJson(e as Map<String, dynamic>)).toList();
+
 /// Assessment 세션 모델
 @freezed
-class AssessmentSession with _$AssessmentSession {
+abstract class AssessmentSession with _$AssessmentSession {
   const AssessmentSession._();
 
   const factory AssessmentSession({
@@ -31,12 +38,6 @@ class AssessmentSession with _$AssessmentSession {
     required int currentQuestionIndex, // 현재 문항 번호 (0-based)
     required int totalQuestions, // 전체 문항 수 (50)
   }) = _AssessmentSession;
-
-  static List<Map<String, dynamic>> _assessmentQuestionsToJson(List<AssessmentQuestion> questions) =>
-      questions.map((q) => q.toJson()).toList();
-  
-  static List<AssessmentQuestion> _assessmentQuestionsFromJson(List<dynamic> json) =>
-      json.map((e) => AssessmentQuestion.fromJson(e as Map<String, dynamic>)).toList();
 
   /// 진행률 (0.0 ~ 1.0)
   double get progress => currentQuestionIndex / totalQuestions;
@@ -76,7 +77,7 @@ class AssessmentSession with _$AssessmentSession {
 
 /// Assessment 답변 모델
 @freezed
-class AssessmentAnswer with _$AssessmentAnswer {
+abstract class AssessmentAnswer with _$AssessmentAnswer {
   const factory AssessmentAnswer({
     required int questionIndex, // 문항 번호 (0-based)
     required String questionId, // 문항 ID (itemId)

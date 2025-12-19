@@ -45,7 +45,7 @@ enum QuestionType {
 }
 
 @freezed
-class QuestionModel with _$QuestionModel {
+abstract class QuestionModel with _$QuestionModel {
   const factory QuestionModel({
     required String id,
     required QuestionType type,
@@ -53,7 +53,7 @@ class QuestionModel with _$QuestionModel {
     required String promptAudioUrl, // 질문 오디오 URL
     @Default([]) List<String> optionsImageUrl, // 보기 이미지 URL 목록
     @Default([]) List<String> optionsText, // 보기 텍스트 (접근성용)
-    @JsonKey() required dynamic correctAnswer, // 정답 (인덱스 or 텍스트)
+    required dynamic correctAnswer, // 정답 (인덱스 or 텍스트)
     @Default(10) int timeLimitSeconds, // 제한 시간
     // S 1.4.1: 소리 식별용 추가 필드
     @Default([]) List<String> soundUrls, // 재생할 소리 URL 목록
@@ -68,10 +68,10 @@ class QuestionModel with _$QuestionModel {
 /// 
 /// 사용자가 입력한 답변과 관련 메타데이터를 저장합니다.
 @freezed
-class AnswerData with _$AnswerData {
+abstract class AnswerData with _$AnswerData {
   const factory AnswerData({
     required String questionId,
-    @JsonKey() required dynamic selectedAnswer, // 선택한 인덱스 또는 텍스트
+    required dynamic selectedAnswer, // 선택한 인덱스 또는 텍스트
     required int reactionTimeMs, // 반응 시간 (밀리초)
     required DateTime answeredAt, // 답변 시각
     String? recordingPath, // 녹음 파일 경로 (recording 타입일 때)

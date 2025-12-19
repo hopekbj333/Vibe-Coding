@@ -1,7 +1,7 @@
-import 'dart:async';
+import 'dart:async' show Timer, unawaited;
 import 'dart:convert';
 import 'dart:io';
-import 'package:flutter/foundation.dart' show kIsWeb, unawaited;
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -208,7 +208,7 @@ class _StoryQuestionPageState extends ConsumerState<StoryQuestionPage> {
       AppLogger.debug('실행 엔진 생성');
       final executor = InstructionSequenceExecutor(
         ttsService: _ttsService,
-        audioPlayer: _audioPlayer,
+        audioPlaybackService: _audioPlaybackService,
         playQuestionAudio: _playQuestionAudio,
       );
       

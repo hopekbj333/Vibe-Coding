@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../../../core/services/tts_service.dart';
-import '../../../../core/services/audio_playback_service.dart';
-import '../../../../core/utils/logger.dart';
-import '../../../../core/constants/audio_constants.dart';
-import '../../../data/models/story_assessment_model.dart';
-import '../../../../training/data/models/training_content_model.dart';
+import 'package:literacy_assessment/core/services/tts_service.dart';
+import 'package:literacy_assessment/core/services/audio_playback_service.dart';
+import 'package:literacy_assessment/core/utils/logger.dart';
+import 'package:literacy_assessment/core/constants/audio_constants.dart';
+import 'package:literacy_assessment/features/assessment/data/models/story_assessment_model.dart';
+import 'package:literacy_assessment/features/assessment/data/models/question_model.dart';
+import 'package:literacy_assessment/features/assessment/data/services/assessment_sampling_service.dart';
+import 'package:literacy_assessment/features/training/data/models/training_content_model.dart';
 
 /// 스토리 문항 위젯
 /// 
@@ -25,7 +27,7 @@ class StoryQuestionWidget extends StatefulWidget {
     required this.isPlayingAudio,
     required this.selectedAnswer,
     required this.ttsService,
-    required this.audioPlayer,
+    required this.audioPlaybackService,
     required this.playQuestionAudio,
     required this.submitAnswer,
   });
@@ -64,7 +66,7 @@ class _StoryQuestionWidgetState extends State<StoryQuestionWidget> {
   }
 
   /// 보기가 있는 문항 (객관식)
-  Widget _buildOptionsQuestion(QuestionModel question) {
+  Widget _buildOptionsQuestion(AssessmentQuestion question) {
     // 오디오 재생 버튼 (다시 들을 수 있도록)
     // 2번 문항은 options의 audioPath 사용, 나머지는 questionAudioPath 사용
     final hasAudio = widget.storyQuestion.abilityId == '0.2'
@@ -223,7 +225,7 @@ class _StoryQuestionWidgetState extends State<StoryQuestionWidget> {
   }
 
   /// 리듬 탭 문항 (음절 개수 선택)
-  Widget _buildRhythmTapQuestion(QuestionModel question) {
+  Widget _buildRhythmTapQuestion(AssessmentQuestion question) {
     // 정답이 숫자인 경우 (음절 개수)
     try {
       int.parse(question.correctAnswer); // 정답 검증용 (사용 안 함)
@@ -338,7 +340,7 @@ class _StoryQuestionWidgetState extends State<StoryQuestionWidget> {
   }
 
   /// 기본 문항 (보기 없음)
-  Widget _buildDefaultQuestion(QuestionModel question) {
+  Widget _buildDefaultQuestion(AssessmentQuestion question) {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

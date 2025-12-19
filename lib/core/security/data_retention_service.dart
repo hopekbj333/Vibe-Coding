@@ -5,6 +5,7 @@ import '../../config/firebase/firebase_config.dart';
 import '../../config/firebase/firebase_repositories.dart';
 import '../../config/firebase/firestore_schema.dart';
 import '../../config/firebase/firebase_storage.dart';
+import 'audio_access_service.dart';
 
 /// 데이터 보존 기간 정책 서비스
 /// 
