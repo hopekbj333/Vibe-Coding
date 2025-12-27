@@ -1,0 +1,124 @@
+{
+  "examples": [
+    {
+      "itemId": "ex_001",
+      "question": "'공책'에서 '공'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "책",
+      "itemData": {"word": "공책", "target": "공", "result": "책"}
+    },
+    {
+      "itemId": "ex_002",
+      "question": "'종이컵'에서 '종이'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "컵",
+      "itemData": {"word": "종이컵", "target": "종이", "result": "컵"}
+    },
+    {
+      "itemId": "ex_003",
+      "question": "'딸기우유'에서 '딸기'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "우유",
+      "itemData": {"word": "딸기우유", "target": "딸기", "result": "우유"}
+    }
+  ],
+  "main": [
+    {
+      "itemId": "del_001",
+      "question": "'야구방망이'에서 '야구'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "방망이"
+    },
+    {
+      "itemId": "del_002",
+      "question": "'동전지갑'에서 '동전'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "지갑"
+    },
+    {
+      "itemId": "del_003",
+      "question": "'손톱깎이'에서 '손톱'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "깎이"
+    },
+    {
+      "itemId": "del_004",
+      "question": "'소고기'에서 '소'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "고기"
+    },
+    {
+      "itemId": "del_005",
+      "question": "'책가방'에서 '책'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "가방"
+    },
+    {
+      "itemId": "del_006",
+      "question": "'신발장'에서 '신발'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "장"
+    },
+    {
+      "itemId": "del_007",
+      "question": "'물총'에서 '물'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "총"
+    },
+    {
+      "itemId": "del_008",
+      "question": "'비옷'에서 '비'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "옷"
+    },
+    {
+      "itemId": "del_009",
+      "question": "'창문'에서 '창'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "문"
+    },
+    {
+      "itemId": "del_010",
+      "question": "'놀이터'에서 '놀이'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "터"
+    },
+    {
+      "itemId": "del_011",
+      "question": "'코끼리'에서 '코'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "끼리"
+    },
+    {
+      "itemId": "del_012",
+      "question": "'수요일'에서 '수'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "요일"
+    },
+    {
+      "itemId": "del_013",
+      "question": "'풍선'에서 '풍'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "선"
+    },
+    {
+      "itemId": "del_014",
+      "question": "'바지'에서 '바'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "지"
+    },
+    {
+      "itemId": "del_015",
+      "question": "'휴지통'에서 '휴지'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "통"
+    },
+    {
+      "itemId": "del_016",
+      "question": "'호랑이'에서 '호'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "랑이"
+    },
+    {
+      "itemId": "del_017",
+      "question": "'축구공'에서 '축구'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "공"
+    },
+    {
+      "itemId": "del_018",
+      "question": "'유리창'에서 '유리'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "창"
+    },
+    {
+      "itemId": "del_019",
+      "question": "'오토바이'에서 '오'를 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "토바이"
+    },
+    {
+      "itemId": "del_020",
+      "question": "'안녕하세요'에서 '안녕'을 빼고 나머지 소리를 말해 주세요.",
+      "correctAnswer": "하세요"
+    }
+  ]
+}
