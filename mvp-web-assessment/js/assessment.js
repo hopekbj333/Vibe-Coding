@@ -65,13 +65,16 @@ class Assessment {
     /**
      * 답변 저장
      */
-    saveAnswer(questionId, answer, isCorrect = null) {
-        this.answers.push({
+    saveAnswer(questionId, answer, isCorrect = null, audioBlobUrl = null) {
+        const answerData = {
             questionId,
             answer,
             isCorrect,
+            audioBlobUrl,
             timestamp: new Date().toISOString()
-        });
+        };
+        console.log('답변 저장:', answerData);
+        this.answers.push(answerData);
     }
 
     /**
@@ -101,20 +104,71 @@ class Assessment {
     }
 
     /**
+     * 본 문항 답변 목록 가져오기
+     */
+    getMainAnswers() {
+        if (!this.questions) return [];
+        
+        const mainAnswers = this.answers.filter(a => a.questionId.startsWith('del_'));
+        const result = [];
+        
+        for (let i = 0; i < this.questions.main.length; i++) {
+            const question = this.questions.main[i];
+            const answer = mainAnswers.find(a => a.questionId === question.itemId);
+            
+            result.push({
+                questionNumber: i + 1,
+                question: question.question,
+                correctAnswer: question.correctAnswer,
+                userAnswer: answer ? answer.answer : '',
+                isCorrect: answer ? answer.isCorrect : null,
+                audioBlobUrl: answer ? answer.audioBlobUrl : null
+            });
+        }
+        
+        return result;
+    }
+
+    /**
      * 정답 확인 (유사도 기반)
      */
     checkAnswer(recognizedText, correctAnswer) {
-        const recognized = recognizedText.trim().toLowerCase();
-        const correct = correctAnswer.trim().toLowerCase();
+        // 공백 및 특수문자 제거 (한국어 특성 고려)
+        const normalize = (text) => {
+            return text.trim()
+                .replace(/\s+/g, '') // 모든 공백 제거
+                .replace(/[.,!?;:]/g, '') // 구두점 제거
+                .toLowerCase();
+        };
+
+        const recognized = normalize(recognizedText);
+        const correct = normalize(correctAnswer);
+
+        console.log('정답 확인:', {
+            원본인식: recognizedText,
+            원본정답: correctAnswer,
+            정규화인식: recognized,
+            정규화정답: correct
+        });
 
         // 완전 일치
         if (recognized === correct) {
+            console.log('완전 일치: 정답');
             return true;
         }
 
         // 유사도 계산 (Levenshtein distance 기반)
         const similarity = this.calculateSimilarity(recognized, correct);
-        return similarity >= 0.8; // 80% 이상 유사하면 정답
+        console.log('유사도:', similarity, '임계값: 0.8');
+        const isCorrect = similarity >= 0.8; // 80% 이상 유사하면 정답
+        
+        if (isCorrect) {
+            console.log('유사도 기반: 정답');
+        } else {
+            console.log('유사도 기반: 오답');
+        }
+        
+        return isCorrect;
     }
 
     /**

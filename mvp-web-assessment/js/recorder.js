@@ -38,7 +38,7 @@ class AudioRecorder {
 
             console.log('마이크 접근 성공');
 
-            // MediaRecorder 생성
+            // MediaRecorder 생성 및 즉시 시작 (지연 최소화)
             const mimeType = this.getSupportedMimeType();
             console.log('MediaRecorder 생성', { mimeType });
 
@@ -70,7 +70,7 @@ class AudioRecorder {
                 stream.getTracks().forEach(track => track.stop());
             };
 
-            // 녹음 시작
+            // 녹음 즉시 시작 (지연 없이)
             this.mediaRecorder.start(100); // 100ms마다 데이터 수집
             this.isRecording = true;
 

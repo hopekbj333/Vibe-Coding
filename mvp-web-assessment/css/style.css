@@ -59,6 +59,14 @@ h2 {
     text-align: center;
 }
 
+.instruction-text {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 .btn {
     padding: 16px 48px;
     font-size: 24px;
